@@ -10,6 +10,15 @@ This repository is dedicated to hosting content related to our family puja proce
 
 Here, you will find detailed instructions, rituals, and guidelines for performing various pujas. We hope this will help preserve our traditions and ensure that everyone can participate in these important ceremonies.
 
+## Testing
+
+Here are the commands to install and run http-server:
+
+Install http-server: `npm install -g http-server`
+Run http-server: `http-server`
+
+This will start a local server and provide you with a URL (e.g., http://127.0.0.1:8080) that you can open in your browser to access your index.html file.
+
 ## Contributions
 
 If you have any suggestions or additional content to add, please feel free to contribute by creating a pull request or contacting the repository maintainers.
