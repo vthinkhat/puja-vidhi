@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+    <title>TEMPLATE_TITLE_LANG (TEMPLATE_TITLE_ENG)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Baloo+Tamma+2:wght@400..800&family=Noto+Serif+Kannada&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            /* font-family: "Noto Serif Kannada", system-ui; */
+            /* font-family: "Anek Kannada", system-ui; */
+            font-family: "Baloo Tamma 2", system-ui;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .ENG {
+            font-style: italic;
+            color: blue;
+            font-size: x-small;
+            display: none;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TEMPLATE_TITLE_LANG <span class="ENG">(TEMPLATE_TITLE_ENG)</span></h1>
+
+    <button onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+
+    <div id="shuddikarana-mantra"></div>
+    <div id="ganapati-prarthana"></div>
+    <div id="deepaaradhana"></div>
+    <div id="achamanam"></div>
+    <div id="bhootoochchaatana"></div>
+    <div id="pranayama"></div>
+
+    <h2>
+        ಸಂಕಲ್ಪಂ <span class="ENG">(Sankalpam)</span>
+    </h2>
+    <b>
+        ಶ್ರೀ TEMPLATE-DEVATA ಪ್ರೀತ್ಯರ್ಥಂ<br>
+        <span class="ENG">
+            Sree TEMPLATE-DEVATA preetyardhaM
+        </span>
+    </b>
+
+    <div id="sankalpam"></div>
+
+    <b>
+        ಶ್ರೀ TEMPLATE-DEVATA ದೇವತಾಂ<br>
+        <span class="ENG">
+            Sree TEMPLATE-DEVATA daevataaM
+        </span>
+    </b>
+
+    <!-- ADD PUJA STEPS HERE -->
+    <!-- ADD PUJA STEPS HERE -->
+    <!-- ADD PUJA STEPS HERE -->
+
+    <div id="chaamaram"></div>
+    <div id="puja-end-prarthana"></div>
+    <b>
+        ಪೂಜಯಾ ಚ ಭಗವಾನ್ ಸರ್ವಾತ್ಮಕಃ --OR--
+        ಪೂಜಯಾ ಚ ಭಗವತೀ ಸರ್ವಾತ್ಮಕಃ<br>
+        <span class="ENG">
+            pūjayā ca bhagavān sarvātmakaḥ --OR--
+            pūjayā ca bhagavatee sarvaatmika:<br><br>
+        </span>
+
+        ಶ್ರೀ TEMPLATE-DEVATA ದೇವತಾ<br>
+        <span class="ENG">
+            Śrī TEMPLATE-DEVATA devatā
+        </span>
+    </b>
+    <div id="swasti"></div>
+
+    <script>
+        function loadSection(sectionId, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(sectionId).innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching the section:', error));
+        }
+        loadSection('shuddikarana-mantra', 'general/shuddikarana-mantra.html');
+        loadSection('ganapati-prarthana', 'general/ganapati-prarthana.html');
+        loadSection('deepaaradhana', 'general/deepaaradhana.html');
+        loadSection('achamanam', 'general/achamanam.html');
+        loadSection('bhootoochchaatana', 'general/bhootoochchaatana.html');
+        loadSection('pranayama', 'general/pranayama.html');
+        loadSection('sankalpam', 'general/sankalpam.html');
+        loadSection('chaamaram', 'general/chaamaram.html');
+        loadSection('puja-end-prarthana', 'general/puja-end-prarthana.html');
+        loadSection('swasti', 'general/swasti.html');
+    </script>
+
+</body>
+
+<script>
+    function toggleVisibility() {
+        var elements = document.querySelectorAll('.ENG');
+        elements.forEach(function (element) {
+            if (element.style.display === 'none') {
+                element.style.display = 'inline';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</html>
