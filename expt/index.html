@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Main Page</h1>
+
+    <div id="section1"></div>
+    <div id="section2"></div>
+    <div id="section3"></div>
+
+    <script>
+        function loadSection(sectionId, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(sectionId).innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching the section:', error));
+        }
+
+        loadSection('section1', 'sections/section1.html');
+        loadSection('section2', 'sections/section2.html');
+        loadSection('section3', 'sections/section3.html');
+    </script>
+</body>
+
+</html>
