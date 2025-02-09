@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ಮಹಾಲಕ್ಷ್ಮೀ ಚತುರ್ವಿಂಶತಿ (Mahalakshmi Chaturvimsati)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Baloo+Tamma+2:wght@400..800&family=Noto+Serif+Kannada&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            /* font-family: "Noto Serif Kannada", system-ui; */
+            /* font-family: "Anek Kannada", system-ui; */
+            font-family: "Baloo Tamma 2", system-ui;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .ENG {
+            font-style: italic;
+            color: blue;
+            font-size: x-small;
+            display: none;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ಮಹಾಲಕ್ಷ್ಮೀ ಚತುರ್ವಿಂಶತಿ <span class="ENG">(Mahalakshmi Chaturvimsati)</span></h1>
+
+    <button onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+
+    <div id="lakshmi-chaturvimsati-stotram"></div>
+    <div id="lakshmi-chaturvimsati-naamavali"></div>
+
+    <script>
+        function loadSection(sectionId, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(sectionId).innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching the section:', error));
+        }
+        loadSection('lakshmi-chaturvimsati-stotram', 'stotram/lakshmi-chaturvimsati-stotram.html');
+        loadSection('lakshmi-chaturvimsati-naamavali', 'stotram/lakshmi-chaturvimsati-naamavali.html');
+    </script>
+
+<h2>Literature</h2>
+
+<ul>
+    <li>Dhiksha: <a
+            href="https://youtu.be/JGt7-hnqUHI?si=LQ_724MoWqzajv1Y">https://youtu.be/JGt7-hnqUHI?si=LQ_724MoWqzajv1Y</a>
+    </li>
+    <li>Full details: <a
+            href="https://youtu.be/xdx84r_Byjs?si=mVieId532rQ56mJW">https://youtu.be/xdx84r_Byjs?si=mVieId532rQ56mJW</a>
+    </li>
+    <li>Link N: <a
+            href="https://youtu.be/BmvTfRqDXUc?si=nKTnUXCQ40luj3l-">https://youtu.be/BmvTfRqDXUc?si=nKTnUXCQ40luj3l-</a>
+    </li>
+</ul>
+
+<h3>Sadhana</span></h3>
+<ul>
+    <li>Friday in Tirumla: bathe in Swami Pushkarini, recite on Pushkarini steps</li>
+    <li>At home: 1008 times daily for 40 days; must recite in same spot!!</li>
+    <li>If moving around then do 9 Fridays</li>
+    <li>Only after a head bath (exception if ill)</li>
+</ul>
+
+</body>
+
+<script>
+    function toggleVisibility() {
+        var elements = document.querySelectorAll('.ENG');
+        elements.forEach(function (element) {
+            if (element.style.display === 'none') {
+                element.style.display = 'inline';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</html>
