@@ -30,6 +30,8 @@
 <body>
     <h1>ಗಣಪತಿ ಪೂಜ (Ganapati Pooja)</h1>
 
+    <button onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+
     <div id="shuddikarana-mantra"></div>
     <div id="ganapati-prarthana"></div>
     <div id="deepaaradhana"></div>
@@ -52,5 +54,18 @@
     </script>
 
 </body>
+
+<script>
+    function toggleVisibility() {
+        var elements = document.querySelectorAll('.ENG');
+        elements.forEach(function (element) {
+            if (element.style.display === 'none') {
+                element.style.display = 'inline';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+    }
+</script>
 
 </html>
