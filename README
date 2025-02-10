@@ -14,8 +14,11 @@ Here, you will find detailed instructions, rituals, and guidelines for performin
 
 Here are the commands to install and run http-server locally:
 
-Install http-server: `npm install -g http-server`
-Run http-server: `http-server`
+Install http-server:
+```
+npm install -g http-server
+http-server
+```
 
 This will start a local server and provide you with a URL (e.g., http://127.0.0.1:8080) that you can open in your browser to access your index.html file.
 
