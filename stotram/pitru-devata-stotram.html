@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ಪಿತೃ ದೇವತಾ ಸ್ತೋತ್ರಂ (Pitru Devata Stotram)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Baloo+Tamma+2:wght@400..800&family=Noto+Serif+Kannada&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            /* font-family: "Noto Serif Kannada", system-ui; */
+            /* font-family: "Anek Kannada", system-ui; */
+            font-family: "Baloo Tamma 2", system-ui;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .ENG {
+            font-style: italic;
+            color: blue;
+            font-size: x-small;
+            display: none;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>ಪಿತೃ ದೇವತಾ ಸ್ತೋತ್ರಂ <span class="ENG">(Pitru Devata Stotram)</span></h2>
+
+    <button onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+
+    <p>
+        ನಮಃ ಪಿತ್ರೇ ಜನ್ಮದಾತ್ರೇ ಸರ್ವದೇವಮಯಾಯ ಚ |<br>
+        ಸುಖದಾಯ ಪ್ರಸನ್ನಾಯ ಸುಪ್ರೀತಾಯ ಮಹಾತ್ಮನೇ || ೧ ||<br>
+        <br>
+        
+        ಸರ್ವಯಜ್ಞಸ್ವರೂಪಾಯ ಸ್ವರ್ಗಾಯ ಪರಮೇಷ್ಠಿನೇ |<br>
+        ಸರ್ವತೀರ್ಥಾವಲೋಕಾಯ ಕರುಣಾಸಾಗರಾಯ ಚ || ೨ ||<br>
+        <br>
+        
+        ನಮಃ ಸದಾಽಽಶುತೋಷಾಯ ಶಿವರೂಪಾಯ ತೇ ನಮಃ |<br>
+        ಸದಾಽಪರಾಧಕ್ಷಮಿಣೇ ಸುಖಾಯ ಸುಖದಾಯ ಚ || ೩ ||<br>
+        <br>
+        
+        ದುರ್ಲಭಂ ಮಾನುಷಮಿದಂ ಯೇನ ಲಬ್ಧಂ ಮಯಾ ವಪುಃ |<br>
+        ಸಂಭಾವನೀಯಂ ಧರ್ಮಾರ್ಥೇ ತಸ್ಮೈ ಪಿತ್ರೇ ನಮೋ ನಮಃ || ೪ ||<br>
+        <br>
+        
+        ತೀರ್ಥಸ್ನಾನತಪೋಹೋಮಜಪಾದೀನ್ ಯಸ್ಯ ದರ್ಶನಮ್ |<br>
+        ಮಹಾಗುರೋಶ್ಚ ಗುರವೇ ತಸ್ಮೈ ಪಿತ್ರೇ ನಮೋ ನಮಃ || ೫ ||<br>
+        <br>
+        
+        ಯಸ್ಯ ಪ್ರಣಾಮ ಸ್ತವನಾತ್ ಕೋಟಿಶಃ ಪಿತೃತರ್ಪಣಮ್ |<br>
+        ಅಶ್ವಮೇಧಶತೈಸ್ತುಲ್ಯಂ ತಸ್ಮೈ ಪಿತ್ರೇ ನಮೋ ನಮಃ || ೬ ||<br>
+        <br>
+    </p>
+    
+    <script>
+        function loadSection(sectionId, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(sectionId).innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching the section:', error));
+        }
+    </script>
+
+</body>
+
+<script>
+    function toggleVisibility() {
+        var elements = document.querySelectorAll('.ENG');
+        elements.forEach(function (element) {
+            if (element.style.display === 'none') {
+                element.style.display = 'inline';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</html>
