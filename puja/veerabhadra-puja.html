@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ವೀರಭದ್ರಸ್ವಾಮಿ ಪೂಜ (Veerabhadraswamy Puja)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Baloo+Tamma+2:wght@400..800&family=Noto+Serif+Kannada&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            /* font-family: "Noto Serif Kannada", system-ui; */
+            /* font-family: "Anek Kannada", system-ui; */
+            font-family: "Baloo Tamma 2", system-ui;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .ENG {
+            font-style: italic;
+            color: blue;
+            font-size: x-small;
+            display: none;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ವೀರಭದ್ರಸ್ವಾಮಿ ಪೂಜ <span class="ENG">(Veerabhadraswamy Puja)</span></h1>
+
+    <button onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+
+    <!-- ADD PUJA STEPS HERE -->
+    <!-- ADD PUJA STEPS HERE -->
+    <!-- ADD PUJA STEPS HERE -->
+
+</body>
+
+<script>
+    function toggleVisibility() {
+        var elements = document.querySelectorAll('.ENG');
+        elements.forEach(function (element) {
+            if (element.style.display === 'none') {
+                element.style.display = 'inline';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</html>
