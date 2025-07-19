@@ -1,5 +1,0 @@
-/* Legacy style.css - now redirecting to organized stylesheets */
-/* This file is kept for backward compatibility */
-/* New files should use styles/homepage.css or styles/common.css */
-
-@import url('./styles/homepage.css');
