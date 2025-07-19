@@ -1,248 +1,130 @@
 <!DOCTYPE html>
+<html lang="kn">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ಗರುಡಗಮನ ಸ್ತೋತ್ರಂ (Garudu Gamana Stotram)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Baloo+Tamma+2:wght@400..800&family=Noto+Serif+Kannada&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&display=swap" rel="stylesheet">
     <style>
         body {
-            /* font-family: "Noto Serif Kannada", system-ui; */
-            /* font-family: "Anek Kannada", system-ui; */
             font-family: "Baloo Tamma 2", system-ui;
-            font-style: normal;
             font-weight: 400;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
         }
 
         .ENG {
             font-style: italic;
-            color: blue;
-            font-size: x-small;
+            color: #0066cc;
+            font-size: 0.9em;
             display: none;
-            margin-top: 0;
-            padding-top: 0;
+            margin: 0;
+        }
+
+        .toggle-btn {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .toggle-btn:hover {
+            background-color: #0052a3;
+        }
+
+        .video-container {
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            max-width: 100%;
+            height: 315px;
+        }
+
+        @media (max-width: 600px) {
+            .video-container iframe {
+                height: 200px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h2>ಗರುಡಗಮನ ಸ್ತೋತ್ರಂ <span class="ENG">(Garudu Gamana Stotram)</span></h2>
+    <h1>ಗರುಡಗಮನ ಸ್ತೋತ್ರಂ <span class="ENG">(Garudu Gamana Stotram)</span></h1>
 
-    <button onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+    <button class="toggle-btn" onclick="toggleVisibility()">Show/Hide English Transliteration</button>
 
-    <p>
-        <iframe width="560" height="100" src="https://youtu.be/_P2aI9SYDbo?si=apytLUgJqffR98rI"
-            title="YouTube video player" frameborder="0"
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_P2aI9SYDbo?si=apytLUgJqffR98rI"
+            title="Garuda Gamana Stotram YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </p>
+    </div>
 
+    <div class="stotram-content">
+        <p>
+            ಗರುಡಗಮನ ತವ ಚರಣಕಮಲಮಿಹ, ಮನಸಿ ಲಸತು ಮಮ ನಿತ್ಯಂ <br>
+            <span class="ENG">garuḍa gamana tava caraṇa kamalam iha, manasila satu mama nityam</span><br>
+            ಮಮ ತಾಪಮಪಾಕುರು ದೇವ, ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ | ಧ್ರು. |<br>
+            <span class="ENG">mama tāpam apākuru deva, mama pāpam apākuru deva | dhru. |</span>
+        </p>
 
-    <p>
-    </p>
+        <p>
+            ಜಲಜನಯನ ವಿಧಿನಮುಚಿಹರಣಮುಖ, ವಿಬುಧವಿನುತ-ಪದಪದ್ಮ <br>
+            <span class="ENG">jalaja nayana vidhi namuci harana mukha, vibudha vinuta pada padma</span><br>
+            ಮಮ ತಾಪಮಪಾಕುರು ದೇವ, ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ | 1 |<br>
+            <span class="ENG">mama tāpam apākuru deva, mama pāpam apākuru deva | 1 |</span>
+        </p>
 
-    <p>
-    <h3>ಪಲ್ಲವಿ <span class="ENG">(Refrain)</span></h3>
-    ಗರುಡಗಮನ ತವ ಚರಣಕಮಲಮಿಹ <br>
-    <span class="ENG">
-        garuḍa gamana tava caraṇa kamalam iha<br>
-    </span>
-    ಮನಸಿ ಲಸತು ಮಮ ನಿತ್ಯಂ <br>
-    <span class="ENG">
-        manasi lasatu mama nityam<br>
-    </span>
-    ಮಮ ತಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama tāpam apākuru deva<br>
-    </span>
-    ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama pāpam apākuru deva<br>
-    </span>
-    </p>
+        <p>
+            ಭುಜಗಶಯನ ಭವ ಮದನಜನಕ ಮಮ, ಜನನಮರಣ-ಭಯಹಾರಿ <br>
+            <span class="ENG">bhujaga śayana bhava madana janaka mama, janana maraṇa bhaya hāri</span><br>
+            ಮಮ ತಾಪಮಪಾಕುರು ದೇವ, ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ | 2 |<br>
+            <span class="ENG">mama tāpam apākuru deva, mama pāpam apākuru deva | 2 |</span>
+        </p>
 
-    <p>
-    <h3>ಅಂತರಾ ೧ <span class="ENG">(Antarā 1)</span></h3>
-    ಜಲಜನಯನ ವಿಧಿನಮುಚಿಹರಹರಮುಖ <br>
-    <span class="ENG">
-        jalaja nayana vidhin amuci hara hara mukha<br>
-    </span>
-    ವಿಬುಧವಿನುತ ಪದಪದ್ಮ <br>
-    <span class="ENG">
-        vibudha vinuta pada padma<br>
-    </span>
-    ಮಮ ತಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama tāpam apākuru deva<br>
-    </span>
-    ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama pāpam apākuru deva<br>
-    </span>
-    </p>
+        <p>
+            ಶಂಖಚಕ್ರಧರ ದುಷ್ಟದೈತ್ಯಹರ, ಸರ್ವಲೋಕ-ಶರಣ <br>
+            <span class="ENG">śaṅkha cakra dhara duṣṭa daitya hara, sarva loka śaraṇa</span><br>
+            ಮಮ ತಾಪಮಪಾಕುರು ದೇವ, ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ | 3 |<br>
+            <span class="ENG">mama tāpam apākuru deva, mama pāpam apākuru deva | 3 |</span>
+        </p>
 
-    <p>
-    <h3>ಅಂತರಾ ೨ <span class="ENG">(Antarā 2)</span></h3>
-    ಭುಜಗಶಯನ ಭವ ಮದನಜನಕ ಮಮ <br>
-    <span class="ENG">
-        bhujaga śayana bhava madana janaka mama<br>
-    </span>
-    ಜನನಮರಣ ಭಯಹಾರಿ <br>
-    <span class="ENG">
-        janana maraṇa bhaya hāri<br>
-    </span>
-    ಮಮ ತಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama tāpam apākuru deva<br>
-    </span>
-    ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama pāpam apākuru deva<br>
-    </span>
-    </p>
+        <p>
+            ಅಗಣಿತ-ಗುಣಗಣ ಅಶರಣಶರಣದ, ವಿದಲಿತ-ಸುರರಿಪುಜಾಲ <br>
+            <span class="ENG">agaṇita guṇa gaṇa aśaraṇa śaraṇada, vidalita sura ripu jāla</span><br>
+            ಮಮ ತಾಪಮಪಾಕುರು ದೇವ, ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ | 4 |<br>
+            <span class="ENG">mama tāpam apākuru deva, mama pāpam apākuru deva | 4 |</span>
+        </p>
 
-    <p>
-    <h3>ಅಂತರಾ ೩ <span class="ENG">(Antarā 3)</span></h3>
-    ಶಂಖಚಕ್ರಧರ ದುಷ್ಟದೈತ್ಯಹರ <br>
-    <span class="ENG">
-        śaṅkha cakra dhara duṣṭa daitya hara<br>
-    </span>
-    ಸರ್ವಲೋಕಶರಣ <br>
-    <span class="ENG">
-        sarva loka śaraṇa<br>
-    </span>
-    ಮಮ ತಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama tāpam apākuru deva<br>
-    </span>
-    ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama pāpam apākuru deva<br>
-    </span>
-    </p>
+        <p>
+            ಭಕ್ತವರ್ಯಮಿಹ ಭೂರಿಕರುಣಯಾ, ಪಾಹಿ ಭಾರತೀತೀರ್ಥಮ್ <br>
+            <span class="ENG">bhakta varyam iha bhūri karuṇayā, pāhi bhāratī tīrtham</span><br>
+            ಮಮ ತಾಪಮಪಾಕುರು ದೇವ, ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ | 5 |<br>
+            <span class="ENG">mama tāpam apākuru deva, mama pāpam apākuru deva | 5 |</span>
+        </p>
 
-    <p>
-    <h3>ಅಂತರಾ ೪ <span class="ENG">(Antarā 4)</span></h3>
-    ಅಗಣಿತಗುಣಗಣ ಅಶರಣಶರಣದ <br>
-    <span class="ENG">
-        agaṇita guṇa gaṇa aśaraṇa śaraṇada<br>
-    </span>
-    ವಿದಲಿತ ಸುರರಿಪುಜಾಲ <br>
-    <span class="ENG">
-        vidalita sura ripu jāla<br>
-    </span>
-    ಮಮ ತಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama tāpam apākuru deva<br>
-    </span>
-    ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama pāpam apākuru deva<br>
-    </span>
-    </p>
+        <p>
+            ಇತಿ ಜಗದ್ಗುರು ಶೃಂಗೇರೀ ಪೀಠಾಧಿಪತಿ ಭಾರತೀತೀರ್ಥಸ್ವಾಮಿನಾ ವಿರಚಿತಂ ಮಹಾವಿಷ್ಣುಸ್ತೋತ್ರಂ ಸಂಪೂರ್ಣಮ್ |
+            <span class="ENG">Iti jagadguru sringeri peethadhipati bharatithirthaswaminaa virachitam mahavishnustotram sampoornam |</span>
+        </p>
+    </div>
 
-    <p>
-    <h3>ಅಂತರಾ ೫ <span class="ENG">(Antarā 5)</span></h3>
-    ಭಕ್ತವರ્યಮಿಹ ಭೂರಿಕರುಣಯಾ <br>
-    <span class="ENG">
-        bhakta varyam iha bhūri karuṇayā<br>
-    </span>
-    ಪಾಹಿ ಭಾರತೀತೀರ್ಥಮ್ <br>
-    <span class="ENG">
-        pāhi bhāratī tīrtham<br>
-    </span>
-    ಮಮ ತಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama tāpam apākuru deva<br>
-    </span>
-    ಮಮ ಪಾಪಮಪಾಕುರು ದೇವ <br>
-    <span class="ENG">
-        mama pāpam apākuru deva<br>
-    </span>
-    </p>
-
-    <p>
-    <h3>ಪಲ್ಲವಿ <span class="ENG">(Refrain)</span></h3>
-    O Vishnu, who rides Garuḍa! May your divine lotus feet always shine in my heart and consciousness. Please remove all
-    my sufferings and destroy the sins that weigh down my soul. I surrender to you completely — body, mind, and heart.
-    <ul>
-        <li>ಗರುಡಗಮನ: You who ride Garuda</li>
-        <li>ತವ ಚರಣಕಮಲಮ್: Your lotus feet</li>
-        <li>ಇಹ: Here (in this life)</li>
-        <li>ಮನಸಿ: In my mind</li>
-        <li>ಲಸತು: May it shine / dwell</li>
-        <li>ಮಮ ನಿತ್ಯಂ: In me always</li>
-        <li>ಮಮ ತಾಪಮ್ ಅಪಾಕುರು: Remove my sufferings, O Lord</li>
-        <li>ಮಮ ಪಾಪಮ್ ಅಪಾಕುರು: Remove my sins, O Lord</li>
-    </ul>
-
-    <h3>ಅಂತರಾ ೧ <span class="ENG">(Antarā 1)</span></h3>
-    O Lord with lotus-like eyes, worshipped by Brahma, praised by Indra, Shiva, and all divine beings — may your sacred
-    feet uplift me. You are the refuge of the gods; please relieve my pain and purify my heart of all sins.
-    <ul>
-        <li>ಜಲಜ-ನಯನ: Lotus-eyed one</li>
-        <li>ವಿಧಿನಮ್: Brahma (the Creator)</li>
-        <li>ಉಚಿಹರಹರಮುಖ: Praised by Indra, Shiva, and others</li>
-        <li>ವಿಬುಧ-ವಿನುತ: Worshipped by celestial beings</li>
-        <li>ಪದಪದ್ಮ: Your lotus feet</li>
-    </ul>
-
-    <h3>ಅಂತರಾ ೨ <span class="ENG">(Antarā 2)</span></h3>
-    You who rest on the serpent bed of eternity, source of all creation — the very father of love itself — I bow to you.
-    Remove the deep fear I carry of birth and death. Lead me to peace beyond the cycle of suffering.
-    <ul>
-        <li>ಭುಜಗ-ಶಯನ: One who reclines on the serpent bed (Ananta/Shesha)</li>
-        <li>ಭವ: Worldly existence (samsara)</li>
-        <li>ಮದನ-ಜನಕ: Father of Cupid (as Vishnu/Narayana)</li>
-        <li>ಮಮ ಜನನ-ಮರಣ: My cycle of birth and death</li>
-        <li>ಭಯ-ಹಾರಿ: Remover of fear</li>
-    </ul>
-
-    <h3>ಅಂತರಾ ೩ <span class="ENG">(Antarā 3)</span></h3>
-    Wielder of the divine conch and discus, destroyer of dark forces and demons — you are the protector of all worlds.
-    Be my refuge too. Cleanse me of my past and ease the burdens that life has placed on me.
-    <ul>
-        <li>ಶಂಖ-ಚಕ್ರ-ಧರ: Holder of the conch and discus</li>
-        <li>ದುಷ್ಟ-ದೈತ್ಯ-ಹರ: Destroyer of wicked demons</li>
-        <li>ಸರ್ವ-ಲೋಕ-ಶರಣ: Refuge for all the worlds</li>
-    </ul>
-
-    <h3>ಅಂತರಾ ೪ <span class="ENG">(Antarā 4)</span></h3>
-    Lord of countless divine virtues, savior of those with no support — you shattered the forces that threatened the
-    devas. Likewise, destroy the inner enemies of ego, desire, and ignorance in me. Bring me to your divine shelter.
-    <ul>
-        <li>ಅಗಣಿತ-ಗುಣ-ಗಣ: Possessor of countless virtues</li>
-        <li>ಅಶರಣ-ಶರಣದ: Giver of shelter to the helpless</li>
-        <li>ವಿದಲಿತ ಸುರ-ರಿಪು-ಜಾಲ: Crusher of enemies of the devas</li>
-    </ul>
-
-    <h3>ಅಂತರಾ ೫ <span class="ENG">(Antarā 5)</span></h3>
-    O Lord of boundless compassion, protect your dearest devotee — Śrī Bhāratī Tīrtha — and all who seek you with faith.
-    Grant us your grace, remove our suffering, and make us worthy of your eternal presence.
-    <ul>
-        <li>ಭಕ್ತ-ವರ್ಯಮ್: Great among devotees</li>
-        <li>ಇಹ: In this world</li>
-        <li>ಭೂರಿ-ಕರುಣಯಾ: With immense compassion</li>
-        <li>ಪಾಹಿ: Protect</li>
-        <li>ಭಾರತೀ-ತೀರ್ಥಮ್: (The devotee) Sri Bharati Tirtha</li>
-    </ul>
-    </p>
-
+    <script>
+        function toggleVisibility() {
+            const elements = document.querySelectorAll('.ENG');
+            elements.forEach(element => {
+                element.style.display = element.style.display === 'none' ? 'inline' : 'none';
+            });
+        }
+    </script>
 </body>
-
-<script>
-    function toggleVisibility() {
-        var elements = document.querySelectorAll('.ENG');
-        elements.forEach(function (element) {
-            if (element.style.display === 'none') {
-                element.style.display = 'inline';
-            } else {
-                element.style.display = 'none';
-            }
-        });
-    }
-</script>
-
 </html>
