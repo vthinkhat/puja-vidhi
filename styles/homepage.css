@@ -1,0 +1,164 @@
+/* Homepage specific styles for Puja Vidhi */
+
+/* Base page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main content container */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Welcome title styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+/* Tiles container - flexible grid */
+.tiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Individual tile styling */
+.tile {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: all 0.3s ease;
+    border-left: 4px solid #0066cc;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Tile headers */
+.tile h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* List styling within tiles */
+.tile ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.tile li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Link styling */
+.tile a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.tile a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+/* Bottom section styling */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #0066cc, #f0f0f0, #0066cc);
+    margin: 40px 0;
+}
+
+/* Bottom links styling */
+body > ol {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body > ol a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body > ol a:hover {
+    color: #0052a3;
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .tiles-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    main {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .tile {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tile {
+        padding: 15px;
+    }
+    
+    .tile h2 {
+        font-size: 1.3em;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+} 

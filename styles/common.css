@@ -1,0 +1,114 @@
+/* Common styles for Puja Vidhi project */
+
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Baloo+Tamma+2:wght@400..800&family=Noto+Serif+Kannada&display=swap');
+
+/* Base styles */
+body {
+    font-family: "Baloo Tamma 2", system-ui;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* English transliteration styles */
+.ENG {
+    font-style: italic;
+    color: #0066cc;
+    font-size: 0.9em;
+    display: none;
+    margin: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.toggle-btn:hover {
+    background-color: #0052a3;
+}
+
+/* Video container styles */
+.video-container {
+    margin: 20px 0;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    height: 315px;
+}
+
+/* Typography enhancements */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Content styling */
+.stotram-content {
+    margin-top: 20px;
+}
+
+.puja-content {
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .video-container iframe {
+        height: 200px;
+    }
+    
+    .toggle-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Alternative font options for different content */
+.noto-serif {
+    font-family: "Noto Serif Kannada", system-ui;
+}
+
+.anek-kannada {
+    font-family: "Anek Kannada", system-ui;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+} 
