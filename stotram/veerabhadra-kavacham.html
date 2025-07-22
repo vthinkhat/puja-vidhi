@@ -14,7 +14,13 @@
 <body>
     <h1>ಶ್ರೀ ವೀರಭದ್ರ ಕವಚಂ <span class="ENG">(Sri Veerabhadra Kavacham)</span></h1>
 
-    <button class="toggle-btn" onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+    
+    <button class="toggle-btn" onclick="toggleTransliteration()">Show English Transliteration</button>
 
 
     <div class="stotram-content">
@@ -23,13 +29,113 @@
             ಓಂ ಅಥಃ ಶ್ರೀವೀರಭದ್ರಕವಚಂ || <br>
             <span class="ENG">Om Atha Shri Veerabhadra Kavacham || </span>
         </p>
-        <p>
-            ಓಂ ಅಸ್ಯ ಶ್ರೀ ವೀರಭದ್ರಕವಚಮಹಾಮಂತ್ರಸ್ಯ ಪಶುಪತಿ ಋಷಿಃ ಅನುಷ್ಟುಪ್ಛಂದಃ, <br>
-            ಶ್ರೀಭದ್ರಕಾಲೀಸಮೇತ ವೀರಭದ್ರೋ ದೇವತಾ, ಹ್ರಾಂ ಬೀಜಂ ಹ್ರೀಂ ಶಕ್ತಿಃ ಕ್ಲೀಂ ಕಿಲಕಂ, <br>
-            ಶ್ರೀಭದ್ರಕಾಲೀಸಮೇತ ವೀರಭದ್ರೇಶ್ವರಪ್ರಸಾದಸಿದ್ಧ್ಯರ್ಥೇ ಜಪೇ ವಿನಿಯೋಗಃ <br>
-            <span class="ENG">
-            </span>
-        </p>
+        <div class="verse-content">
+            <div class="kannada-only">
+                <p>
+                    ಓಂ ಅಸ್ಯ ಶ್ರೀ ವೀರಭದ್ರಕವಚಮಹಾಮಂತ್ರಸ್ಯ ಪಶುಪತಿ ಋಷಿಃ ಅನುಷ್ಟುಪ್ಛಂದಃ, <br>
+                    ಶ್ರೀಭದ್ರಕಾಲೀಸಮೇತ ವೀರಭದ್ರೋ ದೇವತಾ, ಹ್ರಾಂ ಬೀಜಂ ಹ್ರೀಂ ಶಕ್ತಿಃ ಕ್ಲೀಂ ಕಿಲಕಂ, <br>
+                    ಶ್ರೀಭದ್ರಕಾಲೀಸಮೇತ ವೀರಭದ್ರೇಶ್ವರಪ್ರಸಾದಸಿದ್ಧ್ಯರ್ಥೇ ಜಪೇ ವಿನಿಯೋಗಃ <br>
+                </p>
+            </div>
+            <div class="kannada-with-english">
+                <p>
+                    ಓಂ ಅಸ್ಯ ಶ್ರೀ ವೀರಭದ್ರಕವಚಮಹಾಮಂತ್ರಸ್ಯ ಪಶುಪತಿ ಋಷಿಃ ಅನುಷ್ಟುಪ್ಛಂದಃ, <br>
+                    <span class="ENG">Om asya Shri Veerabhadra Kavacha Maha Mantrasya Pashupati Rishih, Anushtup Chhandah,</span>  || <br>
+                    ಶ್ರೀಭದ್ರಕಾಲೀಸಮೇತ ವೀರಭದ್ರೋ ದೇವತಾ, ಹ್ರಾಂ ಬೀಜಂ ಹ್ರೀಂ ಶಕ್ತಿಃ ಕ್ಲೀಂ ಕಿಲಕಂ, <br>
+                    <span class="ENG">Shribhadrakali-sameta Veerabhadro Devata, Hraam Beejam, Hreem Shaktih, Kleem Kilakam,</span>  || <br>
+                    ಶ್ರೀಭದ್ರಕಾಲೀಸಮೇತ ವೀರಭದ್ರೇಶ್ವರಪ್ರಸಾದಸಿದ್ಧ್ಯರ್ಥೇ ಜಪೇ ವಿನಿಯೋಗಃ <br>
+                    <span class="ENG">Shribhadrakali-sameta Veerabhadreshwara-prasada-siddhyarthe jape viniyogah</span>
+                </p>
+            </div>
+            <div class="word-by-word">
+                <h4>Line 1:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಓಂ</td>
+                        <td>ಅಸ್ಯ</td>
+                        <td>ಶ್ರೀ ವೀರಭದ್ರಕವಚಮಹಾಮಂತ್ರಸ್ಯ</td>
+                        <td>ಪಶುಪತಿ ಋಷಿಃ</td>
+                        <td>ಅನುಷ್ಟುಪ್ ಛಂದಃ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Om</td>
+                        <td>asya</td>
+                        <td>Shri Veerabhadra kavacha maha mantrasya</td>
+                        <td>Pashupati Rishih</td>
+                        <td>Anushtup Chhandah</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>Sacred primordial sound, invocation of the Divine</td>
+                        <td>of this</td>
+                        <td>of the great mantra known as Shri Veerabhadra Kavacham</td>
+                        <td>The sage (seer) is Pashupati (a name of Lord Shiva)</td>
+                        <td>The meter is Anushtup (a 32-syllable Vedic meter)</td>
+                    </tr>
+                </table>
+                
+                <h4>Line 2:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಶ್ರೀಭದ್ರಕಾಲೀಸಮೇತ ವೀರಭದ್ರೋ ದೇವತಾ</td>
+                        <td>ಹ್ರಾಂ ಬೀಜಂ</td>
+                        <td>ಹ್ರೀಂ ಶಕ್ತಿಃ</td>
+                        <td>ಕ್ಲೀಂ ಕಿಲಕಂ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Shri Bhadrakali sameta Veerabhadra Devata</td>
+                        <td>Hraam Beejam</td>
+                        <td>Hreem Shaktih</td>
+                        <td>Kleem Kilakam</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The deity is Veerabhadra accompanied by Shri Bhadrakali</td>
+                        <td>The seed syllable (bīja mantra) is "Hraam"</td>
+                        <td>The energy (śakti) syllable is "Hreem"</td>
+                        <td>The sealing (kīlaka) syllable is "Kleem" (binds/protects the mantra)</td>
+                    </tr>
+                </table>
+                
+                <h4>Line 3:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಶ್ರೀಭದ್ರಕಾಲೀಸಮೇತ ವೀರಭದ್ರೇಶ್ವರ</td>
+                        <td>ಪ್ರಸಾದಸಿದ್ಧ್ಯರ್ಥೇ</td>
+                        <td>ಜಪೇ</td>
+                        <td>ವಿನಿಯೋಗಃ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Shri Bhadrakali sameta Veerabhadreshwara</td>
+                        <td>prasada-siddhyarthé</td>
+                        <td>jape</td>
+                        <td>viniyogah</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>Lord Veerabhadra together with Shri Bhadrakali</td>
+                        <td>for the attainment of grace or blessing</td>
+                        <td>in the recitation (of the kavacham)</td>
+                        <td>This is the statement of purpose/application of the mantra</td>
+                    </tr>
+                </table>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #666;">
+                    <strong>Combined Translation with Flow:</strong><br>
+                    "Om. Of this great mantra known as Shri Veerabhadra Kavacham,
+                    the sage (seer) is Pashupati, the meter is Anushtup,
+                    the presiding deity is Veerabhadra along with Bhadrakali,
+                    the seed syllable is Hraam, the energy syllable is Hreem, and the sealing syllable is Kleem.
+                    This mantra is to be recited for the attainment of the blessings of Veerabhadreshwara, who is united with Shri Bhadrakali."
+                </p>
+            </div>
+        </div>
+
+        <a href="https://forum.amritananda.org/d/320-how-to-perform-saanga-and-kara-nyasas" target="_blank"
+            rel="noopener">
+            How to perform KaraNyasa and AngaNyasas
+        </a>
+        <a href="https://yogauonline.com/yoga-practice-teaching-tips/yoga-for-beginners/nyasas-turn-your-body-into-a-temple/"
+            target="_blank" rel="noopener">
+            KaraNyasa images
+        </a>
 
         <h2>ಕರನ್ಯಾಸಃ <span class="ENG">(Karaṇyāsaḥ)</span></h2>
         <p>
@@ -39,7 +145,14 @@
             ಓಂ ಹ್ರೈಂ ವಾಂ ಅನಾಮಿಕಾಭ್ಯಾಂ ನಮಃ | <br>
             ಓಂ ಹ್ರೌಂ ಶಾಂ ಕನಿಷ್ಠಿಕಾಭ್ಯಾಂ ನಮಃ | <br>
             ಓಂ ಹ್ರಃ ಷಾಂ ಕರತಲಕರ ಪೃಷ್ಟಾಭ್ಯಾಂ ನಮಃ || <br>
-            <span class="ENG"></span>
+            <span class="ENG">
+                Om Hraam Yaam angushthabhyam namah <br>
+                Om Hreem Raam tarjaneebhyam namah <br>
+                Om Hroom Laam madhyamabhyam namah <br>
+                Om Hraim Vaam anaamikabhyam namah <br>
+                Om Hroum Shaam kanishthikabhyam namah <br>
+                Om Hrah Shaam karatala-karaprishthabhyam namah <br>
+            </span>
         </p>
 
         <h2>ಅಂಗನ್ಯಾಸಃ <span class="ENG">(Aṅganyāsaḥ)</span></h2>
@@ -51,49 +164,565 @@
             ಓಂ ಹ್ರೌಂ ದ್ರಾಂ ನೇತ್ರ ತ್ರಯಾಯ ವೌಷಟ್ | <br>
             ಓಂ ಹ್ರಃ ಕ್ಷಾಂ ಅಸ್ತ್ರಾಯ ಫಟ್ || <br>
             ಭೂರ್ಭುವಃಸ್ವಃ ಇತಿ ದಿಗ್ಬಂಧಃ || <br>
-            <span class="ENG"></span>
+            <span class="ENG">
+                Om Hraam Saam hridayaya namah <br>
+                Om Hreem Laan shirase svaaha <br>
+                Om Hroom Kshaam shikhayai vashat <br>
+                Om Hraim Braam kavachaaya hum <br>
+                Om Hroum Draam netra-trayaya vaushat <br>
+                Om Hrah Kshaam astraaya phat <br>
+                Bhoor Bhuvah Svah iti digbandhah <br>
+            </span>
         </p>
 
         <h2>ಧ್ಯಾನಂ <span class="ENG">(Dhyanam)</span></h2>
-        <p>
-            ರುದ್ರರೌದ್ರಾವತಾರಂ ಹುತವಹನಯನಂ ಚೋರ್ಧ್ವಕೇಶಂ ಸುದಂಷ್ಟ್ರಂ <br>
-            ವ್ಯೋಮಾಂಗಂ ಭೀಮರೂಪಂ ಕಿಣಿಕಿಣಿರಮಸಜ್ವಾಲಮಾಲಾ ವೃತಾಂಗಂ | <br>
-            ಭೂತಪ್ರೇತಾಧಿನಾಥಂ ಕರಕಮಲಯುಗೇ ಖಡ್ಗಪಾತ್ರೇ ವಹಂತಂ <br>
-            ವಂದೇ ಲೋಕೈಕವೀರಂ ತ್ರಿಭುವನವಿನುತಂ ಶ್ಯಾಮಲಂ ವೀರಭದ್ರಂ || <br>
-            <span class="ENG"></span>
-        </p>
+        <div class="verse-content">
+            <div class="kannada-only">
+                <p>
+                    ರುದ್ರರೌದ್ರಾವತಾರಂ <b>ಹುತವಹ</b>ನಯನಂ ಚೋರ್ಧ್ವಕೇಶಂ ಸುದಂಷ್ಟ್ರಂ <br>
+                    ವ್ಯೋಮಾಂಗಂ ಭೀಮರೂಪಂ ಕಿಣಿಕಿಣಿರಮಸಜ್ವಾಲಮಾಲಾ ವೃತಾಂಗಂ | <br>
+                    ಭೂತಪ್ರೇತಾಧಿನಾಥಂ ಕರಕಮಲಯುಗೇ ಖಡ್ಗಪಾತ್ರೇ ವಹಂತಂ <br>
+                    ವಂದೇ ಲೋಕೈಕವೀರಂ ತ್ರಿಭುವನವಿನುತಂ ಶ್ಯಾಮಲಂ ವೀರಭದ್ರಂ || <br>
+                </p>
+            </div>
+            <div class="kannada-with-english">
+                <p>
+                    ರುದ್ರರೌದ್ರಾವತಾರಂ ಹುತವಹನಯನಂ ಚೋರ್ಧ್ವಕೇಶಂ ಸುದಂಷ್ಟ್ರಂ <br>
+                    <span class="ENG">Rudra-raudra-avataaram hutavaha-nayanam chordhva-kesham sudamshtram</span> <br>
+                    ವ್ಯೋಮಾಂಗಂ ಭೀಮರೂಪಂ ಕಿಣಿಕಿಣಿರಮಸಜ್ವಾಲಮಾಲಾ ವೃತಾಂಗಂ | <br>
+                    <span class="ENG">Vyomaangam bheema-roopam kinikini-ramasa-jvalamala vritaangam</span> <br>
+                    ಭೂತಪ್ರೇತಾಧಿನಾಥಂ ಕರಕಮಲಯುಗೇ ಖಡ್ಗಪಾತ್ರೇ ವಹಂತಂ <br>
+                    <span class="ENG">Bhoota-preta-adhinaatham karaka-malayuge khadga-paatre vahantam</span> <br>
+                    ವಂದೇ ಲೋಕೈಕವೀರಂ ತ್ರಿಭುವನವಿನುತಂ ಶ್ಯಾಮಲಂ ವೀರಭದ್ರಂ || <br>
+                    <span class="ENG">Vande lokaika-veeraam tribhuvana-vinutam shyamalam Veerabhadram</span>
+                </p>
+            </div>
+            <div class="word-by-word">
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ರುದ್ರರೌದ್ರಾವತಾರಂ</td>
+                        <td>ಹುತವಹನಯನಂ</td>
+                        <td>ಚೋರ್ಧ್ವಕೇಶಂ</td>
+                        <td>ಸುದಂಷ್ಟ್ರಂ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>rudra-raudra-avataaram</td>
+                        <td>hutavaha-nayanam</td>
+                        <td>chordhva-kesham</td>
+                        <td>sudamshtram</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The fierce incarnation of Rudra (Shiva)</td>
+                        <td>Eyes that are like blazing fire</td>
+                        <td>Hair raised upwards</td>
+                        <td>Terrifying prominent fangs</td>
+                    </tr>
+                </table>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ವ್ಯೋಮಾಂಗಂ </td>
+                        <td>ಭೀಮರೂಪಂ </td>
+                        <td>ಕಿಣಿಕಿಣಿ-ರಮಸ-ಜ್ವಾಲ-ಮಾಲಾ</td>
+                        <td>ವೃತಾಂಗಂ </td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Vyoma-angam</td>
+                        <td>Bheema-rupam</td>
+                        <td>kinikini-ramasa-jvalamala</td>
+                        <td>Avrita-angam</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>Whose body is as vast as the sky</td>
+                        <td>Of a fearsome and mighty form</td>
+                        <td>Garland of flames, decorated with (ramasa), tiny bells (kinikini)</td>
+                        <td>Whose body is wrapped or covered</td>
+                    </tr>
+                </table>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಭೂತಪ್ರೇತಾಧಿನಾಥಂ</td>
+                        <td>ಕರಕಮಲಯುಗೇ</td>
+                        <td>ಖಡ್ಗಪಾತ್ರೇ</td>
+                        <td>ವಹಂತಂ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>bhoota-preta-adhinaatham</td>
+                        <td>kara-kamala-yuge</td>
+                        <td>khadga-paatre</td>
+                        <td>vahantam</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>Lord of ghosts and spirits</td>
+                        <td>In lotus-like hands</td>
+                        <td>Sword and vessel</td>
+                        <td>Holding</td>
+                    </tr>
+                </table>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ವಂದೇ</td>
+                        <td>ಲೋಕೈಕವೀರಂ</td>
+                        <td>ತ್ರಿಭುವನವಿನುತಂ</td>
+                        <td>ಶ್ಯಾಮಲಂ</td>
+                        <td>ವೀರಭದ್ರಂ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>vande</td>
+                        <td>lokaika-veeraam</td>
+                        <td>tribhuvana-vinutam</td>
+                        <td>shyamalam</td>
+                        <td>veerabhadram</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>I bow to</td>
+                        <td>The unique hero of the world</td>
+                        <td>Praised by the three worlds</td>
+                        <td>Dark-complexioned</td>
+                        <td>Veerabhadra</td>
+                    </tr>
+                </table>
+                <p style="margin-top: 15px; font-style: italic; color: #666;">
+                    <strong>Complete meaning:</strong> The fierce form of Rudra, with fire-like eyes, upraised matted hair, and sharp, terrifying fangs. 
+                    His sky-colored body has a terrifying appearance, adorned with a garland of tinkling flames. 
+                    Lord of ghosts and spirits, holding a sword and vessel in his lotus-like hands. 
+                    I bow to Veerabhadra, the unique hero of the world, praised by the three worlds, with a dark complexion.
+                </p>
+            </div>
+        </div>
 
         <h2>ಅಥ ಕವಚಂ <span class="ENG">(Kavacham)</span></h2>
-        <p>
-            ಓಂ ಲಲಾಟಂ ವೀರಭದ್ರೋಽವ್ಯಾಚ್ಚಕ್ಷುಷೀ ಚೋರ್ಧ್ವಕೇಶಭೃತ್ | <br>
-            ಭ್ರೂಮಧ್ಯಂ ಭೂತನಾಥೋಽವ್ಯಾನ್ನಾಸಿಕಾಂ ವೀರವಿಗ್ರಹಃ || ೧ || <br>
-            <span class="ENG"></span>
-        </p>
-        <p>
-            ಕಪಾಲೀ ಕರ್ಣಯುಗಲಂ ಕಂಧರಂ ನೀಲಕಂಧರಃ | <br>
-            ವದನಂ ಭದ್ರಕಾಲೀಶೋ ಚುಬುಕಂ ಚಂದ್ರಖಂಡಭೃತ್ || ೨ || <br>
-            <span class="ENG"></span>
-        </p>
-        <p>
-            ಕರೌ ಪಾಶಕರಃ ಪಾತು ಬಾಹೂ ಪಾತು ಮಹೇಶ್ವರಃ | <br>
-            ಊರುಸ್ಥಲಂ ಚೋಗ್ರದಂಷ್ಟ್ರಾಽಽನಂದಾತ್ಮಾ ಹೃದಂಬುಜಂ || ೩ || <br>
-            <span class="ENG"></span>
-        </p>
-        <p>
-            ರುದ್ರಮೂರ್ತಿರ್ನಾಭಿಮಧ್ಯಂ ಕಟಿಂ ಮೇ ಪಾತು ಶೂಲಭೃತ್ | <br>
-            ಮೂರ್ಧಾನಂ ಪಂಚಮೂರ್ಧಾಽವ್ಯಾನ್ನಿಟಲಂ ನಿರ್ಮಲೇಂದುಭೃತ್ || ೪ || <br>
-            <span class="ENG"></span>
-        </p>
-        <p>
-            ಕಪೋಲಯುಗ್ಮಂ ಕಾಪಾಲೀ ಜಿಹ್ವಾಂ ಮೇ ಜೀವನಾಯಕಃ | <br>
-            ಸ್ತನದ್ವಯಂ ಪಶುಪತಿರ್ಲಿಂಗಂ ಮೇ ಲಿಂಗರೂಪಧೃತ್ || ೫ || <br>
-            <span class="ENG"></span>
-        </p>
-        <p>
-            ಸರ್ವಾಂಗುಲೀಃ ಸರ್ವನಾಥೋ ನಖಾನ್ಮೇ ನಾಗಭೂಷಣಃ | <br>
-            ಪಾರ್ಶ್ವಯುಗ್ಮಂ ಶಕ್ತಿಹಸ್ತೋ ಸರ್ವಾಂಗಂ ದೇವವಲ್ಲಭಃ || ೬ || <br>
-            <span class="ENG"></span>
-        </p>
+        <div class="verse-content">
+            <div class="kannada-only">
+                <p>
+                    ಓಂ ಲಲಾಟಂ ವೀರಭದ್ರೋಽವ್ಯಾಚ್ಚಕ್ಷುಷೀ ಚೋರ್ಧ್ವಕೇಶಭೃತ್ | <br>
+                    ಭ್ರೂಮಧ್ಯಂ ಭೂತನಾಥೋಽವ್ಯಾನ್ನಾಸಿಕಾಂ ವೀರವಿಗ್ರಹಃ || ೧ || <br>
+                </p>
+            </div>
+            <div class="kannada-with-english">
+                <p>
+                    ಓಂ ಲಲಾಟಂ ವೀರಭದ್ರೋಽವ್ಯಾಚ್ಚಕ್ಷುಷೀ ಚೋರ್ಧ್ವಕೇಶಭೃತ್ | <br>
+                    <span class="ENG">Om lalaatam Veerabhadro'vyaat chakshushee chordhva-kesha-bhrit |</span>  || <br>
+                    ಭ್ರೂಮಧ್ಯಂ ಭೂತನಾಥೋಽವ್ಯಾನ್ನಾಸಿಕಾಂ ವೀರವಿಗ್ರಹಃ || ೧ || <br>
+                    <span class="ENG">Bhruu-madhyam bhootanaatho'vyaan naasikaam Veera-vigrahah || 1 ||</span>
+                </p>
+            </div>
+            <div class="word-by-word">
+                <h4>First Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಓಂ</td>
+                        <td>ಲಲಾಟಂ</td>
+                        <td>ವೀರಭದ್ರಃ ಅವ್ಯಾತ್</td>
+                        <td>ಚಕ್ಷುಷೀ</td>
+                        <td>ಚ</td>
+                        <td>ಊರ್ಧ್ವಕೇಶಭೃತ್</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Om</td>
+                        <td>Lalaatam</td>
+                        <td>Veerabhadraḥ avyaat</td>
+                        <td>Chakshushee</td>
+                        <td>cha</td>
+                        <td>Urdhva-kesha-bhrit</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>Sacred syllable, invocation</td>
+                        <td>Forehead</td>
+                        <td>May Veerabhadra protect</td>
+                        <td>The eyes (both)</td>
+                        <td>and</td>
+                        <td>The one with upward-standing hair (epithet of Veerabhadra)</td>
+                    </tr>
+                </table>
+                
+                <h4>Second Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಭ್ರೂಮಧ್ಯಂ</td>
+                        <td>ಭೂತನಾಥಃ ಅವ್ಯಾತ್</td>
+                        <td>ನಾಸಿಕಾಂ</td>
+                        <td>ವೀರವಿಗ್ರಹಃ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Bhru-madhyam</td>
+                        <td>Bhootanaathah avyaat</td>
+                        <td>Naasikaam</td>
+                        <td>Veera-vigrahah</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The space between the eyebrows (ajna chakra region)</td>
+                        <td>May the Lord of spirits (Veerabhadra) protect</td>
+                        <td>The nose</td>
+                        <td>The one with a heroic form (Veerabhadra)</td>
+                    </tr>
+                </table>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #666;">
+                    <strong>Full Meaning in Simple English:</strong><br>
+                    "May Lord Veerabhadra protect my forehead,
+                    may the One with upward-standing hair guard my eyes.
+                    May the Lord of spirits (Bhootanatha) shield the space between my eyebrows,
+                    and may the heroic form of Veerabhadra protect my nose."
+                </p>
+            </div>
+        </div>
+        <div class="verse-content">
+            <div class="kannada-only">
+                <p>
+                    ಕಪಾಲೀ ಕರ್ಣಯುಗಲಂ ಕಂಧರಂ ನೀಲಕಂಧರಃ | <br>
+                    ವದನಂ ಭದ್ರಕಾಲೀಶೋ ಚುಬುಕಂ ಚಂದ್ರಖಂಡಭೃತ್ || ೨ || <br>
+                </p>
+            </div>
+            <div class="kannada-with-english">
+                <p>
+                    ಕಪಾಲೀ ಕರ್ಣಯುಗಲಂ ಕಂಧರಂ ನೀಲಕಂಧರಃ | <br>
+                    <span class="ENG">Kapaalee karnayugalam kandharam neela-kandharah |</span>  || <br>
+                    ವದನಂ ಭದ್ರಕಾಲೀಶೋ ಚುಬುಕಂ ಚಂದ್ರಖಂಡಭೃತ್ || ೨ || <br>
+                    <span class="ENG">Vadanam Bhadrakaaleesho chubukam chandra-khanda-bhrit || 2 ||</span>
+                </p>
+            </div>
+            <div class="word-by-word">
+                <h4>First Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಕಪಾಲೀ</td>
+                        <td>ಕರ್ಣಯುಗಲಂ</td>
+                        <td>ಕಂಧರಂ</td>
+                        <td>ನೀಲಕಂಧರಃ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Kapaalee</td>
+                        <td>Karna-yugalam</td>
+                        <td>Kandharam</td>
+                        <td>Neela-kandharah</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The skull-bearer (an epithet of Shiva/Veerabhadra)<br/>➤ May Kapaalee protect...</td>
+                        <td>The pair of ears</td>
+                        <td>The neck</td>
+                        <td>The blue-throated one (another epithet of Shiva/Veerabhadra)<br/>➤ May Neelakandhara protect...</td>
+                    </tr>
+                </table>
+                
+                <h4>Second Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ವದನಂ</td>
+                        <td>ಭದ್ರಕಾಲೀಶಃ</td>
+                        <td>ಚುಬುಕಂ</td>
+                        <td>ಚಂದ್ರಖಂಡಭೃತ್</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Vadanam</td>
+                        <td>Bhadrakaaleeshaḥ</td>
+                        <td>Chubukam</td>
+                        <td>Chandra-khanda-bhrit</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The face</td>
+                        <td>Lord of Bhadrakali (Veerabhadra)</td>
+                        <td>The chin</td>
+                        <td>Bearer of the crescent moon fragment (epithet of Shiva)</td>
+                    </tr>
+                </table>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #666;">
+                    <strong>Full Meaning in Simple English:</strong><br>
+                    "May Kapaali (the skull-bearing Lord) protect my ears,
+                    may the blue-throated one (Neelakandhara) guard my neck.
+                    May the Lord of Bhadrakali protect my face,
+                    and may the bearer of the crescent moon guard my chin."
+                </p>
+            </div>
+        </div>
+        <div class="verse-content">
+            <div class="kannada-only">
+                <p>
+                    ಕರೌ ಪಾಶಕರಃ ಪಾತು ಬಾಹೂ ಪಾತು ಮಹೇಶ್ವರಃ | <br>
+                    ಊರುಸ್ಥಲಂ ಚೋಗ್ರದಂಷ್ಟ್ರಾಽಽನಂದಾತ್ಮಾ ಹೃದಂಬುಜಂ || ೩ || <br>
+                </p>
+            </div>
+            <div class="kannada-with-english">
+                <p>
+                    ಕರೌ ಪಾಶಕರಃ ಪಾತು ಬಾಹೂ ಪಾತು ಮಹೇಶ್ವರಃ | <br>
+                    <span class="ENG">Karau paashakarah paatu baahoo paatu Maheshvarah |</span>  || <br>
+                    ಊರುಸ್ಥಲಂ ಚೋಗ್ರದಂಷ್ಟ್ರಾಽಽನಂದಾತ್ಮಾ ಹೃದಂಬುಜಂ || ೩ || <br>
+                    <span class="ENG">Uru-sthalam cha ugradamshtraa-aanandaatmaa hridambujam || 3 ||</span>
+                </p>
+            </div>
+            <div class="word-by-word">
+                <h4>First Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಕರೌ</td>
+                        <td>ಪಾಶಕರಃ</td>
+                        <td>ಬಾಹೂ</td>
+                        <td>ಪಾತು ಮಹೇಶ್ವರಃ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Karau</td>
+                        <td>Paasha-karah</td>
+                        <td>Baahoo</td>
+                        <td>Paatu Maheshvarah</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The two hands</td>
+                        <td>The one holding a noose (pasha)<br/>➤ May the noose-holder protect the hands</td>
+                        <td>The arms</td>
+                        <td>May Maheshwara (the Great Lord) protect</td>
+                    </tr>
+                </table>
+                
+                <h4>Second Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಊರುಸ್ಥಲಂ</td>
+                        <td>ಚ</td>
+                        <td>ಉಗ್ರದಂಷ್ಟ್ರಾ</td>
+                        <td>ಆನಂದಾತ್ಮಾ</td>
+                        <td>ಹೃದಂಬುಜಂ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Uru-sthalam</td>
+                        <td>cha</td>
+                        <td>Ugra-damshtraa</td>
+                        <td>Ananda-atmaa</td>
+                        <td>Hridaya-ambujam</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The region of the thighs</td>
+                        <td>and</td>
+                        <td>The one with fierce fangs (epithet of Veerabhadra)<br/>➤ May the fearsome-fanged one protect the thighs</td>
+                        <td>The blissful soul / embodiment of bliss</td>
+                        <td>The lotus of the heart (heart chakra)<br/>➤ May the blissful soul protect the heart-lotus</td>
+                    </tr>
+                </table>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #666;">
+                    <strong>Full Meaning in Simple English:</strong><br>
+                    "May the noose-wielding Lord protect my hands,
+                    may Maheshwara guard my arms,
+                    may the fierce-fanged one protect my thighs,
+                    and may the blissful soul protect the lotus of my heart."
+                </p>
+            </div>
+        </div>
+        <div class="verse-content">
+            <div class="kannada-only">
+                <p>
+                    ರುದ್ರಮೂರ್ತಿರ್ನಾಭಿಮಧ್ಯಂ ಕಟಿಂ ಮೇ ಪಾತು ಶೂಲಭೃತ್ | <br>
+                    ಮೂರ್ಧಾನಂ ಪಂಚಮೂರ್ಧಾಽವ್ಯಾನ್ನಿಟಲಂ ನಿರ್ಮಲೇಂದುಭೃತ್ || ೪ || <br>
+                </p>
+            </div>
+            <div class="kannada-with-english">
+                <p>
+                    ರುದ್ರಮೂರ್ತಿರ್ನಾಭಿಮಧ್ಯಂ ಕಟಿಂ ಮೇ ಪಾತು ಶೂಲಭೃತ್ | <br>
+                    <span class="ENG">Rudramurtir nābhi-madhyam kaṭim me pātu śūlabhṛt |</span>  || <br>
+                    ಮೂರ್ಧಾನಂ ಪಂಚಮೂರ್ಧಾಽವ್ಯಾನ್ನಿಟಲಂ ನಿರ್ಮಲೇಂದುಭೃತ್ || ೪ || <br>
+                    <span class="ENG">Mūrdhānaṁ pañcamūrdhā'vyān niṭalaṁ nirmalendu-bhṛt || 4 ||</span>
+                </p>
+            </div>
+            <div class="word-by-word">
+                <h4>First Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ರುದ್ರಮೂರ್ತಿಃ</td>
+                        <td>ನಾಭಿಮಧ್ಯಂ</td>
+                        <td>ಕಟಿಂ</td>
+                        <td>ಪಾತು</td>
+                        <td>ಶೂಲಭೃತ್</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Rudra-murtih</td>
+                        <td>Nābhi-madhyam</td>
+                        <td>Kaṭim</td>
+                        <td>Pātu</td>
+                        <td>Śūla-bhṛt</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The one in the form of Rudra</td>
+                        <td>The navel region</td>
+                        <td>The waist</td>
+                        <td>May (he) protect</td>
+                        <td>The wielder of the trident (śūla)</td>
+                    </tr>
+                </table>
+                
+                <h4>Second Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಮೂರ್ಧಾನಂ</td>
+                        <td>ಪಂಚಮೂರ್ಧಾ</td>
+                        <td>ಅವ್ಯಾತ್</td>
+                        <td>ನಿಟಲಂ</td>
+                        <td>ನಿರ್ಮಲೆಂದುಭೃತ್</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Mūrdhānam</td>
+                        <td>Pañcha-mūrdhā</td>
+                        <td>Avyāt</td>
+                        <td>Niṭalam</td>
+                        <td>Nirmala-indu-bhṛt</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The crown/top of the head</td>
+                        <td>One with five heads</td>
+                        <td>May he protect</td>
+                        <td>The forehead</td>
+                        <td>Bearer of the pure moon</td>
+                    </tr>
+                </table>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #666;">
+                    <strong>Full Meaning:</strong><br>
+                    "May the form of Rudra protect my navel,
+                    may the trident-bearing Lord guard my waist,
+                    may the five-headed one protect my head,
+                    and may the pure moon-bearer shield my forehead."
+                </p>
+            </div>
+        </div>
+        <div class="verse-content">
+            <div class="kannada-only">
+                <p>
+                    ಕಪೋಲಯುಗ್ಮಂ ಕಾಪಾಲೀ ಜಿಹ್ವಾಂ ಮೇ ಜೀವನಾಯಕಃ | <br>
+                    ಸ್ತನದ್ವಯಂ ಪಶುಪತಿರ್ಲಿಂಗಂ ಮೇ ಲಿಂಗರೂಪಧೃತ್ || ೫ || <br>
+                </p>
+            </div>
+            <div class="kannada-with-english">
+                <p>
+                    ಕಪೋಲಯುಗ್ಮಂ ಕಾಪಾಲೀ ಜಿಹ್ವಾಂ ಮೇ ಜೀವನಾಯಕಃ | <br>
+                    <span class="ENG">Kapola-yugmaṁ Kāpālī jihvāṁ me jīvana-nāyakaḥ |</span>  || <br>
+                    ಸ್ತನದ್ವಯಂ ಪಶುಪತಿರ್ಲಿಂಗಂ ಮೇ ಲಿಂಗರೂಪಧೃತ್ || ೫ || <br>
+                    <span class="ENG">Stana-dvayaṁ Paśupatiḥ liṅgaṁ me liṅga-rūpa-dhṛt || 5 ||</span>
+                </p>
+            </div>
+            <div class="word-by-word">
+                <h4>First Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಕಪೋಲಯುಗ್ಮಂ</td>
+                        <td>ಕಾಪಾಲೀ</td>
+                        <td>ಜಿಹ್ವಾಂ</td>
+                        <td>ಮೇ</td>
+                        <td>ಜೀವನಾಯಕಃ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Kapola-yugmam</td>
+                        <td>Kāpālī</td>
+                        <td>Jihvām</td>
+                        <td>me</td>
+                        <td>Jīvana-nāyakaḥ</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The pair of cheeks</td>
+                        <td>The skull-bearing form (of Shiva)</td>
+                        <td>The tongue</td>
+                        <td>My</td>
+                        <td>The Lord of life</td>
+                    </tr>
+                </table>
+                
+                <h4>Second Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಸ್ತನದ್ವಯಂ</td>
+                        <td>ಪಶುಪತಿಃ</td>
+                        <td>ಲಿಂಗಂ</td>
+                        <td>ಲಿಂಗರೂಪಧೃತ್</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Stana-dvayam</td>
+                        <td>Paśupatiḥ</td>
+                        <td>Liṅgam</td>
+                        <td>Liṅga-rūpa-dhṛt</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>The two breasts (symbolic of the chest)</td>
+                        <td>Lord of all beings</td>
+                        <td>The generative organ (also symbolic of Shiva)</td>
+                        <td>He who assumes the form of the linga</td>
+                    </tr>
+                </table>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #666;">
+                    <strong>Full Meaning:</strong><br>
+                    "May Kāpālī, the skull-bearing Lord, protect my cheeks,
+                    may the Lord of life guard my tongue,
+                    may Paśupati, protector of all beings, guard my chest,
+                    and may the Linga-form Lord protect my generative organ."
+                </p>
+            </div>
+        </div>
+        <div class="verse-content">
+            <div class="kannada-only">
+                <p>
+                    ಸರ್ವಾಂಗುಲೀಃ ಸರ್ವನಾಥೋ ನಖಾನ್ಮೇ ನಾಗಭೂಷಣಃ | <br>
+                    ಪಾರ್ಶ್ವಯುಗ್ಮಂ ಶಕ್ತಿಹಸ್ತೋ ಸರ್ವಾಂಗಂ ದೇವವಲ್ಲಭಃ || ೬ || <br>
+                </p>
+            </div>
+            <div class="kannada-with-english">
+                <p>
+                    ಸರ್ವಾಂಗುಲೀಃ ಸರ್ವನಾಥೋ ನಖಾನ್ಮೇ ನಾಗಭೂಷಣಃ | <br>
+                    <span class="ENG">Sarvāṅgulīḥ Sarva-nātho nakhān me Nāga-bhūṣaṇaḥ |</span>  || <br>
+                    ಪಾರ್ಶ್ವಯುಗ್ಮಂ ಶಕ್ತಿಹಸ್ತೋ ಸರ್ವಾಂಗಂ ದೇವವಲ್ಲಭಃ || ೬ || <br>
+                    <span class="ENG">Pārśva-yugmaṁ Śakti-hasto sarvāṅgaṁ Deva-vallabhaḥ || 6 ||</span>
+                </p>
+            </div>
+            <div class="word-by-word">
+                <h4>First Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಸರ್ವಾಂಗುಲೀಃ</td>
+                        <td>ಸರ್ವನಾಥಃ</td>
+                        <td>ನಖಾನ್</td>
+                        <td>ನಾಗಭೂಷಣಃ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Sarva-aṅgulīḥ</td>
+                        <td>Sarva-nāthaḥ</td>
+                        <td>Nakhān</td>
+                        <td>Nāga-bhūṣaṇaḥ</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>All fingers</td>
+                        <td>Lord of all</td>
+                        <td>Nails</td>
+                        <td>The one adorned with serpents</td>
+                    </tr>
+                </table>
+                
+                <h4>Second Line:</h4>
+                <table class="word-by-word-table">
+                    <tr class="kannada-row">
+                        <td>ಪಾರ್ಶ್ವಯುಗ್ಮಂ</td>
+                        <td>ಶಕ್ತಿಹಸ್ತಃ</td>
+                        <td>ಸರ್ವಾಂಗಂ</td>
+                        <td>ದೇವವಲ್ಲಭಃ</td>
+                    </tr>
+                    <tr class="translation-row">
+                        <td>Pārśva-yugmam</td>
+                        <td>Śakti-hastaḥ</td>
+                        <td>Sarvāṅgam</td>
+                        <td>Deva-vallabhaḥ</td>
+                    </tr>
+                    <tr class="meaning-row">
+                        <td>Both sides of the body (flanks/ribs)</td>
+                        <td>He whose hand holds Śakti (power or a weapon)</td>
+                        <td>The entire body</td>
+                        <td>Beloved of the gods (Shiva)</td>
+                    </tr>
+                </table>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #666;">
+                    <strong>Full Meaning:</strong><br>
+                    "May the Lord of all protect all my fingers,
+                    may the serpent-adorned one guard my nails,
+                    may the wielder of Śakti protect both my flanks,
+                    and may the gods' beloved guard my entire body."
+                </p>
+            </div>
+        </div>
         <p>
             ಸರ್ವಕಾರ್ಯೇಷು ಮಾಂ ಪಾಯಾತ್ ಭದ್ರಕಾಲೀಮನೋಹರಃ | <br>
             ಬ್ರಹ್ಮರಾಕ್ಷಸಪೈಶಾಚವೇತಾಲರಣಭೂಮಿಷು || ೭ || <br>
@@ -147,12 +776,18 @@
                 <a href="https://youtu.be/39fURZVLJ38?si=jPRGb-KKZBneuHRS" target="_blank" rel="noopener">
                     Veerabhadra Kavacham - Telugu
                 </a>
+            </li>
+            <li>
                 <a href="https://youtu.be/goxYCiWJ9yA?si=YCHFz4ibQ3dplDgE" target="_blank" rel="noopener">
                     Veerabhadra Kavacham - Kannada
                 </a>
+            </li>
+            <li>
                 <a href="https://youtu.be/3NhjEd_VjTY?si=3wXNoJZyGjVdbuCV" target="_blank" rel="noopener">
                     Veerabhadra Kavacham - Koravi temple recitation
                 </a>
+            </li>
+            <li>
                 <a href="https://youtu.be/Tsuffktn6qc?si=OqR3Qx6p5RI_vQTw" target="_blank" rel="noopener">
                     Veerabhadra Kavacham - Devotional song
                 </a>

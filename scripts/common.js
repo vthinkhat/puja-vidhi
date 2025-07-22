@@ -3,6 +3,11 @@
  */
 
 /**
+ * Current display mode: 'kannada', 'english', or 'word-by-word'
+ */
+let currentDisplayMode = 'kannada';
+
+/**
  * Toggle visibility of English transliteration elements
  */
 function toggleVisibility() {
@@ -14,6 +19,109 @@ function toggleVisibility() {
             element.style.display = 'none';
         }
     });
+}
+
+/**
+ * Set display mode for text content
+ * @param {string} mode - 'kannada', 'english', or 'word-by-word'
+ */
+function setDisplayMode(mode) {
+    currentDisplayMode = mode;
+    
+    // Update button states
+    const buttons = document.querySelectorAll('.mode-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`[data-mode="${mode}"]`)?.classList.add('active');
+    
+    // Update verse content displays
+    const verseContents = document.querySelectorAll('.verse-content');
+    verseContents.forEach(content => {
+        content.className = `verse-content mode-${mode}`;
+    });
+    
+    // Handle legacy toggle button and old content structure
+    if (mode === 'english') {
+        const elements = document.querySelectorAll('.ENG');
+        elements.forEach(element => {
+            element.style.display = 'inline';
+        });
+        
+        const toggleBtn = document.querySelector('.toggle-btn');
+        if (toggleBtn) {
+            toggleBtn.textContent = 'Hide English Transliteration';
+        }
+    } else {
+        const elements = document.querySelectorAll('.ENG');
+        elements.forEach(element => {
+            element.style.display = 'none';
+        });
+        
+        const toggleBtn = document.querySelector('.toggle-btn');
+        if (toggleBtn) {
+            toggleBtn.textContent = 'Show English Transliteration';
+        }
+    }
+}
+
+/**
+ * Initialize display mode buttons
+ */
+function initializeDisplayModeButtons() {
+    const buttonsContainer = document.querySelector('.display-mode-buttons');
+    if (!buttonsContainer) return;
+    
+    const buttons = buttonsContainer.querySelectorAll('.mode-btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const mode = button.getAttribute('data-mode');
+            setDisplayMode(mode);
+        });
+    });
+    
+    // Set initial mode
+    setDisplayMode('kannada');
+}
+
+/**
+ * Create word-by-word translation table
+ * @param {Array} words - Array of word objects with kannada, transliteration, and meaning
+ * @returns {HTMLElement} - Table element
+ */
+function createWordByWordTable(words) {
+    const table = document.createElement('table');
+    table.className = 'word-by-word-table';
+    
+    // Create Kannada row
+    const kannadaRow = document.createElement('tr');
+    kannadaRow.className = 'kannada-row';
+    words.forEach(word => {
+        const td = document.createElement('td');
+        td.textContent = word.kannada;
+        kannadaRow.appendChild(td);
+    });
+    table.appendChild(kannadaRow);
+    
+    // Create transliteration row
+    const transliterationRow = document.createElement('tr');
+    transliterationRow.className = 'translation-row';
+    words.forEach(word => {
+        const td = document.createElement('td');
+        td.textContent = word.transliteration;
+        transliterationRow.appendChild(td);
+    });
+    table.appendChild(transliterationRow);
+    
+    // Create meaning row
+    const meaningRow = document.createElement('tr');
+    meaningRow.className = 'meaning-row';
+    words.forEach(word => {
+        const td = document.createElement('td');
+        td.textContent = word.meaning;
+        meaningRow.appendChild(td);
+    });
+    table.appendChild(meaningRow);
+    
+    return table;
 }
 
 /**
@@ -82,6 +190,9 @@ function initializePage() {
         loadCommonPujaSections();
     }
     
+    // Initialize display mode buttons
+    initializeDisplayModeButtons();
+    
     // Ensure English transliteration is hidden by default
     const englishElements = document.querySelectorAll('.ENG');
     englishElements.forEach(element => {
@@ -105,6 +216,9 @@ function toggleTransliteration() {
     if (button) {
         button.textContent = isHidden ? 'Hide English Transliteration' : 'Show English Transliteration';
     }
+    
+    // Update display mode
+    setDisplayMode(isHidden ? 'english' : 'kannada');
 }
 
 // Initialize when DOM is loaded
