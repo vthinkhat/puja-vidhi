@@ -14,7 +14,7 @@
 <body>
     <h1>ನಿತ್ಯ ಮಂತ್ರ <span class="ENG">(Daily Mantra)</span></h1>
 
-    <button onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+    <button class="toggle-btn" onclick="toggleVisibility()">Show/Hide English Transliteration</button>
 
     <h2>ಪ್ರಭಾತ ಶ್ಲೋಕಃ <span class="ENG">(Prabhaata Sloka)</span></h2>
 
@@ -65,19 +65,8 @@
         <span class="ENG">jalaesmin sannidhim kuru || <br></span>
     </p>
 
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
 </body>
-
-<script>
-    function toggleVisibility() {
-        var elements = document.querySelectorAll('.ENG');
-        elements.forEach(function (element) {
-            if (element.style.display === 'none') {
-                element.style.display = 'inline';
-            } else {
-                element.style.display = 'none';
-            }
-        });
-    }
-</script>
 
 </html>

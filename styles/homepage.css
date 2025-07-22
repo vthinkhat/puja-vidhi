@@ -1,8 +1,13 @@
 /* Homepage specific styles for Puja Vidhi */
 
+/* Font imports - consistent with common.css */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Baloo+Tamma+2:wght@400..800&family=Noto+Serif+Kannada&display=swap');
+
 /* Base page styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Baloo Tamma 2", system-ui;
+    font-style: normal;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
