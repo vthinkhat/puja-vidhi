@@ -55,20 +55,7 @@ body {
     border-color: #0066cc;
 }
 
-/* Toggle button styles */
-.toggle-btn {
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
 
-.toggle-btn:hover {
-    background-color: #0052a3;
-}
 
 /* Word-by-word translation table styles */
 .word-by-word-table {
@@ -127,31 +114,13 @@ body {
     font-size: 0.85em;
 }
 
-/* Hidden elements for different display modes */
+/* Content structure styles */
 .verse-content {
     margin-bottom: 20px;
 }
 
-.verse-content .kannada-only,
-.verse-content .kannada-with-english,
-.verse-content .word-by-word {
-    display: none;
-}
-
-.verse-content.mode-kannada .kannada-only {
-    display: block;
-}
-
-.verse-content.mode-english .kannada-with-english {
-    display: block;
-}
-
-.verse-content.mode-english .kannada-with-english .ENG {
-    display: inline !important;
-}
-
-.verse-content.mode-word-by-word .word-by-word {
-    display: block;
+.section {
+    margin-bottom: 30px;
 }
 
 /* Video container styles */
@@ -197,11 +166,6 @@ p {
     
     .video-container iframe {
         height: 200px;
-    }
-    
-    .toggle-btn {
-        padding: 8px 16px;
-        font-size: 14px;
     }
 
     .display-mode-buttons {

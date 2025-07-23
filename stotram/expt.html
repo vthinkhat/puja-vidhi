@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಶ್ರೀ ವೀರಭದ್ರ ಕವಚಂ (Sri Veerabhadra Kavacham)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Centralized Styles -->
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>ಶ್ರೀ ವೀರಭದ್ರ ಕವಚಂ <span class="ENG">(Sri Veerabhadra Kavacham)</span></h1>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <!-- Content Data Script -->
+    <script>
+        // Define all content in a single data structure
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಧ್ಯಾನಂ",
+                        english: "Dhyanam"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ರುದ್ರರೌದ್ರಾವತಾರಂ ಹುತವಹನಯನಂ ಚೋರ್ಧ್ವಕೇಶಂ ಸುದಂಷ್ಟ್ರಂ",
+                                    transliteration: "Rudra-raudra-avataaram hutavaha-nayanam chordhva-kesham sudamshtram",
+                                    words: [
+                                        {
+                                            kannada: "ರುದ್ರರೌದ್ರಾವತಾರಂ",
+                                            transliteration: "rudra-raudra-avataaram",
+                                            meaning: "The fierce incarnation of Rudra (Shiva)"
+                                        },
+                                        {
+                                            kannada: "ಹುತವಹನಯನಂ",
+                                            transliteration: "hutavaha-nayanam",
+                                            meaning: "Eyes that are like blazing fire"
+                                        },
+                                        {
+                                            kannada: "ಚೋರ್ಧ್ವಕೇಶಂ",
+                                            transliteration: "chordhva-kesham",
+                                            meaning: "Hair raised upwards"
+                                        },
+                                        {
+                                            kannada: "ಸುದಂಷ್ಟ್ರಂ",
+                                            transliteration: "sudamshtram",
+                                            meaning: "Terrifying prominent fangs"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ವ್ಯೋಮಾಂಗಂ ಭೀಮರೂಪಂ ಕಿಣಿಕಿಣಿರಮಸಜ್ವಾಲಮಾಲಾ ವೃತಾಂಗಂ |",
+                                    transliteration: "Vyomaangam bheema-roopam kinikini-ramasa-jvalamala vritaangam",
+                                    words: [
+                                        {
+                                            kannada: "ವ್ಯೋಮಾಂಗಂ",
+                                            transliteration: "Vyoma-angam",
+                                            meaning: "Whose body is as vast as the sky"
+                                        },
+                                        {
+                                            kannada: "ಭೀಮರೂಪಂ",
+                                            transliteration: "Bheema-rupam",
+                                            meaning: "Of a fearsome and mighty form"
+                                        },
+                                        {
+                                            kannada: "ಕಿಣಿಕಿಣಿ-ರಮಸ-ಜ್ವಾಲ-ಮಾಲಾ",
+                                            transliteration: "kinikini-ramasa-jvalamala",
+                                            meaning: "Garland of flames, decorated with (ramasa), tiny bells (kinikini)"
+                                        },
+                                        {
+                                            kannada: "ವೃತಾಂಗಂ",
+                                            transliteration: "Avrita-angam",
+                                            meaning: "Whose body is wrapped or covered"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಭೂತಪ್ರೇತಾಧಿನಾಥಂ ಕರಕಮಲಯುಗೇ ಖಡ್ಗಪಾತ್ರೇ ವಹಂತಂ",
+                                    transliteration: "Bhoota-preta-adhinaatham karaka-malayuge khadga-paatre vahantam",
+                                    words: [
+                                        {
+                                            kannada: "ಭೂತಪ್ರೇತಾಧಿನಾಥಂ",
+                                            transliteration: "bhoota-preta-adhinaatham",
+                                            meaning: "Lord of ghosts and spirits"
+                                        },
+                                        {
+                                            kannada: "ಕರಕಮಲಯುಗೇ",
+                                            transliteration: "kara-kamala-yuge",
+                                            meaning: "In lotus-like hands"
+                                        },
+                                        {
+                                            kannada: "ಖಡ್ಗಪಾತ್ರೇ",
+                                            transliteration: "khadga-paatre",
+                                            meaning: "Sword and vessel"
+                                        },
+                                        {
+                                            kannada: "ವಹಂತಂ",
+                                            transliteration: "vahantam",
+                                            meaning: "Holding"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ವಂದೇ ಲೋಕೈಕವೀರಂ ತ್ರಿಭುವನವಿನುತಂ ಶ್ಯಾಮಲಂ ವೀರಭದ್ರಂ ||",
+                                    transliteration: "Vande lokaika-veeraam tribhuvana-vinutam shyamalam Veerabhadram",
+                                    words: [
+                                        {
+                                            kannada: "ವಂದೇ",
+                                            transliteration: "vande",
+                                            meaning: "I bow to"
+                                        },
+                                        {
+                                            kannada: "ಲೋಕೈಕವೀರಂ",
+                                            transliteration: "lokaika-veeraam",
+                                            meaning: "The unique hero of the world"
+                                        },
+                                        {
+                                            kannada: "ತ್ರಿಭುವನವಿನುತಂ",
+                                            transliteration: "tribhuvana-vinutam",
+                                            meaning: "Praised by the three worlds"
+                                        },
+                                        {
+                                            kannada: "ಶ್ಯಾಮಲಂ",
+                                            transliteration: "shyamalam",
+                                            meaning: "Dark-complexioned"
+                                        },
+                                        {
+                                            kannada: "ವೀರಭದ್ರಂ",
+                                            transliteration: "veerabhadram",
+                                            meaning: "Veerabhadra"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "The fierce form of Rudra, with fire-like eyes, upraised matted hair, and sharp, terrifying fangs. His sky-colored body has a terrifying appearance, adorned with a garland of tinkling flames. Lord of ghosts and spirits, holding a sword and vessel in his lotus-like hands. I bow to Veerabhadra, the unique hero of the world, praised by the three worlds, with a dark complexion."
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
+
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>

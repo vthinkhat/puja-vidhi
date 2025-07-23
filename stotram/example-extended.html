@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Example - Data-Driven Content</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>Extended Example <span class="ENG">(Data-Driven Content)</span></h1>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <!-- Content Data Script -->
+    <script>
+        // Example showing how easy it is to add more content
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಧ್ಯಾನಂ",
+                        english: "Dhyanam"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ರುದ್ರರೌದ್ರಾವತಾರಂ ಹುತವಹನಯನಂ ಚೋರ್ಧ್ವಕೇಶಂ ಸುದಂಷ್ಟ್ರಂ",
+                                    transliteration: "Rudra-raudra-avataaram hutavaha-nayanam chordhva-kesham sudamshtram",
+                                    words: [
+                                        {
+                                            kannada: "ರುದ್ರರೌದ್ರಾವತಾರಂ",
+                                            transliteration: "rudra-raudra-avataaram",
+                                            meaning: "The fierce incarnation of Rudra"
+                                        },
+                                        {
+                                            kannada: "ಹುತವಹನಯನಂ",
+                                            transliteration: "hutavaha-nayanam",
+                                            meaning: "Eyes like blazing fire"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "The fierce form of Rudra with fire-like eyes..."
+                        }
+                    ]
+                },
+                // EASY TO ADD NEW SECTIONS - Just copy this structure!
+                {
+                    title: {
+                        kannada: "ಕವಚಂ",
+                        english: "Kavacham"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ವೀರಭದ್ರಾಯ ನಮಃ ಶಿರಃ ಪಾತು",
+                                    transliteration: "Veerabhadraaya namah shirah paatu",
+                                    words: [
+                                        {
+                                            kannada: "ವೀರಭದ್ರಾಯ",
+                                            transliteration: "Veerabhadraaya",
+                                            meaning: "To Veerabhadra"
+                                        },
+                                        {
+                                            kannada: "ನಮಃ",
+                                            transliteration: "namah",
+                                            meaning: "Salutations"
+                                        },
+                                        {
+                                            kannada: "ಶಿರಃ",
+                                            transliteration: "shirah",
+                                            meaning: "Head"
+                                        },
+                                        {
+                                            kannada: "ಪಾತು",
+                                            transliteration: "paatu",
+                                            meaning: "May protect"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "May Veerabhadra protect the head."
+                        }
+                    ]
+                }
+                // Add more sections here as needed...
+            ]
+        };
+    </script>
+
+    <!-- Instructions for maintainers -->
+    <div style="margin-top: 40px; padding: 20px; background-color: #f0f0f0; border-radius: 8px;">
+        <h3>📝 How to Add More Content (For Maintainers)</h3>
+        <p><strong>Benefits of this approach:</strong></p>
+        <ul>
+            <li>✅ Content is defined only ONCE in the JavaScript data structure</li>
+            <li>✅ No more duplicating Kannada text across 3 different sections</li>
+            <li>✅ No more duplicating English transliteration</li>
+            <li>✅ Easy to add new sections - just add to the `stotramData.sections` array</li>
+            <li>✅ Consistent formatting across all display modes</li>
+            <li>✅ Easy to maintain and update</li>
+        </ul>
+        
+        <p><strong>To add a new verse:</strong></p>
+        <ol>
+            <li>Copy the section structure in the JavaScript</li>
+            <li>Update the Kannada text, transliteration, and word meanings</li>
+            <li>Save the file - all three display modes automatically work!</li>
+        </ol>
+    </div>
+
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html> 

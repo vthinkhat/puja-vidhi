@@ -8,18 +8,130 @@
 let currentDisplayMode = 'kannada';
 
 /**
- * Toggle visibility of English transliteration elements
+ * Render content dynamically based on display mode
+ * @param {string} mode - 'kannada', 'english', or 'word-by-word'
  */
-function toggleVisibility() {
-    var elements = document.querySelectorAll('.ENG');
-    elements.forEach(function (element) {
-        if (element.style.display === 'none' || element.style.display === '') {
-            element.style.display = 'inline';
-        } else {
-            element.style.display = 'none';
+function renderContent(mode) {
+    const container = document.getElementById('dynamic-content');
+    if (!container || typeof stotramData === 'undefined') {
+        console.warn('Dynamic content container or stotramData not found');
+        return;
+    }
+
+    container.innerHTML = '';
+
+    stotramData.sections.forEach(section => {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'section';
+
+        // Add section title
+        const titleElement = document.createElement('h2');
+        titleElement.innerHTML = `${section.title.kannada} <span class="ENG">(${section.title.english})</span>`;
+        sectionDiv.appendChild(titleElement);
+
+        // Add verses
+        section.verses.forEach(verse => {
+            const verseDiv = document.createElement('div');
+            verseDiv.className = 'verse-content';
+
+            if (mode === 'kannada') {
+                verseDiv.appendChild(renderKannadaOnly(verse));
+            } else if (mode === 'english') {
+                verseDiv.appendChild(renderKannadaWithEnglish(verse));
+            } else if (mode === 'word-by-word') {
+                verseDiv.appendChild(renderWordByWord(verse));
+            }
+
+            sectionDiv.appendChild(verseDiv);
+        });
+
+        container.appendChild(sectionDiv);
+    });
+
+    // Apply ENG visibility based on mode
+    updateEngDisplayVisibility(mode);
+}
+
+/**
+ * Render Kannada-only content
+ */
+function renderKannadaOnly(verse) {
+    const div = document.createElement('div');
+    div.className = 'kannada-only';
+    
+    const p = document.createElement('p');
+    verse.lines.forEach((line, index) => {
+        p.innerHTML += line.kannada;
+        if (index < verse.lines.length - 1) {
+            p.innerHTML += ' <br>';
         }
     });
+    div.appendChild(p);
+    
+    return div;
 }
+
+/**
+ * Render Kannada with English transliteration
+ */
+function renderKannadaWithEnglish(verse) {
+    const div = document.createElement('div');
+    div.className = 'kannada-with-english';
+    
+    const p = document.createElement('p');
+    verse.lines.forEach((line, index) => {
+        p.innerHTML += line.kannada + ' <br>';
+        p.innerHTML += `<span class="ENG">${line.transliteration}</span>`;
+        if (index < verse.lines.length - 1) {
+            p.innerHTML += ' <br>';
+        }
+    });
+    div.appendChild(p);
+    
+    return div;
+}
+
+/**
+ * Render word-by-word breakdown
+ */
+function renderWordByWord(verse) {
+    const div = document.createElement('div');
+    div.className = 'word-by-word';
+    
+    // Group words into tables for each line
+    verse.lines.forEach(line => {
+        if (line.words && line.words.length > 0) {
+            const table = createWordByWordTable(line.words);
+            div.appendChild(table);
+        }
+    });
+    
+    // Add complete meaning if available
+    if (verse.completeMeaning) {
+        const meaningPara = document.createElement('p');
+        meaningPara.style.marginTop = '15px';
+        meaningPara.style.fontStyle = 'italic';
+        meaningPara.style.color = '#666';
+        meaningPara.innerHTML = `<strong>Complete meaning:</strong> ${verse.completeMeaning}`;
+        div.appendChild(meaningPara);
+    }
+    
+    return div;
+}
+
+/**
+ * Update ENG element visibility based on mode
+ */
+function updateEngDisplayVisibility(mode) {
+    const elements = document.querySelectorAll('.ENG');
+    const shouldShow = mode === 'english';
+    
+    elements.forEach(element => {
+        element.style.display = shouldShow ? 'inline' : 'none';
+    });
+}
+
+
 
 /**
  * Set display mode for text content
@@ -33,34 +145,8 @@ function setDisplayMode(mode) {
     buttons.forEach(btn => btn.classList.remove('active'));
     document.querySelector(`[data-mode="${mode}"]`)?.classList.add('active');
     
-    // Update verse content displays
-    const verseContents = document.querySelectorAll('.verse-content');
-    verseContents.forEach(content => {
-        content.className = `verse-content mode-${mode}`;
-    });
-    
-    // Handle legacy toggle button and old content structure
-    if (mode === 'english') {
-        const elements = document.querySelectorAll('.ENG');
-        elements.forEach(element => {
-            element.style.display = 'inline';
-        });
-        
-        const toggleBtn = document.querySelector('.toggle-btn');
-        if (toggleBtn) {
-            toggleBtn.textContent = 'Hide English Transliteration';
-        }
-    } else {
-        const elements = document.querySelectorAll('.ENG');
-        elements.forEach(element => {
-            element.style.display = 'none';
-        });
-        
-        const toggleBtn = document.querySelector('.toggle-btn');
-        if (toggleBtn) {
-            toggleBtn.textContent = 'Show English Transliteration';
-        }
-    }
+    // Render content for the selected mode
+    renderContent(mode);
 }
 
 /**
@@ -78,7 +164,7 @@ function initializeDisplayModeButtons() {
         });
     });
     
-    // Set initial mode
+    // Set initial mode and render content
     setDisplayMode('kannada');
 }
 
@@ -192,37 +278,9 @@ function initializePage() {
     
     // Initialize display mode buttons
     initializeDisplayModeButtons();
-    
-    // Ensure English transliteration is hidden by default
-    const englishElements = document.querySelectorAll('.ENG');
-    englishElements.forEach(element => {
-        element.style.display = 'none';
-    });
 }
 
-/**
- * Enhanced toggle function with better UX
- */
-function toggleTransliteration() {
-    const button = document.querySelector('.toggle-btn');
-    const elements = document.querySelectorAll('.ENG');
-    const isHidden = elements[0]?.style.display === 'none' || elements[0]?.style.display === '';
-    
-    elements.forEach(function (element) {
-        element.style.display = isHidden ? 'inline' : 'none';
-    });
-    
-    // Update button text
-    if (button) {
-        button.textContent = isHidden ? 'Hide English Transliteration' : 'Show English Transliteration';
-    }
-    
-    // Update display mode
-    setDisplayMode(isHidden ? 'english' : 'kannada');
-}
+
 
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializePage);
-
-// Backward compatibility - keep the old function name
-window.toggleVisibility = toggleVisibility; 
+document.addEventListener('DOMContentLoaded', initializePage); 
