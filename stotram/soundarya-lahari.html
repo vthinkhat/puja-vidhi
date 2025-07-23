@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="kn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ಸೌಂದರ್ಯ ಲಹರಿ (Soundarya Lahari)</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    
+
     <!-- Centralized Styles -->
     <link rel="stylesheet" href="../styles/common.css">
 </head>
@@ -13,81 +14,449 @@
 <body>
     <h1>ಸೌಂದರ್ಯ ಲಹರಿ <span class="ENG">(Soundarya Lahari)</span></h1>
 
-    <button class="toggle-btn" onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
 
-    <h3>15 → ಸರ್ವ ಶುಕ್ಲಾ ಸರಸ್ವತಿ <span class="ENG">(Sarva Shukla Saraswati)</span></h3>
-    <p>
-        ಶರಜ್ಜ್ಯೋತ್ಸ್ನಾಶುದ್ಧಾಂ ಶಶಿಯುತಜಟಾಜೂಟಮಕುಟಾಂ<br>
-        <span class="ENG">
-            sharaj-jyotsna-shuddham shashiyuta-jatajuta-makutam<br>
-        </span>
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
 
-        ವರ-ತ್ರಾಸ-ತ್ರಾಣ-ಸ್ಫಟಿಕಘಟಿಕಾ-ಪುಸ್ತಕ-ಕರಾಮ್ ।<br>
-        <span class="ENG">
-            vara-traasa-traana-sphatika-ghatikaa-pustaka-karaam;<br>
-        </span>
+    <!-- Content Data Script -->
+    <script>
+        // Define all content in a single data structure
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "15 → ಸರ್ವ ಶುಕ್ಲಾ ಸರಸ್ವತಿ",
+                        english: "15 → Sarva Shukla Saraswati"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಶರಜ್ಜ್ಯೋತ್ಸ್ನಾಶುದ್ಧಾಂ ಶಶಿಯುತಜಟಾಜೂಟಮಕುಟಾಂ",
+                                    transliteration: "sharaj-jyotsna-shuddhaam shashiyuta-jatajoota-makutaam",
+                                    words: [
+                                        {
+                                            kannada: "ಶರಜ್ಜ್ಯೋತ್ಸ್ನಾಶುದ್ಧಾಂ",
+                                            transliteration: "sharaj-jyotsna-shuddhaam",
+                                            meaning: "Pure like the autumn moonlight"
+                                        },
+                                        {
+                                            kannada: "ಶಶಿಯುತ-ಜಟಾಜೂಟ-ಮಕುಟಾಂ",
+                                            transliteration: "shashi-yuta-jataajoota-makutaam",
+                                            meaning: "Whose crown is formed of matted hair adorned with the moon"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ವರ-ತ್ರಾಸ-ತ್ರಾಣ-ಸ್ಫಟಿಕಘಟಿಕಾ-ಪುಸ್ತಕ-ಕರಾಮ್ ।",
+                                    transliteration: "vara-traasa-traana-sphatika-ghatikaa-pustaka-karaam;",
+                                    words: [
+                                        {
+                                            kannada: "ವರ",
+                                            transliteration: "vara",
+                                            meaning: "Granting boons"
+                                        },
+                                        {
+                                            kannada: "ತ್ರಾಸ",
+                                            transliteration: "traasa",
+                                            meaning: "Dispelling fear"
+                                        },
+                                        {
+                                            kannada: "ತ್ರಾಣ",
+                                            transliteration: "traana",
+                                            meaning: "Offering protection"
+                                        },
+                                        {
+                                            kannada: "ಸ್ಫಟಿಕಘಟಿಕಾ",
+                                            transliteration: "sphatika-ghatika",
+                                            meaning: "Crystal rosary (or time-measuring device like a crystal clock)"
+                                        },
+                                        {
+                                            kannada: "ಪುಸ್ತಕ",
+                                            transliteration: "pustaka",
+                                            meaning: "Book"
+                                        },
+                                        {
+                                            kannada: "ಕರಾಮ್",
+                                            transliteration: "karaam",
+                                            meaning: "In her hands"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಸಕೃನ್ನ ತ್ವಾ ನತ್ವಾ ಕಥಮಿವ ಸತಾಂ ಸನ್ನಿದಧತೇ",
+                                    transliteration: "sakrunna thwaa nathwaa kathamiva sathaam sannidadhathe",
+                                    words: [
+                                        {
+                                            kannada: "ಸಕೃತ್",
+                                            transliteration: "sakrit",
+                                            meaning: "Even once"
+                                        },
+                                        {
+                                            kannada: "ತ್ವಾ",
+                                            transliteration: "twaa",
+                                            meaning: "You"
+                                        },
+                                        {
+                                            kannada: "ನತ್ವಾ",
+                                            transliteration: "natwaa",
+                                            meaning: "Having bowed"
+                                        },
+                                        {
+                                            kannada: "ಕಥಮಿವ",
+                                            transliteration: "katham iva",
+                                            meaning: "How indeed"
+                                        },
+                                        {
+                                            kannada: "ಸತಾಂ",
+                                            transliteration: "sataam",
+                                            meaning: "Of the noble ones"
+                                        },
+                                        {
+                                            kannada: "ಸನ್ನಿದಧತೇ",
+                                            transliteration: "sannidadhate",
+                                            meaning: "Not be blessed with your presence"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಮಧು-ಕ್ಷೀರ-ದ್ರಾಕ್ಷಾ-ಮಧುರಿಮ-ಧುರೀಣಾಃ ಫಣಿತಯಃ ॥ 15 ॥",
+                                    transliteration: "madhu-ksheer-e-draakhsaa-madhurima-dhurinaah phanitayah.",
+                                    words: [
+                                        {
+                                            kannada: "ಮಧು",
+                                            transliteration: "madhu",
+                                            meaning: "Honey"
+                                        },
+                                        {
+                                            kannada: "ಕ್ಷೀರ",
+                                            transliteration: "ksheera",
+                                            meaning: "Milk"
+                                        },
+                                        {
+                                            kannada: "ದ್ರಾಕ್ಷಾ",
+                                            transliteration: "draakshaa",
+                                            meaning: "Grapes"
+                                        },
+                                        {
+                                            kannada: "ಮಧುರಿಮ",
+                                            transliteration: "madhurima",
+                                            meaning: "Sweetness"
+                                        },
+                                        {
+                                            kannada: "ಧುರೀಣಾಃ",
+                                            transliteration: "dhurinaah",
+                                            meaning: "Experts / endowed with"
+                                        },
+                                        {
+                                            kannada: "ಫಣಿತಯಃ",
+                                            transliteration: "phanitayah",
+                                            meaning: "Utterances / speech"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "She is as pure as the autumn moonlight, wearing a crown of matted locks adorned with the moon. In her hands she holds the boon-bestowing and fear-dispelling mudras, a crystal rosary, and a book. How can the speech of the noble, who bow even once before her, not become sweet and eloquent like honey, milk, and grapes?"
 
-        ಸಕೃನ್ನ ತ್ವಾ ನತ್ವಾ ಕಥಮಿವ ಸತಾಂ ಸನ್ನಿದಧತೇ<br>
-        <span class="ENG">
-            sakrunna thwaa nathwaa kathamiva sathaam sannidadhathe<br>
-        </span>
-
-        ಮಧು-ಕ್ಷೀರ-ದ್ರಾಕ್ಷಾ-ಮಧುರಿಮ-ಧುರೀಣಾಃ ಫಣಿತಯಃ ॥ 15 ॥<br>
-        <span class="ENG">
-            madhu-ksheer-e-draakhsaa-madhurima-dhurinaah phanitayah.<br>
-        </span>
-    </p>
-
-    <h3>16 → ಆರುಣ ಸರಸ್ವತಿ <span class="ENG">(Auruna Saraswati)</span></h3>
-    <p>
-        ಕವೀಂದ್ರಾಣಾಂ ಚೇತಃಕಮಲವನಬಾಲಾತಪರುಚಿಂ<br>
-        <span class="ENG">
-            kaveendraanaam chethah:-kamalavana-baalaa-thapa-ruchim<br>
-        </span>
-
-        ಭಜಂತೇ ಯೇ ಸಂತಃ ಕತಿಚಿದರುಣಾಮೇವ ಭವತೀಮ್ ।<br>
-        <span class="ENG">
-            bhajanthe ye santhah kathichidarunaameva bhavatheeem<br>
-        </span>
-
-        ವಿರಿಂಚಿ-ಪ್ರೇಯಸ್ಯಾ-ಸ್ತರುಣತರ-ಶೃಂಗಾರ-ಲಹರೀ-<br>
-        <span class="ENG">
-            virinchi-preyasyaas-taruna-tara-shrungaara-laharee<br>
-        </span>
-
-        ಗಭೀರಾಭಿ-ರ್ವಾಗ್ಭಿಃವಿದಧತಿ ಸತಾಂ ರಂಜನಮಮೀ ॥ 16 ॥<br>
-        <span class="ENG">
-            gabheerabhir-vaagbhir-vidadhathi sathaam ranjanamamee 16<br>
-        </span>
-    </p>
-
-    <h3>17 → 8 ವಾಗ್ದೇವತ <span class="ENG">(8 goddesses of speech)</span></h3>
-    <p>
-        ಸವಿತ್ರೀಭಿ-ರ್ವಾಚಾಂ ಶಶಿಮಣಿ ಶಿಲಾ-ಭಂಗ ರುಚಿಭಿಃ<br>
-        <span class="ENG">
-            savithree-bhir-vaachaam shashimani shilaa-bhanga ruchibhihi<br>
-        </span>
-
-        ವಶಿನ್ಯಾದ್ಯಾಭಿ-ಸ್ತ್ವಾಂ ಸಹ ಜನನಿ ಸಂಚಿಂತಯತಿ ಯಃ ।<br>
-        <span class="ENG">
-            vashinyaa-dyaabhi-sthvaam saha janani sam-chinthayati yaha<br>
-        </span>
-
-        ಸ ಕರ್ತಾ ಕಾವ್ಯಾನಾಂ ಭವತಿ ಮಹತಾಂ ಭಂಗಿರುಚಿಭಿಃ<br>
-        <span class="ENG">
-            sa karthaa kavyaanaam bhavathi mahathaam bhangi ruchibhihi<br>
-        </span>
-
-        ವಚೋಭಿ-ರ್ವಾಗ್ದೇವೀ ವದನ-ಕಮಲಾಮೋದ ಮಧುರೈಃ ॥ 17 ॥<br>
-        <span class="ENG">
-            vachoobhir-vaagdevee vadana-kamalaamodha madhuraihi:<br>
-        </span>
-    </p>
-
-
-</body>
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "16 → ಆರುಣ ಸರಸ್ವತಿ",
+                        english: "16 → Auruna Saraswati"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಕವೀಂದ್ರಾಣಾಂ ಚೇತಃಕಮಲವನಬಾಲಾತಪರುಚಿಂ",
+                                    transliteration: "kaveendraanaam chethah:-kamalavana-baalaa-thapa-ruchim",
+                                    words: [
+                                        {
+                                            kannada: "ಕವೀಂದ್ರಾಣಾಂ",
+                                            transliteration: "kaveendraanaam",
+                                            meaning: "Of the great poets (kavi + indra = king of poets)"
+                                        },
+                                        {
+                                            kannada: "ಚೇತಃ",
+                                            transliteration: "chetah",
+                                            meaning: "Of the mind/heart"
+                                        },
+                                        {
+                                            kannada: "ಕಮಲವನ",
+                                            transliteration: "kamalavana",
+                                            meaning: "Lotus grove (symbolizing a cluster of pure thoughts)"
+                                        },
+                                        {
+                                            kannada: "ಬಾಲಾತಪ",
+                                            transliteration: "baala-tapa",
+                                            meaning: "Morning sun rays"
+                                        },
+                                        {
+                                            kannada: "ರುಚಿಂ",
+                                            transliteration: "ruchim",
+                                            meaning: "The radiance or luster"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಭಜಂತೇ ಯೇ ಸಂತಃ ಕತಿಚಿದರುಣಾಮೇವ ಭವತೀಮ್ ।",
+                                    transliteration: "bhajanthe ye santhah kathichidarunaameva bhavatheeem",
+                                    words: [
+                                        {
+                                            kannada: "ಭಜಂತೇ",
+                                            transliteration: "bhajanthe",
+                                            meaning: "Worship or revere"
+                                        },
+                                        {
+                                            kannada: "ಯೇ",
+                                            transliteration: "ye",
+                                            meaning: "Those who"
+                                        },
+                                        {
+                                            kannada: "ಸಂತಃ",
+                                            transliteration: "santhah",
+                                            meaning: "The noble and virtuous"
+                                        },
+                                        {
+                                            kannada: "ಕತಿಚಿತು",
+                                            transliteration: "kathichit",
+                                            meaning: "A few, some"
+                                        },
+                                        {
+                                            kannada: "ಆರುಣಾಮೇವ",
+                                            transliteration: "arunaam eva",
+                                            meaning: "Reddish-hued (like dawn)"
+                                        },
+                                        {
+                                            kannada: "ಭವತೀಮ್",
+                                            transliteration: "bhavatheem",
+                                            meaning: "Her (Saraswati)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ವಿರಿಂಚಿ-ಪ್ರೇಯಸ್ಯಾ-ಸ್ತರುಣತರ-ಶೃಂಗಾರ-ಲಹರೀ-",
+                                    transliteration: "virinchi-preyasyaas-taruna-tara-shrungaara-laharee",
+                                    words: [
+                                        {
+                                            kannada: "ವಿರಿಂಚಿ",
+                                            transliteration: "virinchi",
+                                            meaning: "Brahma (the creator)"
+                                        },
+                                        {
+                                            kannada: "ಪ್ರೇಯಸ್ಯಾಃ",
+                                            transliteration: "preyasyaah",
+                                            meaning: "Beloved (consort)"
+                                        },
+                                        {
+                                            kannada: "ತರುಣತರ",
+                                            transliteration: "taruna-tara",
+                                            meaning: "Very youthful"
+                                        },
+                                        {
+                                            kannada: "ಶೃಂಗಾರ",
+                                            transliteration: "shringaara",
+                                            meaning: "Love, beauty or amorous charm"
+                                        },
+                                        {
+                                            kannada: "ಲಹರೀ",
+                                            transliteration: "laharee",
+                                            meaning: "Wave"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಗಭೀರಾಭಿ-ರ್ವಾಗ್ಭಿಃವಿದಧತಿ ಸತಾಂ ರಂಜನಮಮೀ ॥ 16 ॥",
+                                    transliteration: "gabheerabhir-vaagbhir-vidadhathi sathaam ranjanamamee 16",
+                                    words: [
+                                        {
+                                            kannada: "ಗಭೀರಾಭಿಃ",
+                                            transliteration: "gabheerabhiḥ",
+                                            meaning: "With profound and deep"
+                                        },
+                                        {
+                                            kannada: "ವಾಗ್ಭಿಃ",
+                                            transliteration: "vaagbhih",
+                                            meaning: "Words, speech"
+                                        },
+                                        {
+                                            kannada: "ವಿದಧತಿ",
+                                            transliteration: "vidadhathi",
+                                            meaning: "They bestow or create"
+                                        },
+                                        {
+                                            kannada: "ಸತಾಂ",
+                                            transliteration: "sataam",
+                                            meaning: "For the virtuous or noble ones"
+                                        },
+                                        {
+                                            kannada: "ರಂಜನಂ",
+                                            transliteration: "ranjanam",
+                                            meaning: "Joy or delight"
+                                        },
+                                        {
+                                            kannada: "ಅಮೀ",
+                                            transliteration: "amee",
+                                            meaning: "These (words or utterances)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "She radiates like the gentle rays of the morning sun, illuminating the lotus-like minds of great poets. Those few noble souls who worship this reddish-hued (Auruna) Saraswati, the beloved consort of Brahma, speak profound words filled with waves of youthful charm and love, delighting the hearts of the virtuous."
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "17 → 8 ವಾಗ್ದೇವತ",
+                        english: "17 → 8 goddesses of speech"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಸವಿತ್ರೀಭಿ-ರ್ವಾಚಾಂ ಶಶಿಮಣಿ ಶಿಲಾ-ಭಂಗ ರುಚಿಭಿಃ",
+                                    transliteration: "savithree-bhir-vaachaam shashimani shilaa-bhanga ruchibhihi",
+                                    words: [
+                                        {
+                                            kannada: "ಸವಿತ್ರೀಭಿಃ",
+                                            transliteration: "savitreebhih",
+                                            meaning: "By the Savitri forms (Vedic speech goddesses, including Gayatri, Savitri, Saraswati etc.)"
+                                        },
+                                        {
+                                            kannada: "ವಾಚಾಂ",
+                                            transliteration: "vaachaam",
+                                            meaning: "Of speeches / of words"
+                                        },
+                                        {
+                                            kannada: "ಶಶಿಮಣಿ",
+                                            transliteration: "shashi-mani",
+                                            meaning: "Moon-gem (moonstone, metaphor for radiant clarity)"
+                                        },
+                                        {
+                                            kannada: "ಶಿಲಾ-ಭಂಗ",
+                                            transliteration: "shilaa-bhanga",
+                                            meaning: "Crystal-like / resembling shining stone"
+                                        },
+                                        {
+                                            kannada: "ರುಚಿಭಿಃ",
+                                            transliteration: "ruchibhih",
+                                            meaning: "With gleams / radiant colors"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ವಶಿನ್ಯಾದ್ಯಾಭಿ-ಸ್ತ್ವಾಂ ಸಹ ಜನನಿ ಸಂಚಿಂತಯತಿ ಯಃ ।",
+                                    transliteration: "vashinyaa-dyaabhi-sthvaam saha janani sam-chinthayati yaha",
+                                    words: [
+                                        {
+                                            kannada: "ವಶಿನ್ಯಾದ್ಯಾಭಿಃ",
+                                            transliteration: "vashinyaadyabhih",
+                                            meaning: "Along with Vashini and other (goddesses of speech)"
+                                        },
+                                        {
+                                            kannada: "ತ್ವಾಂ",
+                                            transliteration: "tvaam",
+                                            meaning: "You"
+                                        },
+                                        {
+                                            kannada: "ಸಹ",
+                                            transliteration: "saha",
+                                            meaning: "Together with"
+                                        },
+                                        {
+                                            kannada: "ಜನನಿ",
+                                            transliteration: "janani",
+                                            meaning: "O Mother (Divine Mother)"
+                                        },
+                                        {
+                                            kannada: "ಸಂಚಿಂತಯತಿ",
+                                            transliteration: "samchintayati",
+                                            meaning: "Contemplates / meditates upon with devotion"
+                                        },
+                                        {
+                                            kannada: "ಯಃ",
+                                            transliteration: "yah",
+                                            meaning: "Who"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಸ ಕರ್ತಾ ಕಾವ್ಯಾನಾಂ ಭವತಿ ಮಹತಾಂ ಭಂಗಿರುಚಿಭಿಃ",
+                                    transliteration: "sa karthaa kavyaanaam bhavathi mahathaam bhangi ruchibhihi",
+                                    words: [
+                                        {
+                                            kannada: "ಸ",
+                                            transliteration: "sa",
+                                            meaning: "He"
+                                        },
+                                        {
+                                            kannada: "ಕರ್ತಾ",
+                                            transliteration: "kartaa",
+                                            meaning: "The creator / composer"
+                                        },
+                                        {
+                                            kannada: "ಕಾವ್ಯಾನಾಂ",
+                                            transliteration: "kaavyaanaam",
+                                            meaning: "Of poems / poetic works"
+                                        },
+                                        {
+                                            kannada: "ಭವತಿ",
+                                            transliteration: "bhavati",
+                                            meaning: "Becomes / is"
+                                        },
+                                        {
+                                            kannada: "ಮಹತಾಂ",
+                                            transliteration: "mahataam",
+                                            meaning: "Of the great"
+                                        },
+                                        {
+                                            kannada: "ಭಂಗಿ-ರುಚಿಭಿಃ",
+                                            transliteration: "bhangi-ruchibhih",
+                                            meaning: "With aesthetic beauty and tasteful elegance"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ವಚೋಭಿ-ರ್ವಾಗ್ದೇವೀ ವದನ-ಕಮಲಾಮೋದ ಮಧುರೈಃ ॥ 17 ॥",
+                                    transliteration: "vachoobhir-vaagdevee vadana-kamalaamodha madhuraihi;",
+                                    words: [
+                                        {
+                                            kannada: "ವಚೋಭಿಃ",
+                                            transliteration: "vachobhih",
+                                            meaning: "With words / by utterances"
+                                        },
+                                        {
+                                            kannada: "ವಾಗ್ದೇವೀ",
+                                            transliteration: "vaag-devee",
+                                            meaning: "Goddess of speech (Saraswati)"
+                                        },
+                                        {
+                                            kannada: "ವದನ-ಕಮಲ-ಅಮೋದ-ಮಧುರೈಃ",
+                                            transliteration: "vadana-kamala-amoda-madhuraih",
+                                            meaning: "Sweet with the fragrance (delight) of her lotus-like mouth"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "With speech goddesses like Savitri, whose words shine with the delicate luster of moon-gems and crystal, she is meditated upon by the noble. The one who contemplates you, O Mother, along with Vashini and other goddesses of speech, becomes a creator of refined and great poetry, filled with the charm and elegance that pleases even the wise. His speech becomes sweet with the fragrance of the lotus-mouth of the Goddess of Speech."
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
 
     <!-- Centralized Scripts -->
     <script src="../scripts/common.js"></script>
 </body>
+
 </html>
