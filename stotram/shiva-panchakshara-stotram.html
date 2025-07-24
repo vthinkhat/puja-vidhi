@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="kn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ಶಿವ ಪಂಚಾಕ್ಷರ ಸ್ತೋತ್ರಂ (Shiva Panchakshara Stotram)</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    
+
     <!-- Centralized Styles -->
     <link rel="stylesheet" href="../styles/common.css">
 </head>
@@ -13,7 +14,11 @@
 <body>
     <h1>ಶಿವ ಪಂಚಾಕ್ಷರ ಸ್ತೋತ್ರಂ <span class="ENG">(Shiva Panchakshara Stotram)</span></h1>
 
-    <button onclick="toggleVisibility()">Show/Hide English Transliteration</button>
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
 
     <p>
         <iframe width="560" height="100" src="https://www.youtube.com/embed/tFv_ZVYjVHQ?si=u1b4efHMxvgcKCm6"
@@ -24,78 +29,513 @@
 
     <p>
         <iframe width="560" height="100" src="https://www.youtube.com/embed/Fd1e_Q2ITLg?si=cggM6XJuRA8f6AG2"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </p>
 
-    <p>
-        ನಾಗೇಂದ್ರಹಾರಾಯ ತ್ರಿಲೋಚನಾಯ ಭಸ್ಮಾಂಗರಾಗಾಯ ಮಹೇಶ್ವರಾಯ | <br>
-        <span class="ENG">
-            nagendraharaya trilochanaya bhasmangaragaya mahesvaraya | <br>
-        </span>
-        ನಿತ್ಯಾಯ ಶುದ್ಧಾಯ ದಿಗಂಬರಾಯ ತಸ್ಮೈ "ನ" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೧ || <br>
-        <span class="ENG">
-            nityaya suddhaya digambaraya tasmai na karaya namah shivaya || 1 ||<br>
-        </span>
-    </p>
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
 
-    <p>
-        ಮಂದಾಕಿನೀ-ಸಲಿಲ-ಚಂದನ-ಚರ್ಚಿತಾಯ ನಂದೀಶ್ವರ-ಪ್ರಮಥನಾಥ-ಮಹೇಶ್ವರಾಯ | <br>
-        <span class="ENG">
-            mandakini salila chandana charchitaya nandeeswara pramathanatha mahesvaraya | <br>
-        </span>
-        ಮಂದಾರ-ಪುಷ್ಪ-ಬಹುಪುಷ್ಪ-ಸುಪೂಜಿತಾಯ ತಸ್ಮೈ "ಮ" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೨ || <br>
-        <span class="ENG">
-            mandara pushpa bahupushpa supujitaya tasmai ma karaya namah shivaya || 2 ||<br>
-        </span>
-    </p>
-
-    <p>
-        ಶಿವಾಯ ಗೌರೀ-ವದನಾಬ್ಜ-ವೃಂದ ಸೂರ್ಯಾಯ ದಕ್ಷಾಧ್ವರ ನಾಶಕಾಯ | <br>
-        <span class="ENG">
-            shivaya gauri vadanabja brnda suryaya dakshadhvara nashakaya | <br>
-        </span>
-        ಶ್ರೀನೀಲಕಂಠಾಯ-ವೃಷಧ್ವಜಾಯ ತಸ್ಮೈ "ಶಿ" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೩ || <br>
-        <span class="ENG">
-            sri nilakantaya vrshadhvajaya tasmai shi karaya namah shivaya || 2 ||<br>
-        </span>
-    </p>
-
-    <p>
-        ವಶಿಷ್ಠ-ಕುಂಭೋದ್ಭವ-ಗೌತಮಾರ್ಯ ಮುನೀಂದ್ರ-ದೇವಾರ್ಚಿತ-ಶೇಖರಾಯ | <br>
-        <span class="ENG">
-            vashista kumbhodbhava gautamaarya munindra devarchita shekharaya | <br>
-        </span>
-        ಚಂದ್ರಾರ್ಕ-ವೈಶ್ವಾನರ-ಲೋಚನಾಯ ತಸ್ಮೈ "ವ" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೪ || <br>
-        <span class="ENG">
-            chandrarka vaishvanara lochanaya tasmai va karaya namah shivaya || 3 || <br>
-        </span>
-    </p>
-
-    <p>
-        ಯಕ್ಷಸ್ವರೂಪಾಯ ಜಟಾಧರಾಯ ಪಿನಾಕ-ಹಸ್ತಾಯ ಸನಾತನಾಯ | <br>
-        <span class="ENG">
-            yaksasvarupaya jatadharaya pinaka hastaya sanatanaya | <br>
-        </span>
-        ದಿವ್ಯಾಯ ದೇವಾಯ ದಿಗಂಬರಾಯ ತಸ್ಮೈ "ಯ" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೫ || <br>
-        <span class="ENG">
-            divyaya devaya digambaraya tasmai ya karaya namah shivaya<br>
-        </span>
-    </p>
-
-    <p>
-        ಪಂಚಾಕ್ಷರಮಿದಂ ಪುಣ್ಯಂ ಯಃ ಪಠೇಚ್ಛಿವಸನ್ನಿಧೌ | <br>
-        ಶಿವಲೋಕಮವಾಪ್ನೋತಿ ಶಿವೇನ ಸಹ ಮೋದತೇ || <br>
-    </p>
-
-    <p>
-        ಇತಿ ಶ್ರೀಮದ್ ಶಂಕಾರಾಚಾರ್ಯವಿರಚಿತಂ ಶಿವಪಂಚಾಕ್ಷರಸ್ತೋತ್ರಂ ಸಂಪೂರ್ಣಂ | <br>
-    </p>
-
-</body>
+    <!-- Content Data Script -->
+    <script>
+        // Define all content in a single data structure
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಶಿವ ಪಂಚಾಕ್ಷರ ಸ್ತೋತ್ರಂ",
+                        english: "Shiva Panchakshara Stotram"
+                    },
+                    verses: [
+                        {
+                            verseNumber: 1,
+                            lines: [
+                                {
+                                    kannada: "ನಾಗೇಂದ್ರಹಾರಾಯ ತ್ರಿಲೋಚನಾಯ ಭಸ್ಮಾಂಗರಾಗಾಯ ಮಹೇಶ್ವರಾಯ |",
+                                    transliteration: "nagendraharaya trilochanaya bhasmangaragaya mahesvaraya |",
+                                    words: [
+                                        {
+                                            kannada: "ನಾಗೇಂದ್ರಹಾರಾಯ",
+                                            transliteration: "nagendra-haraya",
+                                            meaning: "One who wears the Vasuki (king of serpents) as a garland"
+                                        },
+                                        {
+                                            kannada: "ತ್ರಿಲೋಚನಾಯ",
+                                            transliteration: "trilochanaya",
+                                            meaning: "To the three-eyed one"
+                                        },
+                                        {
+                                            kannada: "ಭಸ್ಮಾಂಗರಾಗಾಯ",
+                                            transliteration: "bhasma-angaraga-ya",
+                                            meaning: "One whose body is adorned with sacred ash"
+                                        },
+                                        {
+                                            kannada: "ಮಹೇಶ್ವರಾಯ",
+                                            transliteration: "mahesvaraya",
+                                            meaning: "To the great Lord"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ನಿತ್ಯಾಯ ಶುದ್ಧಾಯ ದಿಗಂಬರಾಯ ತಸ್ಮೈ \"ನ\" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೧ ||",
+                                    transliteration: "nityaya suddhaya digambaraya tasmai na karaya namah shivaya || 1 ||",
+                                    words: [
+                                        {
+                                            kannada: "ನಿತ್ಯಾಯ",
+                                            transliteration: "nityaya",
+                                            meaning: "To the eternal one"
+                                        },
+                                        {
+                                            kannada: "ಶುದ್ಧಾಯ",
+                                            transliteration: "suddhaya",
+                                            meaning: "To the pure one"
+                                        },
+                                        {
+                                            kannada: "ದಿಗಂಬರಾಯ",
+                                            transliteration: "digambaraya",
+                                            meaning: "To the one who is clothed in directions (the sky)"
+                                        },
+                                        {
+                                            kannada: "ತಸ್ಮೈ",
+                                            transliteration: "tasmai",
+                                            meaning: "To that"
+                                        },
+                                        {
+                                            kannada: "\"ನ\" ಕಾರಾಯ",
+                                            transliteration: "na karaya",
+                                            meaning: "Letter 'Na'"
+                                        },
+                                        {
+                                            kannada: "ನಮಃ ಶಿವಾಯ",
+                                            transliteration: "namah shivaya",
+                                            meaning: "Salutations to Shiva"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to Lord Shiva, who wears the king of serpents as a garland, who has three eyes, whose body is smeared with sacred ash, who is the Great Lord, who is eternal, pure, and sky-clad (Digambara), and who is represented by the sacred syllable 'na'."
+                        },
+                        {
+                            verseNumber: 2,
+                            lines: [
+                                {
+                                    kannada: "ಮಂದಾಕಿನೀ-ಸಲಿಲ-ಚಂದನ-ಚರ್ಚಿತಾಯ ನಂದೀಶ್ವರ-ಪ್ರಮಥನಾಥ-ಮಹೇಶ್ವರಾಯ |",
+                                    transliteration: "mandakini salila chandana charchitaya nandeeswara pramathanatha mahesvaraya |",
+                                    words: [
+                                        {
+                                            kannada: "ಮಂದಾಕಿನೀ-ಸಲಿಲ",
+                                            transliteration: "mandakini-salila",
+                                            meaning: "Waters (salila) of river Mandakini (Ganga)"
+                                        },
+                                        {
+                                            kannada: "ಚಂದನ-ಚರ್ಚಿತಾಯ",
+                                            transliteration: "chandana-charchitaya",
+                                            meaning: "Anointed with sandalwood"
+                                        },
+                                        {
+                                            kannada: "ನಂದೀಶ್ವರ",
+                                            transliteration: "nandeeswara",
+                                            meaning: "Lord of Nandi"
+                                        },
+                                        {
+                                            kannada: "ಪ್ರಮಥನಾಥ",
+                                            transliteration: "pramathanatha",
+                                            meaning: "Lord of the Pramathas, fierce ganas (divine attendants)"
+                                        },
+                                        {
+                                            kannada: "ಮಹೇಶ್ವರಾಯ",
+                                            transliteration: "mahesvaraya",
+                                            meaning: "To the great Lord"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಮಂದಾರ-ಪುಷ್ಪ-ಬಹುಪುಷ್ಪ-ಸುಪೂಜಿತಾಯ ತಸ್ಮೈ \"ಮ\" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೨ ||",
+                                    transliteration: "mandara pushpa bahupushpa supujitaya tasmai ma karaya namah shivaya || 2 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಮಂದಾರ-ಪುಷ್ಪ",
+                                            transliteration: "mandara-pushpa",
+                                            meaning: "celestial Mandāra flower"
+                                        },
+                                        {
+                                            kannada: "ಬಹುಪುಷ್ಪ",
+                                            transliteration: "bahu-pushpa",
+                                            meaning: "and many kinds of flowers"
+                                        },
+                                        {
+                                            kannada: "ಸುಪೂಜಿತಾಯ",
+                                            transliteration: "supujitaya",
+                                            meaning: "to the one who is well worshipped"
+                                        },
+                                        {
+                                            kannada: "ತಸ್ಮೈ",
+                                            transliteration: "tasmai",
+                                            meaning: "To that"
+                                        },
+                                        {
+                                            kannada: "\"ಮ\" ಕಾರಾಯ",
+                                            transliteration: "ma karaya",
+                                            meaning: "Letter 'Ma'"
+                                        },
+                                        {
+                                            kannada: "ನಮಃ ಶಿವಾಯ",
+                                            transliteration: "namah shivaya",
+                                            meaning: "Salutations to Shiva"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to Lord Shiva, who is anointed with sandalwood paste and the waters of the Mandākini (Ganga), who is the Great Lord, master of Nandi and the Pramatha ganas, who is worshipped with Mandāra and many other sacred flowers, and who is represented by the sacred syllable 'ma'."
+                        },
+                        {
+                            verseNumber: 3,
+                            lines: [
+                                {
+                                    kannada: "ಶಿವಾಯ ಗೌರೀ-ವದನಾಬ್ಜ-ವೃಂದ ಸೂರ್ಯಾಯ ದಕ್ಷಾಧ್ವರ ನಾಶಕಾಯ |",
+                                    transliteration: "shivaya gauri vadanabja brnda suryaya dakshadhvara nashakaya |",
+                                    words: [
+                                        {
+                                            kannada: "ಶಿವಾಯ",
+                                            transliteration: "shivaya",
+                                            meaning: "To the auspicious one"
+                                        },
+                                        {
+                                            kannada: "ಗೌರೀ-ವದನಾಬ್ಜ-ವೃಂದ",
+                                            transliteration: "gauri-vadana-abja-vrnda",
+                                            meaning: "(To the sun) that causes the cluster (vrnda) of lotus-like faces of gauri to blossom"
+                                        },
+                                        {
+                                            kannada: "ಸೂರ್ಯಾಯ",
+                                            transliteration: "suryaya",
+                                            meaning: "To the sun"
+                                        },
+                                        {
+                                            kannada: "ದಕ್ಷಾಧ್ವರ",
+                                            transliteration: "daksha-adhvara",
+                                            meaning: "Daksha's sacrifice (adhvara )"
+                                        },
+                                        {
+                                            kannada: "ನಾಶಕಾಯ",
+                                            transliteration: "nashakaya",
+                                            meaning: "To the destroyer"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಶ್ರೀನೀಲಕಂಠಾಯ-ವೃಷಧ್ವಜಾಯ ತಸ್ಮೈ \"ಶಿ\" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೩ ||",
+                                    transliteration: "sri nilakantaya vrshadhvajaya tasmai shi karaya namah shivaya || 3 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಶ್ರೀನೀಲಕಂಠಾಯ",
+                                            transliteration: "sri-nilakantaya",
+                                            meaning: "To the blue-necked one"
+                                        },
+                                        {
+                                            kannada: "ವೃಷಧ್ವಜಾಯ",
+                                            transliteration: "vrsha-dhvajaya",
+                                            meaning: "whose flag bears the emblem of the bull"
+                                        },
+                                        {
+                                            kannada: "ತಸ್ಮೈ",
+                                            transliteration: "tasmai",
+                                            meaning: "To that"
+                                        },
+                                        {
+                                            kannada: "\"ಶಿ\" ಕಾರಾಯ",
+                                            transliteration: "shi karaya",
+                                            meaning: "Letter 'Shi'"
+                                        },
+                                        {
+                                            kannada: "ನಮಃ ಶಿವಾಯ",
+                                            transliteration: "namah shivaya",
+                                            meaning: "Salutations to Shiva"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to Lord Shiva, who is the sun to the lotus-like face of Gaurī, the destroyer of Dakṣa’s yajña, the auspicious blue-throated one, who has the bull as his emblem, and who is represented by the sacred syllable 'śi'."
+                        },
+                        {
+                            verseNumber: 4,
+                            lines: [
+                                {
+                                    kannada: "ವಶಿಷ್ಠ-ಕುಂಭೋದ್ಭವ-ಗೌತಮಾರ್ಯ ಮುನೀಂದ್ರ-ದೇವಾರ್ಚಿತ-ಶೇಖರಾಯ |",
+                                    transliteration: "vashista kumbhodbhava gautamaarya munindra devarchita shekharaya |",
+                                    words: [
+                                        {
+                                            kannada: "ವಶಿಷ್ಠ",
+                                            transliteration: "vashista",
+                                            meaning: "Sage Vasishta"
+                                        },
+                                        {
+                                            kannada: "ಕುಂಭೋದ್ಭವ",
+                                            transliteration: "kumbhodbhava",
+                                            meaning: "Born from a pot (Sage Agastya)"
+                                        },
+                                        {
+                                            kannada: "ಗೌತಮ",
+                                            transliteration: "gautama",
+                                            meaning: "Sage Gautama"
+                                        },
+                                        {
+                                            kannada: "ಆರ್ಯ",
+                                            transliteration: "Aarya",
+                                            meaning: "noble one, revered"
+                                        },
+                                        {
+                                            kannada: "ಮುನೀಂದ್ರ",
+                                            transliteration: "muni-indra",
+                                            meaning: "Chief of sages"
+                                        },
+                                        {
+                                            kannada: "ದೇವ",
+                                            transliteration: "deva",
+                                            meaning: "gods"
+                                        },
+                                        {
+                                            kannada: "ಅರ್ಚಿತ",
+                                            transliteration: "archita",
+                                            meaning: "Worshipped"
+                                        },
+                                        {
+                                            kannada: "ಶೇಖರಾಯ -ಶೇಖರಾಯ",
+                                            transliteration: "shekharaya",
+                                            meaning: "To the one who is the crest jewel (śekhara) or head (as in wearer of)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಾರ್ಕ-ವೈಶ್ವಾನರ-ಲೋಚನಾಯ ತಸ್ಮೈ \"ವ\" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೪ ||",
+                                    transliteration: "chandrarka vaishvaa nara lochanaya tasmai va karaya namah shivaya || 4 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಚಂದ್ರಾರ್ಕ",
+                                            transliteration: "chandra-arka",
+                                            meaning: "Moon and sun"
+                                        },
+                                        {
+                                            kannada: "ವೈಶ್ವಾನರ",
+                                            transliteration: "vaishva-nara",
+                                            meaning: "fire (Agni; also means cosmic fire)"
+                                        },
+                                        {
+                                            kannada: "ಲೋಚನಾಯ",
+                                            transliteration: "lochanaya",
+                                            meaning: "to the One whose eyes are..."
+                                        },
+                                        {
+                                            kannada: "ತಸ್ಮೈ",
+                                            transliteration: "tasmai",
+                                            meaning: "To that"
+                                        },
+                                        {
+                                            kannada: "\"ವ\" ಕಾರಾಯ",
+                                            transliteration: "va karaya",
+                                            meaning: "Letter 'Va'"
+                                        },
+                                        {
+                                            kannada: "ನಮಃ ಶಿವಾಯ",
+                                            transliteration: "namah shivaya",
+                                            meaning: "Salutations to Shiva"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to Lord Shiva, who is worshipped by revered sages like Vashishtha, Agastya, and Gautama, who is the supreme among sages and gods, whose three eyes are the moon, sun, and fire, and who is symbolized by the sacred syllable 'va' in the Panchakshari mantra."
+                        },
+                        {
+                            verseNumber: 5,
+                            lines: [
+                                {
+                                    kannada: "ಯಕ್ಷಸ್ವರೂಪಾಯ ಜಟಾಧರಾಯ ಪಿನಾಕ-ಹಸ್ತಾಯ ಸನಾತನಾಯ |",
+                                    transliteration: "yaksasvarupaya jatadharaya pinaka hastaya sanatanaya |",
+                                    words: [
+                                        {
+                                            kannada: "ಯಕ್ಷಸ್ವರೂಪಾಯ",
+                                            transliteration: "yaksha-svarupaya",
+                                            meaning: "To the one in the form of Yaksha"
+                                        },
+                                        {
+                                            kannada: "ಜಟಾಧರಾಯ",
+                                            transliteration: "jata-dharaya",
+                                            meaning: "To the one with matted hair"
+                                        },
+                                        {
+                                            kannada: "ಪಿನಾಕ-ಹಸ್ತಾಯ",
+                                            transliteration: "pinaka-hastaya",
+                                            meaning: "To the one holding the Pinaka bow"
+                                        },
+                                        {
+                                            kannada: "ಸನಾತನಾಯ",
+                                            transliteration: "sanatanaya",
+                                            meaning: "To the eternal one"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ದಿವ್ಯಾಯ ದೇವಾಯ ದಿಗಂಬರಾಯ ತಸ್ಮೈ \"ಯ\" ಕಾರಾಯ ನಮಃ ಶಿವಾಯ || ೫ ||",
+                                    transliteration: "divyaya devaya digambaraya tasmai ya karaya namah shivaya || 5 ||",
+                                    words: [
+                                        {
+                                            kannada: "ದಿವ್ಯಾಯ",
+                                            transliteration: "divyaya",
+                                            meaning: "To the divine one"
+                                        },
+                                        {
+                                            kannada: "ದೇವಾಯ",
+                                            transliteration: "devaya",
+                                            meaning: "To the god"
+                                        },
+                                        {
+                                            kannada: "ದಿಗಂಬರಾಯ",
+                                            transliteration: "digambaraya",
+                                            meaning: "To the one who is clothed in the directions"
+                                        },
+                                        {
+                                            kannada: "ತಸ್ಮೈ",
+                                            transliteration: "tasmai",
+                                            meaning: "To that"
+                                        },
+                                        {
+                                            kannada: "\"ಯ\" ಕಾರಾಯ",
+                                            transliteration: "ya karaya",
+                                            meaning: "Letter 'Ya'"
+                                        },
+                                        {
+                                            kannada: "ನಮಃ ಶಿವಾಯ",
+                                            transliteration: "namah shivaya",
+                                            meaning: "Salutations to Shiva"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to Lord Shiva, who is in the mystical form of a Yakṣa, who wears matted locks, who holds the bow Pināka in his hand, who is eternal, who is the divine and radiant god, who is clothed with the directions (Digambara), and who is symbolized by the sacred syllable 'ya'."
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "ಫಲಶ್ರುತಿ",
+                        english: "Phalashruti / Benefits"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಪಂಚಾಕ್ಷರಮಿದಂ ಪುಣ್ಯಂ ಯಃ ಪಠೇಚ್ಛಿವಸನ್ನಿಧೌ |",
+                                    transliteration: "panchaksharamidam punyam yah pathecchiva-sannidhau |",
+                                    words: [
+                                        {
+                                            kannada: "ಪಂಚಾಕ್ಷರಮಿದಂ",
+                                            transliteration: "pancha-aksharam-idam",
+                                            meaning: "This (idam) five-lettered (prayer)"
+                                        },
+                                        {
+                                            kannada: "ಪುಣ್ಯಂ",
+                                            transliteration: "punyam",
+                                            meaning: "Sacred/meritorious"
+                                        },
+                                        {
+                                            kannada: "ಯಃ",
+                                            transliteration: "yah",
+                                            meaning: "Whoever"
+                                        },
+                                        {
+                                            kannada: "ಪಠೇತ್",
+                                            transliteration: "pathet",
+                                            meaning: "Recites"
+                                        },
+                                        {
+                                            kannada: "ಶಿವಸನ್ನಿಧೌ",
+                                            transliteration: "shiva-sannidhau",
+                                            meaning: "In the presence of Shiva"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಶಿವಲೋಕಮವಾಪ್ನೋತಿ ಶಿವೇನ ಸಹ ಮೋದತೇ ||",
+                                    transliteration: "shivalokamavapnoti shivena saha modate ||",
+                                    words: [
+                                        {
+                                            kannada: "ಶಿವಲೋಕಂ",
+                                            transliteration: "shiva-lokam",
+                                            meaning: "Shiva's abode"
+                                        },
+                                        {
+                                            kannada: "ಅವಾಪ್ನೋತಿ",
+                                            transliteration: "avapnoti",
+                                            meaning: "Attains"
+                                        },
+                                        {
+                                            kannada: "ಶಿವೇನ ಸಹ",
+                                            transliteration: "shivena saha",
+                                            meaning: "Along with Shiva"
+                                        },
+                                        {
+                                            kannada: "ಮೋದತೇ",
+                                            transliteration: "modate",
+                                            meaning: "Rejoices"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Whoever recites this sacred five-syllabled mantra ('Na-Ma-Śi-Va-Ya') in the presence of Lord Shiva, attains the realm of Shiva and rejoices there in His company."
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "ಇತಿ ಶ್ರುತಿ",
+                        english: "Conclusion"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಇತಿ ಶ್ರೀಮದ್ ಶಂಕಾರಾಚಾರ್ಯವಿರಚಿತಂ ಶಿವಪಂಚಾಕ್ಷರಸ್ತೋತ್ರಂ ಸಂಪೂರ್ಣಂ |",
+                                    transliteration: "iti shrimad shankaracharyavirachitam shivapanchaksharastotram sampurnam |",
+                                    words: [
+                                        {
+                                            kannada: "ಇತಿ",
+                                            transliteration: "iti",
+                                            meaning: "Thus"
+                                        },
+                                        {
+                                            kannada: "ಶ್ರೀಮದ್",
+                                            transliteration: "shrimad",
+                                            meaning: "Sacred/revered"
+                                        },
+                                        {
+                                            kannada: "ಶಂಕಾರಾಚಾರ್ಯವಿರಚಿತಂ",
+                                            transliteration: "shankaracharya-virachitam",
+                                            meaning: "Composed by Shankaracharya"
+                                        },
+                                        {
+                                            kannada: "ಶಿವಪಂಚಾಕ್ಷರಸ್ತೋತ್ರಂ",
+                                            transliteration: "shiva-panchakshara-stotram",
+                                            meaning: "Shiva Panchakshara Stotram"
+                                        },
+                                        {
+                                            kannada: "ಸಂಪೂರ್ಣಂ",
+                                            transliteration: "sampurnam",
+                                            meaning: "Is complete"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Thus the sacred Shiva Panchakshara Stotram composed by Shankaracharya is complete."
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
 
     <!-- Centralized Scripts -->
     <script src="../scripts/common.js"></script>
 </body>
+
 </html>
