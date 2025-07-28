@@ -131,6 +131,40 @@ function updateEngDisplayVisibility(mode) {
     });
 }
 
+/**
+ * Toggle visibility of English transliteration elements
+ * This function is called by the Show/Hide English button
+ */
+function toggleVisibility() {
+    const elements = document.querySelectorAll('.ENG');
+    
+    if (elements.length === 0) {
+        console.log('No .ENG elements found');
+        return;
+    }
+    
+    // Check current visibility state using class instead of computed style
+    const firstElement = elements[0];
+    const isCurrentlyVisible = firstElement.classList.contains('show-english');
+    
+    // Toggle all elements using class
+    elements.forEach(element => {
+        if (isCurrentlyVisible) {
+            element.classList.remove('show-english');
+        } else {
+            element.classList.add('show-english');
+        }
+    });
+    
+    // Update button text
+    const button = document.querySelector('.toggle-btn');
+    if (button) {
+        button.textContent = isCurrentlyVisible ? 'Show English Transliteration' : 'Hide English Transliteration';
+    }
+    
+    console.log('Toggle completed. English is now:', isCurrentlyVisible ? 'hidden' : 'visible');
+}
+
 
 
 /**
@@ -243,7 +277,8 @@ function loadSection(sectionId, url) {
  * This function loads all the standard sections used in puja templates
  */
 function loadCommonPujaSections() {
-    const sections = [
+    // General sections from the general/ directory
+    const generalSections = [
         'shuddikarana-mantra',
         'ganapati-prarthana', 
         'kuladevata-prarthana',
@@ -257,12 +292,57 @@ function loadCommonPujaSections() {
         'swasti'
     ];
     
-    sections.forEach(section => {
+    // Stotram sections from the stotram/ directory
+    const stotramSections = [
+        'lakshmi-ashtottara-satanaama-stotram',
+        'lakshmi-ashtakam',
+        'kanakadhara-stotram',
+        'argala-stotram',
+        'dakshinamurthy-stotram',
+        'ganpati-sankata-nashana-stotram',
+        'garuda-gamana-stotram',
+        'lakshmi-chaturvimsati-stotram',
+        'lakshmi-chaturvimsati-naamavali',
+        'maha-mrityunjaya-mantra',
+        'pitru-devata-stotram',
+        'ramadootha-anjaneya-stotram',
+        'saraswati-kavacham',
+        'shiva-panchakshara-stotram',
+        'panchakshara-stotram', // Alternative ID for shiva-panchakshara-stotram
+        'soundarya-lahari',
+        'surya-arghya-mantra',
+        'surya-namaskara-mantra',
+        'veerabhadra-kavacham',
+        'venkateswara-vajra-kavacham',
+        'vishnu-sahasranamam',
+        'daily-mantras',
+        'dattratreya-mantra'
+    ];
+    
+    // Load general sections
+    generalSections.forEach(section => {
         const element = document.getElementById(section);
         if (element) {
             // Determine the correct path based on current location
             const pathPrefix = window.location.pathname.includes('/puja/') ? '../general/' : './general/';
             loadSection(section, `${pathPrefix}${section}.html`);
+        }
+    });
+    
+    // Load stotram sections
+    stotramSections.forEach(section => {
+        const element = document.getElementById(section);
+        if (element) {
+            // Determine the correct path based on current location
+            const pathPrefix = window.location.pathname.includes('/puja/') ? '../stotram/' : './stotram/';
+            
+            // Handle ID to filename mappings
+            let filename = section;
+            if (section === 'panchakshara-stotram') {
+                filename = 'shiva-panchakshara-stotram';
+            }
+            
+            loadSection(section, `${pathPrefix}${filename}.html`);
         }
     });
 }

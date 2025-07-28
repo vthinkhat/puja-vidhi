@@ -25,6 +25,32 @@ body {
     padding-top: 0;
 }
 
+/* When English is shown */
+.ENG.show-english {
+    display: inline !important;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #0052a3;
+}
+
+.toggle-btn:active {
+    background-color: #003d7a;
+}
+
 /* Display mode buttons */
 .display-mode-buttons {
     margin-bottom: 20px;
