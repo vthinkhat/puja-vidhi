@@ -287,6 +287,7 @@ function loadCommonPujaSections() {
         'bhootoochchaatana',
         'pranayama',
         'sankalpam',
+        'ghantaa-nadham',
         'chaamaram',
         'puja-end-prarthana',
         'swasti'
