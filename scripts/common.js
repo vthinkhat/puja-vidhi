@@ -290,7 +290,8 @@ function loadCommonPujaSections() {
         'ghantaa-nadham',
         'chaamaram',
         'puja-end-prarthana',
-        'swasti'
+        'swasti',
+        'parisinchana'
     ];
     
     // Stotram sections from the stotram/ directory
