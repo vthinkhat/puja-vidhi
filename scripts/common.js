@@ -291,7 +291,8 @@ function loadCommonPujaSections() {
         'chaamaram',
         'puja-end-prarthana',
         'swasti',
-        'parisinchana'
+        'parisinchana',
+        'kalashaaradhana'
     ];
     
     // Stotram sections from the stotram/ directory
@@ -329,6 +330,8 @@ function loadCommonPujaSections() {
             const pathPrefix = window.location.pathname.includes('/puja/') ? '../general/' : './general/';
             loadSection(section, `${pathPrefix}${section}.html`);
         }
+        
+
     });
     
     // Load stotram sections

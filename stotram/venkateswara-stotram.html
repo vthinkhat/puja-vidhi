@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ವೇಂಕಟೇಶ್ವರ ಸ್ತೋತ್ರಂ (Venkateswara Stotram)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Centralized Styles -->
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>ವೇಂಕಟೇಶ್ವರ ಸ್ತೋತ್ರಂ <span class="ENG">(Venkateswara Stotram)</span></h1>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <!-- Content Data Script -->
+    <script>
+        // Define all content in a single data structure
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ವೇಂಕಟೇಶ್ವರ ಸ್ತೋತ್ರಂ",
+                        english: "Venkateswara Stotram"
+                    },
+                    verses: [
+                        {
+                            verseNumber: 1,
+                            lines: [
+                                {
+                                    kannada: "ಕಮಲಾಕುಚಚೂಚುಕಕುಂಕುಮತೋ",
+                                    transliteration: "kamalākuca-cūcuka-kunkuma-to",
+                                    words: [
+                                        {
+                                            kannada: "ಕಮಲಾ",
+                                            transliteration: "kamalā",
+                                            meaning: "Goddess Lakshmi"
+                                        },
+                                        {
+                                            kannada: "ಕುಚ",
+                                            transliteration: "kuca",
+                                            meaning: "breast"
+                                        },
+                                        {
+                                            kannada: "ಚೂಚುಕ",
+                                            transliteration: "cūcuka",
+                                            meaning: "tip"
+                                        },
+                                        {
+                                            kannada: "ಕುಂಕುಮ",
+                                            transliteration: "kunkuma",
+                                            meaning: "vermilion"
+                                        },
+                                        {
+                                            kannada: "ತೋ",
+                                            transliteration: "to",
+                                            meaning: "smeared/marked with"
+                                        }]
+                                },
+                                {
+                                    kannada: "ನಿಯತಾರುಣಿತಾತುಲನೀಲತನೋ |",
+                                    transliteration: "niyatāruṇi tātula nīlatanō |",
+                                    words: [
+                                        {
+                                            kannada: "ನಿಯತ",
+                                            transliteration: "niyata",
+                                            meaning: "constantly"
+                                        },
+                                        {
+                                            kannada: "ಆರುಣಿತ",
+                                            transliteration: "āruṇita",
+                                            meaning: "reddened"
+                                        },
+                                        {
+                                            kannada: "ಅತುಲನೀಲತನೋ",
+                                            transliteration: "atulānīlatano",
+                                            meaning: "one with incomparable dark-blue body"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಕಮಲಾಯತಲೋಚನ ಲೋಕಪತೇ",
+                                    transliteration: "kamalāyata lōchana lōkapatē",
+                                    words: [
+                                        {
+                                            kannada: "ಕಮಲಾಯತ",
+                                            transliteration: "kamalāyata",
+                                            meaning: "lotus-like (long, beautiful like a lotus)"
+                                        },
+                                        {
+                                            kannada: "ಲೋಚನ",
+                                            transliteration: "lōcana",
+                                            meaning: "eyes"
+                                        },
+                                        {
+                                            kannada: "ಲೋಕಪತೇ",
+                                            transliteration: "lōkapatē",
+                                            meaning: "O Lord of the worlds"
+                                        }]
+                                },
+                                {
+                                    kannada: "ವಿಜಯೀಭವ ವೇಂಕಟಶೈಲಪತೇ || ೧ ||",
+                                    transliteration: "vijayībhava vēṅkaṭa śailapatē || 1 ||",
+                                    words: [
+                                        {
+                                            kannada: "ವಿಜಯೀಭವ",
+                                            transliteration: "vijayī bhava",
+                                            meaning: "Be victorious"
+                                        },
+                                        {
+                                            kannada: "ವೇಂಕಟಶೈಲಪತೇ",
+                                            transliteration: "vēṅkaṭa-śaila-patē",
+                                            meaning: "O Lord of Venkata Hill"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O Lord of Venkata Hill, whose incomparable dark-blue body is reddened by the vermilion from the breasts of Goddess Lakshmi, whose eyes are like lotus petals, O Lord of the worlds, be ever victorious."
+                        },
+                        {
+                            verseNumber: 2,
+                            lines: [
+                                {
+                                    kannada: "ಸಚತುರ್ಮುಖಷಣ್ಮುಖಪಂಚಮುಖ",
+                                    transliteration: "sachaturmukha ṣaṇmukha pañchamukha",
+                                    words: [
+                                        {
+                                            kannada: "ಸ",
+                                            transliteration: "sa",
+                                            meaning: "with / along with"
+                                        },
+                                        {
+                                            kannada: "ಚತುರ್ಮುಖ",
+                                            transliteration: "chaturmukha",
+                                            meaning: "Brahma, the four-faced"
+                                        },
+                                        {
+                                            kannada: "ಷಣ್ಮುಖ",
+                                            transliteration: "ṣaṇmukha",
+                                            meaning: "Kartikeya, the six-faced"
+                                        },
+                                        {
+                                            kannada: "ಪಂಚಮುಖ",
+                                            transliteration: "pañchamukha",
+                                            meaning: "Shiva, the five-faced"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪ್ರಮುಖಾಖಿಲದೈವತಮೌಳಿಮಣೇ |",
+                                    transliteration: "pramukhā khila daivata mauḷi maṇē |",
+                                    words: [
+                                        {
+                                            kannada: "ಪ್ರಮುಖ",
+                                            transliteration: "pramukha",
+                                            meaning: "the foremost"
+                                        },
+                                        {
+                                            kannada: "ಅಖಿಲ",
+                                            transliteration: "akhila",
+                                            meaning: "all / entire"
+                                        },
+                                        {
+                                            kannada: "ದೈವತ",
+                                            transliteration: "daivata",
+                                            meaning: "gods / deities"
+                                        },
+                                        {
+                                            kannada: "ಮೌಳಿಮಣೇ",
+                                            transliteration: "mauḷi-maṇē",
+                                            meaning: "crown jewel"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಶರಣಾಗತವತ್ಸಲ ಸಾರನಿಧೇ",
+                                    transliteration: "śaraṇāgata vatsala sāra nidhē",
+                                    words: [
+                                        {
+                                            kannada: "ಶರಣಾಗತ",
+                                            transliteration: "śaraṇāgata",
+                                            meaning: "those who surrender / devotees who seek refuge"
+                                        },
+                                        {
+                                            kannada: "ವತ್ಸಲ",
+                                            transliteration: "vatsala",
+                                            meaning: "affectionate / loving protector"
+                                        },
+                                        {
+                                            kannada: "ಸಾರ",
+                                            transliteration: "sāra",
+                                            meaning: "essence"
+                                        },
+                                        {
+                                            kannada: "ನಿಧೇ",
+                                            transliteration: "nidhē",
+                                            meaning: "treasure"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪರಿಪಾಲಯ ಮಾಂ ವೃಷಶೈಲಪತೇ || ೨ ||",
+                                    transliteration: "paripālaya māṃ vṛṣa śaila patē || 2 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಪರಿಪಾಲಯ",
+                                            transliteration: "paripālaya",
+                                            meaning: "protect / take care of"
+                                        },
+                                        {
+                                            kannada: "ಮಾಂ",
+                                            transliteration: "māṃ",
+                                            meaning: "me"
+                                        },
+                                        {
+                                            kannada: "ವೃಷಶೈಲಪತೇ",
+                                            transliteration: "vṛṣa-śaila-patē",
+                                            meaning: "O Lord of Vrishabhachala (Tirumala Hill)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O Lord of Vrishabhachala (Venkata Hill), the crown jewel among all gods including Brahma (four-faced), Kartikeya (six-faced), and Shiva (five-faced), O treasure of compassion for devotees who surrender to You — please protect me."
+                        }
+                        ,
+                        {
+                            verseNumber: 3,
+                            lines: [
+                                {
+                                    kannada: "ಅತಿವೇಲತಯಾ ತವ ದುರ್ವಿಷಹೈ-",
+                                    transliteration: "ativēlatayā tava durviṣahai-",
+                                    words: [
+                                        {
+                                            kannada: "ಅತಿ",
+                                            transliteration: "ati",
+                                            meaning: "excessively / greatly"
+                                        },
+                                        {
+                                            kannada: "ವೇಲತಯಾ",
+                                            transliteration: "vēlatayā",
+                                            meaning: "by lapse / negligence / carelessness"
+                                        },
+                                        {
+                                            kannada: "ತವ",
+                                            transliteration: "tava",
+                                            meaning: "your"
+                                        },
+                                        {
+                                            kannada: "ದುರ್ವಿಷಹೈ",
+                                            transliteration: "durviṣahai",
+                                            meaning: "unbearable / intolerable"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "-ರನುವೇಲಕೃತೈರಪರಾಧಶತೈಃ |",
+                                    transliteration: "-ranuvēlakṛtai raparādha śataiḥ |",
+                                    words: [
+                                        {
+                                            kannada: "ಅನು",
+                                            transliteration: "anu",
+                                            meaning: "following / repeatedly"
+                                        },
+                                        {
+                                            kannada: "ವೇಲ",
+                                            transliteration: "vēla",
+                                            meaning: "mistakes / transgressions"
+                                        },
+                                        {
+                                            kannada: "ಕೃತೈಃ",
+                                            transliteration: "kṛtaiḥ",
+                                            meaning: "done / committed"
+                                        },
+                                        {
+                                            kannada: "ಅಪರಾಧ",
+                                            transliteration: "aparādha",
+                                            meaning: "offences / sins"
+                                        },
+                                        {
+                                            kannada: "ಶತೈಃ",
+                                            transliteration: "śataiḥ",
+                                            meaning: "by hundreds"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಭರಿತಂ ತ್ವರಿತಂ ವೃಷಶೈಲಪತೇ",
+                                    transliteration: "bharitaṃ tvaritaṃ vṛṣa śaila patē",
+                                    words: [
+                                        {
+                                            kannada: "ಭರಿತಂ",
+                                            transliteration: "bharitam",
+                                            meaning: "filled with"
+                                        },
+                                        {
+                                            kannada: "ತ್ವರಿತಂ",
+                                            transliteration: "tvaritam",
+                                            meaning: "urgently / hastily"
+                                        },
+                                        {
+                                            kannada: "ವೃಷಶೈಲಪತೇ",
+                                            transliteration: "vṛṣa-śaila-patē",
+                                            meaning: "O Lord of Vrishabhachala (Tirumala Hill)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪರಯಾ ಕೃಪಯಾ ಪರಿಪಾಹಿ ಹರೇ || ೩ ||",
+                                    transliteration: "parayā kṛpayā paripāhi harē || 3 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಪರಯಾ",
+                                            transliteration: "parayā",
+                                            meaning: "with supreme"
+                                        },
+                                        {
+                                            kannada: "ಕೃಪಯಾ",
+                                            transliteration: "kṛpayā",
+                                            meaning: "compassion / grace"
+                                        },
+                                        {
+                                            kannada: "ಪರಿಪಾಹಿ",
+                                            transliteration: "paripāhi",
+                                            meaning: "protect completely"
+                                        },
+                                        {
+                                            kannada: "ಹರೇ",
+                                            transliteration: "harē",
+                                            meaning: "O Lord Hari (Vishnu)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O Lord of Vrishabhachala, because of my great carelessness, I am filled with unbearable sins and countless offences. Please, O Hari, protect me quickly with Your supreme compassion."
+                        },
+                        {
+                            verseNumber: 4,
+                            lines: [
+                                {
+                                    kannada: "ಅಧಿವೇಂಕಟಶೈಲಮುದಾರಮತೇ-",
+                                    transliteration: "adhi vēṅkaṭa śaila mudāra matē-",
+                                    words: [
+                                        {
+                                            kannada: "ಅಧಿ",
+                                            transliteration: "adhi",
+                                            meaning: "upon / presiding over"
+                                        },
+                                        {
+                                            kannada: "ವೇಂಕಟಶೈಲ",
+                                            transliteration: "vēṅkaṭa-śaila",
+                                            meaning: "Venkata hill (Tirumala)"
+                                        },
+                                        {
+                                            kannada: "ಮುದಾರ",
+                                            transliteration: "mudāra",
+                                            meaning: "noble / generous"
+                                        },
+                                        {
+                                            kannada: "ಮತೇ",
+                                            transliteration: "matē",
+                                            meaning: "O minded one / O Lord of noble mind"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "-ರ್ಜನತಾಭಿಮತಾಧಿಕದಾನರತಾತ್ |",
+                                    transliteration: "-r janatābhimata adhika dāna ratāt |",
+                                    words: [
+                                        {
+                                            kannada: "ಜನತಾ",
+                                            transliteration: "janatā",
+                                            meaning: "people / devotees"
+                                        },
+                                        {
+                                            kannada: "ಅಭಿಮತ",
+                                            transliteration: "abhimata",
+                                            meaning: "desires / wishes"
+                                        },
+                                        {
+                                            kannada: "ಅಧಿಕ",
+                                            transliteration: "adhika",
+                                            meaning: "exceeding / abundant"
+                                        },
+                                        {
+                                            kannada: "ದಾನ",
+                                            transliteration: "dāna",
+                                            meaning: "giving / granting"
+                                        },
+                                        {
+                                            kannada: "ರತಾತ್",
+                                            transliteration: "ratāt",
+                                            meaning: "engaged / devoted"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪರದೇವತಯಾ ಗದಿತಾನ್ನಿಗಮೈಃ",
+                                    transliteration: "para dēvatayā gaditān nigamaiḥ",
+                                    words: [
+                                        {
+                                            kannada: "ಪರ",
+                                            transliteration: "para",
+                                            meaning: "supreme"
+                                        },
+                                        {
+                                            kannada: "ದೇವತಯಾ",
+                                            transliteration: "dēvatayā",
+                                            meaning: "as the deity"
+                                        },
+                                        {
+                                            kannada: "ಗದಿತಾನ್",
+                                            transliteration: "gaditān",
+                                            meaning: "declared / spoken"
+                                        },
+                                        {
+                                            kannada: "ನಿಗಮೈಃ",
+                                            transliteration: "nigamaiḥ",
+                                            meaning: "by the Vedas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಕಮಲಾದಯಿತಾನ್ನ ಪರಂ ಕಲಯೇ || ೪ ||",
+                                    transliteration: "kamalādayitān na paraṃ kalayē || 4 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಕಮಲಾ",
+                                            transliteration: "kamalā",
+                                            meaning: "Goddess Lakshmi"
+                                        },
+                                        {
+                                            kannada: "ಅದಯಿತ",
+                                            transliteration: "adayita",
+                                            meaning: "beloved / consort"
+                                        },
+                                        {
+                                            kannada: "ನ",
+                                            transliteration: "na",
+                                            meaning: "not"
+                                        },
+                                        {
+                                            kannada: "ಪರಂ",
+                                            transliteration: "param",
+                                            meaning: "other / beyond"
+                                        },
+                                        {
+                                            kannada: "ಕಲಯೇ",
+                                            transliteration: "kalayē",
+                                            meaning: "I consider / I know"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O noble-minded Lord of Venkata Hill, who is ever engaged in abundantly granting the wishes of the devotees, whom the Vedas declare as the Supreme Deity, the beloved of Goddess Lakshmi — I know no other beyond You."
+                        },
+                        {
+                            verseNumber: 5,
+                            lines: [
+                                {
+                                    kannada: "ಕಲ ವೇಣುರವಾವಶ ಗೋಪವಧೂ",
+                                    transliteration: "kala vēṇu-ravāvaśa gōpa-vadhū",
+                                    words: [
+                                        {
+                                            kannada: "ಕಲ",
+                                            transliteration: "kala",
+                                            meaning: "sweet, melodious"
+                                        },
+                                        {
+                                            kannada: "ವೇಣು",
+                                            transliteration: "vēṇu",
+                                            meaning: "flute"
+                                        },
+                                        {
+                                            kannada: "ರವ",
+                                            transliteration: "rava",
+                                            meaning: "sound, melody"
+                                        },
+                                        {
+                                            kannada: "ಆವಶ",
+                                            transliteration: "āvaśa",
+                                            meaning: "captivated, enchanted"
+                                        },
+                                        {
+                                            kannada: "ಗೋಪವಧೂ",
+                                            transliteration: "gōpa-vadhū",
+                                            meaning: "wives of cowherds (gopīs)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಶತಕೋಟಿ ವೃತಾತ್ ಸ್ಮರಕೋಟಿ ಸಮಾತ್",
+                                    transliteration: "śata kōṭi vṛtāt smara kōṭi samāt",
+                                    words: [
+                                        {
+                                            kannada: "ಶತಕೋಟಿ",
+                                            transliteration: "śata-kōṭi",
+                                            meaning: "hundreds of crores (innumerable)"
+                                        },
+                                        {
+                                            kannada: "ವೃತಾತ್",
+                                            transliteration: "vṛtāt",
+                                            meaning: "surrounded by"
+                                        },
+                                        {
+                                            kannada: "ಸ್ಮರಕೋಟಿ",
+                                            transliteration: "smara-kōṭi",
+                                            meaning: "equal to millions of Cupids (in beauty and charm)"
+                                        },
+                                        {
+                                            kannada: "ಸಮಾತ್",
+                                            transliteration: "samāt",
+                                            meaning: "comparable, equal"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪ್ರತಿವಲ್ಲವಿಕಾ ಅಭಿಮತಾತ್ ಸುಖದಾತ್",
+                                    transliteration: "prati vallavikā abhimatāt sukha-dāt",
+                                    words: [
+                                        {
+                                            kannada: "ಪ್ರತಿ",
+                                            transliteration: "prati",
+                                            meaning: "to each"
+                                        },
+                                        {
+                                            kannada: "ವಲ್ಲವಿಕಾ",
+                                            transliteration: "vallavikā",
+                                            meaning: "gopī, cowherd maiden"
+                                        },
+                                        {
+                                            kannada: "ಅಭಿಮತಾತ್",
+                                            transliteration: "abhimatāt",
+                                            meaning: "beloved, desired one"
+                                        },
+                                        {
+                                            kannada: "ಸുഖದಾತ್",
+                                            transliteration: "sukha-dāt",
+                                            meaning: "giver of joy"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ವಸುದೇವ ಸುತಾನ್ ನ ಪರಂ ಕಲಯೇ || ೫ ||",
+                                    transliteration: "vasudēva-sutān na paraṁ kalayē || 5 ||",
+                                    words: [
+                                        {
+                                            kannada: "ವಸುದೇವ",
+                                            transliteration: "vasudēva",
+                                            meaning: "Vasudeva (Krishna’s father)"
+                                        },
+                                        {
+                                            kannada: "ಸುತಾನ್",
+                                            transliteration: "sutān",
+                                            meaning: "son (Krishna)"
+                                        },
+                                        {
+                                            kannada: "ನ",
+                                            transliteration: "na",
+                                            meaning: "not"
+                                        },
+                                        {
+                                            kannada: "ಪರಂ",
+                                            transliteration: "paraṁ",
+                                            meaning: "any other, higher"
+                                        },
+                                        {
+                                            kannada: "ಕಲಯೇ",
+                                            transliteration: "kalayē",
+                                            meaning: "I recognize, I consider"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I know none higher than the son of Vasudeva (Krishna), who enchants the wives of cowherds with the sweet music of His flute, who is surrounded by countless gopīs, who is as charming as millions of Cupids, and who gives joy to each gopī as their beloved."
+                        },
+                        {
+                            verseNumber: 6,
+                            lines: [
+                                {
+                                    kannada: "ಅಭಿರಾಮಗುಣಾಕರ ದಾಶರಥೇ",
+                                    transliteration: "abhirāma guṇākara dāśaradhē",
+                                    words: [
+                                        {
+                                            kannada: "ಅಭಿರಾಮ",
+                                            transliteration: "abhirāma",
+                                            meaning: "delightful, charming"
+                                        },
+                                        {
+                                            kannada: "ಗುಣಾಕರ",
+                                            transliteration: "guṇākara",
+                                            meaning: "bestower of virtues and qualities"
+                                        },
+                                        {
+                                            kannada: "ದಾಶರಥೇ",
+                                            transliteration: "dāśaradhē",
+                                            meaning: "O descendant of Dasharatha (Lord Rama)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಜಗದೇಕಧನುರ್ಧರ ಧೀರಮತೇ |",
+                                    transliteration: "jagadēka dhanurdhara dhīramatē |",
+                                    words: [
+                                        {
+                                            kannada: "ಜಗದೇಕ",
+                                            transliteration: "jagadēka",
+                                            meaning: "one and only of the world"
+                                        },
+                                        {
+                                            kannada: "ಧನುರ್ಧರ",
+                                            transliteration: "dhanurdhara",
+                                            meaning: "wielder of the bow"
+                                        },
+                                        {
+                                            kannada: "ಧೀರಮತೇ",
+                                            transliteration: "dhīramatē",
+                                            meaning: "O courageous-minded one"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ರಘುನಾಯಕ ರಾಮ ರಮೇಶ ವಿಭೋ",
+                                    transliteration: "raghunāyaka rāma ramēśa vibhō",
+                                    words: [
+                                        {
+                                            kannada: "ರಘುನಾಯಕ",
+                                            transliteration: "raghunāyaka",
+                                            meaning: "leader of the Raghu dynasty"
+                                        },
+                                        {
+                                            kannada: "ರಾಮ",
+                                            transliteration: "rāma",
+                                            meaning: "Lord Rama"
+                                        },
+                                        {
+                                            kannada: "ರಮೇಶ",
+                                            transliteration: "ramēśa",
+                                            meaning: "Lord of devotees or Rameshvara"
+                                        },
+                                        {
+                                            kannada: "ವಿಭೋ",
+                                            transliteration: "vibhō",
+                                            meaning: "O mighty one"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ವರದೋ ಭವ ದೇವ ದಯಾಜಲಧೇ || ೬ ||",
+                                    transliteration: "varadō bhava dēva dayā jaladhē || 6 ||",
+                                    words: [
+                                        {
+                                            kannada: "ವರದೋ",
+                                            transliteration: "varadō",
+                                            meaning: "giver of boons"
+                                        },
+                                        {
+                                            kannada: "ಭವ ದೇವ",
+                                            transliteration: "bhava dēva",
+                                            meaning: "O Lord, protector of existence"
+                                        },
+                                        {
+                                            kannada: "ದಯಾಜಲಧೇ",
+                                            transliteration: "dayā-jaladhē",
+                                            meaning: "ocean of compassion"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O Lord Rama, descendant of Dasharatha, delightful and bestower of virtues, the sole wielder of the bow, courageous-minded, leader of the Raghu dynasty, mighty Rameshvara, giver of boons, protector of the world, and ocean of compassion!"
+                        },
+                        {
+                            verseNumber: 7,
+                            lines: [
+                                {
+                                    kannada: "ಅವನೀತನಯಾ ಕಮನೀಯಕರಂ",
+                                    transliteration: "avanītanayā kamanīyakaraṃ",
+                                    words: [
+                                        {
+                                            kannada: "ಅವನೀತನಯಾ",
+                                            transliteration: "avanītanayā",
+                                            meaning: "One with captivating, graceful eyes"
+                                        },
+                                        {
+                                            kannada: "ಕಮನೀಯಕರಂ",
+                                            transliteration: "kamanīyakaraṃ",
+                                            meaning: "one who does charming deeds, attractive"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ರಜನೀಕರಚಾರುಮುಖಾಂಬುರುಹಮ್ |",
+                                    transliteration: "rajanīkara chāru mukhāmburuham |",
+                                    words: [
+                                        {
+                                            kannada: "ರಜನೀಕರ",
+                                            transliteration: "rajanīkara",
+                                            meaning: "moonlight"
+                                        },
+                                        {
+                                            kannada: "ಚಾರು",
+                                            transliteration: "chāru",
+                                            meaning: "beautiful, lovely"
+                                        },
+                                        {
+                                            kannada: "ಮುಖಾಂಬುರುಹಮ್",
+                                            transliteration: "mukhāmburuham",
+                                            meaning: "whose face is radiant and charming"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ರಜನೀಚರರಾಜತಮೋಮಿಹಿರಂ",
+                                    transliteration: "rajanīchara rājata mōmi hiraṃ",
+                                    words: [
+                                        {
+                                            kannada: "ರಜನೀಚರ",
+                                            transliteration: "rajanīchara",
+                                            meaning: "night-moving, like the moon"
+                                        },
+                                        {
+                                            kannada: "ರಾಜತಮೋ",
+                                            transliteration: "rājata mō",
+                                            meaning: "silvery, shining"
+                                        },
+                                        {
+                                            kannada: "ಮಹಿರಂ",
+                                            transliteration: "mahiraṃ",
+                                            meaning: "magnificent, excellent"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಮಹನೀಯಮಹಂ ರಘುರಾಮಮಯೇ || ೭ ||",
+                                    transliteration: "mahanīya mahaṃ raghurāmamayē || 7 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಮಹನೀಯ",
+                                            transliteration: "mahanīya",
+                                            meaning: "most beautiful, charming"
+                                        },
+                                        {
+                                            kannada: "ಮಹಂ",
+                                            transliteration: "mahaṃ",
+                                            meaning: "indeed"
+                                        },
+                                        {
+                                            kannada: "ರಘುರಾಮಮಯೇ",
+                                            transliteration: "raghurāmamayē",
+                                            meaning: "O Raghurama, the embodiment of the Raghu dynasty"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O Raghurama, the embodiment of the Raghu dynasty, with captivating eyes and charming deeds, whose face is as beautiful as moonlight, radiant and silvery, magnificent and most charming!"
+                        },
+                        {
+                            verseNumber: 8,
+                            lines: [
+                                {
+                                    kannada: "ಸುಮುಖಂ ಸುಹೃದಂ ಸುಲಭಂ ಸುಖದಂ",
+                                    transliteration: "sumukhaṃ suhṛdaṃ sulabhaṃ sukhadaṃ",
+                                    words: [
+                                        {
+                                            kannada: "ಸುಮುಖಂ",
+                                            transliteration: "sumukhaṃ",
+                                            meaning: "pleasant-faced, attractive"
+                                        },
+                                        {
+                                            kannada: "ಸುಹೃದಂ",
+                                            transliteration: "suhṛdaṃ",
+                                            meaning: "friendly, benevolent"
+                                        },
+                                        {
+                                            kannada: "ಸುಲಭಂ",
+                                            transliteration: "sulabhaṃ",
+                                            meaning: "easily approachable"
+                                        },
+                                        {
+                                            kannada: "ಸುಖದಂ",
+                                            transliteration: "sukhadaṃ",
+                                            meaning: "giver of happiness"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಸ್ವನುಜಂ ಚ ಸುಕಾಯಮಮೋಘಶರಮ್ |",
+                                    transliteration: "svanujaṃ cha sukāyama mōghaśaram |",
+                                    words: [
+                                        {
+                                            kannada: "ಸ್ವನುಜಂ",
+                                            transliteration: "svanujaṃ",
+                                            meaning: "own child (or dear one)"
+                                        },
+                                        {
+                                            kannada: "ಸುಕಾಯಮ",
+                                            transliteration: "sukāyama",
+                                            meaning: "beneficial for the body, well-being"
+                                        },
+                                        {
+                                            kannada: "ಅಮೋಘಶರಮ್",
+                                            transliteration: "amōghaśaram",
+                                            meaning: "unfailing arrow (symbolic of power or grace)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಅಪಹಾಯ ರಘೂದ್ವಾಹ ಮನ್ಯಮಹಂ",
+                                    transliteration: "apahāya raghūdvāha manyamahaṃ",
+                                    words: [
+                                        {
+                                            kannada: "ಅಪಹಾಯ",
+                                            transliteration: "apahāya",
+                                            meaning: "abandoning, renouncing"
+                                        },
+                                        {
+                                            kannada: "ರಘೂದ್ವಾಹ",
+                                            transliteration: "raghūdvāha",
+                                            meaning: "dual sons of Raghu (or two aspects of Rama)"
+                                        },
+                                        {
+                                            kannada: "ಮನ್ಯಮಹಂ",
+                                            transliteration: "manyamahaṃ",
+                                            meaning: "I consider, I hold in mind"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ನ ಕಥಂಚನ ಕಂಚನ ಜಾತು ಭಜೇ || ೮ ||",
+                                    transliteration: "na kathañchana kañcana jātubhajē || 8 ||",
+                                    words: [
+                                        {
+                                            kannada: "ನ",
+                                            transliteration: "na",
+                                            meaning: "not"
+                                        },
+                                        {
+                                            kannada: "ಕಥಂಚನ",
+                                            transliteration: "kathañchana",
+                                            meaning: "at all, in any way"
+                                        },
+                                        {
+                                            kannada: "ಕಂಚನ",
+                                            transliteration: "kañcana",
+                                            meaning: "gold, metaphorically “nothing else”"
+                                        },
+                                        {
+                                            kannada: "ಜಾತು ಭಜೇ",
+                                            transliteration: "jātubhajē",
+                                            meaning: "do I worship, devote"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I do not worship anyone else, O Lord! You are pleasant-faced, benevolent, easily approachable, and giver of happiness. You are dear, unfailing in power, and I hold only You in my mind."
+                        },
+                        {
+                            verseNumber: 9,
+                            lines: [
+                                {
+                                    kannada: "ವಿನಾ ವೇಂಕಟೇಶಂ ನ ನಾಥೋ ನ ನಾಥಃ",
+                                    transliteration: "vinā vēṅkaṭēśaṃ na nāthō na nāthaḥ",
+                                    words: [
+                                        {
+                                            kannada: "ವಿನಾ",
+                                            transliteration: "vinā",
+                                            meaning: "without"
+                                        },
+                                        {
+                                            kannada: "ವೇಂಕಟೇಶಂ",
+                                            transliteration: "vēṅkaṭēśaṃ",
+                                            meaning: "Lord Venkateswara"
+                                        },
+                                        {
+                                            kannada: "ನ ನಾಥೋ ನ ನಾಥಃ",
+                                            transliteration: "na nāthō na nāthaḥ",
+                                            meaning: "there is no other Lord, none like Him"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಸದಾ ವೇಂಕಟೇಶಂ ಸ್ಮರಾಮಿ ಸ್ಮರಾಮಿ |",
+                                    transliteration: "sadā vēṅkaṭēśaṃ smarāmi smarāmi |",
+                                    words: [
+                                        {
+                                            kannada: "ಸದಾ",
+                                            transliteration: "sadā",
+                                            meaning: "always"
+                                        },
+                                        {
+                                            kannada: "ವೇಂಕಟೇಶಂ",
+                                            transliteration: "vēṅkaṭēśaṃ",
+                                            meaning: "Lord Venkateswara"
+                                        },
+                                        {
+                                            kannada: "ಸ್ಮರಾಮಿ ಸ್ಮರಾಮಿ",
+                                            transliteration: "smarāmi smarāmi",
+                                            meaning: "I remember, I meditate upon"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಹರೇ ವೇಂಕಟೇಶ ಪ್ರಸೀದ ಪ್ರಸೀದ",
+                                    transliteration: "harē vēṅkaṭēśa prasīda prasīda",
+                                    words: [
+                                        {
+                                            kannada: "ಹರೇ",
+                                            transliteration: "harē",
+                                            meaning: "O Hari, O Lord"
+                                        },
+                                        {
+                                            kannada: "ಪ್ರಸೀದ ಪ್ರಸೀದ",
+                                            transliteration: "prasīda prasīda",
+                                            meaning: "be pleased, show grace"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪ್ರಿಯಂ ವೇಂಕಟೇಶ ಪ್ರಯಚ್ಛ ಪ್ರಯಚ್ಛ || ೯ ||",
+                                    transliteration: "priyaṃ vēṅkaṭēśa prayachCha prayachCha || 9 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಪ್ರಿಯಂ",
+                                            transliteration: "priyaṃ",
+                                            meaning: "beloved, dear"
+                                        },
+                                        {
+                                            kannada: "ವೇಂಕಟೇಶ",
+                                            transliteration: "vēṅkaṭēśa",
+                                            meaning: "Lord Venkateswara"
+                                        },
+                                        {
+                                            kannada: "ಪ್ರಯಚ್ಛ ಪ್ರಯಚ್ಛ",
+                                            transliteration: "prayachCha prayachCha",
+                                            meaning: "grant, bestow"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "There is no Lord like Venkateswara. I always remember Him. O Hari, be pleased and show grace, and grant me Your beloved blessings!"
+                        },
+                        {
+                            verseNumber: 10,
+                            lines: [
+                                {
+                                    kannada: "ಅಹಂ ದೂರತಸ್ತೇ ಪದಾಂಭೋಜಯುಗ್ಮ-",
+                                    transliteration: "ahaṃ dūratastē padāṃ bhoja-yugma-",
+                                    words: [
+                                        {
+                                            kannada: "ಅಹಂ",
+                                            transliteration: "ahaṃ",
+                                            meaning: "I"
+                                        },
+                                        {
+                                            kannada: "ದೂರತಸ್ತೇ",
+                                            transliteration: "dūratastē",
+                                            meaning: "from a distance, afar"
+                                        },
+                                        {
+                                            kannada: "ಪದಾಂಭೋಜಯುಗ್ಮ",
+                                            transliteration: "padāṃ-bhoja-yugma",
+                                            meaning: "your pair of lotus feet"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "-ಪ್ರಣಾಮೇಚ್ಛಯಾಽಽಗತ್ಯ ಸೇವಾಂ ಕರೋಮಿ |",
+                                    transliteration: "praṇāmēchchayā gatya sēvāṃ karōmi |",
+                                    words: [
+                                        {
+                                            kannada: "ಪ್ರಣಾಮೇಚ್ಛಯಾ",
+                                            transliteration: "praṇāmēchchayā",
+                                            meaning: "with reverent obeisance"
+                                        },
+                                        {
+                                            kannada: "ಗತ್ಯ",
+                                            transliteration: "gatya",
+                                            meaning: "going to, approaching"
+                                        },
+                                        {
+                                            kannada: "ಸೇವಾಂ ಕರೋಮಿ",
+                                            transliteration: "sēvāṃ karōmi",
+                                            meaning: "I perform service/worship"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಸಕೃತ್ಸೇವಯಾ ನಿತ್ಯಸೇವಾಫಲಂ ತ್ವಂ",
+                                    transliteration: "sakṛtsēvayā nitya sēvā-phalaṃ tvaṃ",
+                                    words: [
+                                        {
+                                            kannada: "ಸಕೃತ್ಸೇವಯಾ",
+                                            transliteration: "sakṛtsēvayā",
+                                            meaning: "through occasional service"
+                                        },
+                                        {
+                                            kannada: "ನಿತ್ಯಸೇವಾಫಲಂ",
+                                            transliteration: "nitya sēvā-phalaṃ",
+                                            meaning: "the merit of daily service"
+                                        },
+                                        {
+                                            kannada: "ತ್ವಂ",
+                                            transliteration: "tvaṃ",
+                                            meaning: "You"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪ್ರಯಚ್ಛ ಪ್ರಯಚ್ಛ ಪ್ರಭೋ ವೇಂಕಟೇಶ || ೧೦ ||",
+                                    transliteration: "prayachCha prayachCha prabhō vēṅkaṭēśa || 10 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಪ್ರಯಚ್ಛ ಪ್ರಯಚ್ಛ",
+                                            transliteration: "prayachCha prayachCha",
+                                            meaning: "grant, bestow"
+                                        },
+                                        {
+                                            kannada: "ಪ್ರಭೋ",
+                                            transliteration: "prabhō",
+                                            meaning: "O Lord"
+                                        },
+                                        {
+                                            kannada: "ವೇಂಕಟೇಶ",
+                                            transliteration: "vēṅkaṭēśa",
+                                            meaning: "Venkateswara"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I, from afar, approach Your sacred lotus feet with reverent obeisance and perform service. O Lord Venkateswara, grant me the merit of this service and the fruits of daily worship!"
+                        },
+                        {
+                            verseNumber: 11,
+                            lines: [
+                                {
+                                    kannada: "ಅಜ್ಞಾನಿನಾ ಮಯಾ ದೋಷಾನಶೇಷಾನ್ವಿಹಿತಾನ್ ಹರೇ |",
+                                    transliteration: "ajñāninā mayā dōṣāna śēṣānvihitān harē |",
+                                    words: [
+                                        {
+                                            kannada: "ಅಜ್ಞಾನಿನಾ",
+                                            transliteration: "ajñāninā",
+                                            meaning: "by my ignorance"
+                                        },
+                                        {
+                                            kannada: "ಮಯಾ",
+                                            transliteration: "mayā",
+                                            meaning: "by me"
+                                        },
+                                        {
+                                            kannada: "ದೋಷಾನಶೇಷಾನ್ವಿಹಿತಾನ್",
+                                            transliteration: "dōṣāna-śēṣān-vihitān",
+                                            meaning: "all sins and faults, completely committed"
+                                        },
+                                        {
+                                            kannada: "ಹರೇ",
+                                            transliteration: "harē",
+                                            meaning: "O Lord Hari"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಕ್ಷಮಸ್ವ ತ್ವಂ ಕ್ಷಮಸ್ವ ತ್ವಂ ಶೇಷಶೈಲಶಿಖಾಮಣೇ || ೧೧ ||",
+                                    transliteration: "kṣamasva tvaṃ kṣamasva tvaṃ śēṣaśaila śikhāmaṇē || 11 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಕ್ಷಮಸ್ವ ತ್ವಂ",
+                                            transliteration: "kṣamasva tvaṃ",
+                                            meaning: "please forgive me"
+                                        },
+                                        {
+                                            kannada: "ಶೇಷಶೈಲಶಿಖಾಮಣೇ",
+                                            transliteration: "śēṣaśaila śikhāmaṇē",
+                                            meaning: "O jewel atop Shesha Hill (Venkata Hill)"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O Lord Venkateswara, due to my ignorance I have committed countless sins. Please forgive me, O jewel atop Shesha Hill!"
+                        }
+
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "ಇತಿ ಶ್ರುತಿ",
+                        english: "Conclusion"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಇತಿ ಶ್ರೀವೇಂಕಟೇಶ ಸ್ತೋತ್ರಮ್ |",
+                                    transliteration: "iti śrīvēṅkaṭēśa stōtram |",
+                                    words: [
+                                        {
+                                            kannada: "ಇತಿ",
+                                            transliteration: "iti",
+                                            meaning: "thus"
+                                        },
+                                        {
+                                            kannada: "ಶ್ರೀವೇಂಕಟೇಶ",
+                                            transliteration: "śrīvēṅkaṭēśa",
+                                            meaning: "Lord Venkateswara"
+                                        },
+                                        {
+                                            kannada: "ಸ್ತೋತ್ರಮ್",
+                                            transliteration: "stōtram",
+                                            meaning: "stotram, hymn"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Thus ends the Venkateswara Stotram."
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
+
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>
