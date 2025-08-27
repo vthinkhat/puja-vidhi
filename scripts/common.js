@@ -319,7 +319,8 @@ function loadCommonPujaSections() {
         'venkateswara-vajra-kavacham',
         'vishnu-sahasranamam',
         'daily-mantras',
-        'dattratreya-mantra'
+        'dattratreya-mantra',
+        'vinayaka-ashtottara-satanamavali'
     ];
     
     // Load general sections
