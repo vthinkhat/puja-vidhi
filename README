@@ -22,6 +22,7 @@ Here are the commands to install and run http-server locally:
 
 Install http-server:
 ```
+# OPTIONAL # sudo apt install npm
 npm install -g http-server
 http-server
 ```
