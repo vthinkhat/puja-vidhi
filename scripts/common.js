@@ -98,21 +98,66 @@ function renderWordByWord(verse) {
     const div = document.createElement('div');
     div.className = 'word-by-word';
     
-    // Group words into tables for each line
-    verse.lines.forEach(line => {
-        if (line.words && line.words.length > 0) {
-            const table = createWordByWordTable(line.words);
-            div.appendChild(table);
+    // First, display the original verse text
+    const versePara = document.createElement('p');
+    versePara.style.marginBottom = '15px';
+    versePara.style.fontWeight = 'bold';
+    versePara.style.color = '#333';
+    verse.lines.forEach((line, index) => {
+        versePara.innerHTML += line.kannada;
+        if (index < verse.lines.length - 1) {
+            versePara.innerHTML += ' <br>';
         }
     });
+    div.appendChild(versePara);
     
-    // Add complete meaning if available
-    if (verse.completeMeaning) {
+    // Show verse number if available
+    if (verse.shlokaNumber) {
+        const verseNum = document.createElement('h4');
+        verseNum.textContent = `Verse ${verse.shlokaNumber}`;
+        verseNum.style.color = '#0066cc';
+        verseNum.style.marginTop = '0';
+        verseNum.style.marginBottom = '10px';
+        div.insertBefore(verseNum, versePara);
+    }
+    
+    // Show word-by-word breakdown if available at verse level
+    if (verse.words && verse.words.length > 0) {
+        const table = createWordByWordTable(verse.words);
+        div.appendChild(table);
+    } else {
+        // Fallback: check for words at line level (for backward compatibility)
+        let foundWords = false;
+        verse.lines.forEach(line => {
+            if (line.words && line.words.length > 0) {
+                const table = createWordByWordTable(line.words);
+                div.appendChild(table);
+                foundWords = true;
+            }
+        });
+        
+        if (!foundWords) {
+            const noWordsMsg = document.createElement('p');
+            noWordsMsg.textContent = '(Word-by-word breakdown not available for this verse)';
+            noWordsMsg.style.fontStyle = 'italic';
+            noWordsMsg.style.color = '#888';
+            noWordsMsg.style.fontSize = '0.9em';
+            noWordsMsg.style.marginTop = '10px';
+            div.appendChild(noWordsMsg);
+        }
+    }
+    
+    // Add complete meaning if available (check both possible property names)
+    const meaning = verse.fullMeaning || verse.completeMeaning;
+    if (meaning) {
         const meaningPara = document.createElement('p');
         meaningPara.style.marginTop = '15px';
         meaningPara.style.fontStyle = 'italic';
         meaningPara.style.color = '#666';
-        meaningPara.innerHTML = `<strong>Complete meaning:</strong> ${verse.completeMeaning}`;
+        meaningPara.style.backgroundColor = '#f9f9f9';
+        meaningPara.style.padding = '10px';
+        meaningPara.style.borderRadius = '5px';
+        meaningPara.innerHTML = `<strong>Complete meaning:</strong> ${meaning}`;
         div.appendChild(meaningPara);
     }
     
@@ -208,6 +253,12 @@ function initializeDisplayModeButtons() {
  * @returns {HTMLElement} - Table element
  */
 function createWordByWordTable(words) {
+    if (!words || !Array.isArray(words) || words.length === 0) {
+        const div = document.createElement('div');
+        div.textContent = 'No word data available';
+        return div;
+    }
+    
     const table = document.createElement('table');
     table.className = 'word-by-word-table';
     
@@ -216,7 +267,7 @@ function createWordByWordTable(words) {
     kannadaRow.className = 'kannada-row';
     words.forEach(word => {
         const td = document.createElement('td');
-        td.textContent = word.kannada;
+        td.textContent = word.kannada || 'N/A';
         kannadaRow.appendChild(td);
     });
     table.appendChild(kannadaRow);
@@ -226,7 +277,7 @@ function createWordByWordTable(words) {
     transliterationRow.className = 'translation-row';
     words.forEach(word => {
         const td = document.createElement('td');
-        td.textContent = word.transliteration;
+        td.textContent = word.transliteration || 'N/A';
         transliterationRow.appendChild(td);
     });
     table.appendChild(transliterationRow);
@@ -236,7 +287,7 @@ function createWordByWordTable(words) {
     meaningRow.className = 'meaning-row';
     words.forEach(word => {
         const td = document.createElement('td');
-        td.textContent = word.meaning;
+        td.textContent = word.meaning || 'N/A';
         meaningRow.appendChild(td);
     });
     table.appendChild(meaningRow);

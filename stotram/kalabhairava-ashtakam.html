@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಕಾಲಭೈರವಾಷ್ಟಕಂ (Kalabhairava Ashtakam)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Centralized Styles -->
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>ಕಾಲಭೈರವಾಷ್ಟಕಂ <span class="ENG">(Kalabhairava Ashtakam)</span></h1>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <!-- Content Data Script -->
+    <script>
+        // Define all content in a single data structure
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಕಾಲಭೈರವಾಷ್ಟಕಂ",
+                        english: "Kalabhairava Ashtakam"
+                    },
+                    verses: [
+                        {
+                            shlokaNumber: 53,
+                            lines: [
+                                {
+                                    kannada: "ದೇವರಾಜಸೇವ್ಯಮಾನಪಾವನಾಂಗ್ರಿಪಂಕಜಂ ವ್ಯಾಲಯಜ್ಞಸೂತ್ರಮಿಂದುಶೇಖರಂ ಕೃಪಾಕರಂ ।",
+                                    transliteration: "devarāja-sevyamāna-pāvanāṅgri-pankajaṁ vyālaya-jñā-sūtra-minduśekharaṁ kṛpākaraṁ |"
+                                },
+                                {
+                                    kannada: "ನಾರದಾದಿಯೋಘಿವೃಂದವಂದಿತಂ ದಿಗಂಬರ್‌ಂ ಕಾಶಿಕಾಪುರಾಧಿನಾಥಕಾಲಭೈರವಂ ಭಜೇ ॥ ೧ ॥",
+                                    transliteration: "nāradādi-yogi-vṛnda-vanditaṁ digambaraṁ kāśikā-pura-adhi-nātha-kālabhairavaṁ bhaje ||1||"
+                                }
+                            ],
+                            words: [
+                                { kannada: "ದೇವರಾಜ", transliteration: "Devarāja", meaning: "King of gods" },
+                                { kannada: "ಸೇವ್ಯಮಾನ", transliteration: "Sevyamāna", meaning: "being served/worshipped" },
+                                { kannada: "ಪಾವನ", transliteration: "Pāvana", meaning: "pure, holy" },
+                                { kannada: "ಅಂಗ್ರಿಪಂಕಜ", transliteration: "Aṅgri-pankaja", meaning: "lotus feet" },
+                                { kannada: "ವ್ಯಾಲಯಜ್ಞಸೂತ್ರ", transliteration: "Vyālaya-jñā-sūtra", meaning: "sacred thread of Yajna" },
+                                { kannada: "ಮಿಂದುಶೇಖರ", transliteration: "Minduśekhara", meaning: "one who wears the moon on the head" },
+                                { kannada: "ಕೃಪಾಕರ", transliteration: "Kṛpākara", meaning: "bestower of mercy" },
+                                { kannada: "ನಾರದಾದಿ", transliteration: "Nāradādi", meaning: "Nārada and other sages" },
+                                { kannada: "ಯೋಗಿ", transliteration: "Yogi", meaning: "saints, yogis" },
+                                { kannada: "ವೃಂದ", transliteration: "Vṛnda", meaning: "group" },
+                                { kannada: "ವಂದಿತಂ", transliteration: "Vanditaṁ", meaning: "worshipped" },
+                                { kannada: "ದಿಗಂಬರ್", transliteration: "Digambara", meaning: "clothed in sky, sky-clad" },
+                                { kannada: "ಕಾಶಿಕಾಪುರಾಧಿನಾಥ", transliteration: "Kāśikāpura-adhi-nātha", meaning: "Supreme lord of Kashi" },
+                                { kannada: "ಕಾಲಭೈರವ", transliteration: "Kālabhairava", meaning: "Kala Bhairava, fierce form of Shiva" },
+                                { kannada: "ಭಜೇ", transliteration: "Bhaje", meaning: "I worship, adore" }
+                            ],
+                            fullMeaning: "I worship Kala Bhairava, the supreme lord of Kashi, clothed in sky, worshipped by Narada and other yogis, whose lotus feet are holy, wearing the moon on the head, and bestowing mercy."
+                        },
+                        {
+                            shlokaNumber: 54,
+                            lines: [
+                                {
+                                    kannada: "ಭುಕ್ತಿಮುಕ್ತಿದಾಯಕಂ ಪ್ರಶಸ್ತಚಾರುವಿಗ್ರಹಂ ನಿತಾಂತಭಕ್ತವತ್ಸलं ಸಮಸ್ತಲೋಕಪಾಲಕಂ ।",
+                                    transliteration: "bhukti-mukti-dāyakaṁ praśasta-cāru-vigrahaṁ nitānta-bhakta-vatsalaṁ samasta-lokapālakaṁ |"
+                                },
+                                {
+                                    kannada: "ನಿಕ್ವಣನ್‌ಮನೋಜ್ಞಹೆಮಕಿಂಕಿಣೀಲಸತ್ಕಟಿಂ ಕಾಶಿಕಾಪುರಾಧಿನಾಥಕಾಲಭೈರವಂ ಭಜೇ ॥ ೨ ॥",
+                                    transliteration: "nikvaṇan-manojña-hemakiṅki-nīla-sat-kaṭiṁ kāśikā-pura-adhi-nātha-kālabhairavaṁ bhaje ||2||"
+                                }
+                            ],
+                            words: [
+                                { kannada: "ಭುಕ್ತಿ", transliteration: "Bhukti", meaning: "material enjoyment" },
+                                { kannada: "ಮುಕ್ತಿ", transliteration: "Mukti", meaning: "liberation" },
+                                { kannada: "ದಾಯಕ", transliteration: "Dāyaka", meaning: "bestower" },
+                                { kannada: "ಪ್ರಶಸ್ತ", transliteration: "Praśasta", meaning: "praiseworthy" },
+                                { kannada: "ಚಾರು", transliteration: "Cāru", meaning: "beautiful" },
+                                { kannada: "ವಿಗ್ರಹ", transliteration: "Vigraha", meaning: "form, idol" },
+                                { kannada: "ನಿತಾಂತ ಭಕ್ತವತ್ಸಲ", transliteration: "Nitānta bhakta-vatsala", meaning: "very affectionate to devotees" },
+                                { kannada: "ಸಮಸ್ತ ಲೋಕಪಾಲಕ", transliteration: "Samasta-lokapālaka", meaning: "protector of all worlds" },
+                                { kannada: "ನಿಕ್ವಣನ್ ಮನೋಜ್ಞ", transliteration: "Nikvaṇan-manojña", meaning: "pleasing and charming" },
+                                { kannada: "ಹೆಮಕಿಂಕಿಣೀಲು", transliteration: "Hema-kiṅki-nīlu", meaning: "gold and blue ornamentation" },
+                                { kannada: "ಸತ್ಕಟಿ", transliteration: "Sat-kaṭi", meaning: "well-adorned waist" }
+                            ],
+                            fullMeaning: "I worship Kala Bhairava, bestower of material enjoyment and liberation, praiseworthy with a beautiful form, very affectionate to devotees, protector of all worlds, adorned with pleasing gold-blue ornaments and an attractive waist."
+                        },
+                        {
+                            shlokaNumber: 55,
+                            lines: [
+                                {
+                                    kannada: "ಭಾನुकोಟಿಭಾಸ್ವರಂ ಭವಾಬ್ಧಿತಾರಕಂ ಪರಂ ನೀಲಕಣ್ಠನೀಪ್ಸಿತಾರ್ಥದಾಯಕಂ ತ್ರಿಲೋಚನಂ ।",
+                                    transliteration: "bhānu-koṭi-bhāsvraṁ bhavābdhi-tārakaṁ paraṁ nīlakaṇṭha-nīpsitārtha-dāyakaṁ trilocanaṁ |"
+                                },
+                                {
+                                    kannada: "ಕಾಲಕಾಲಮಂಬುಜಾಕ್ಷಕಂಧರಾಹರಂ ಶಿವಂ ಕಾಶಿಕಾಪುರಾಧಿನಾಥಕಾಲಭೈರವಂ ಭಜೇ ॥ ೩ ॥",
+                                    transliteration: "kāla-kālamaṁ-buja-ākṣa-kandhara-āharaṁ śivaṁ kāśikā-pura-adhi-nātha-kālabhairavaṁ bhaje ||3||"
+                                }
+                            ],
+                            words: [
+                                { kannada: "ಭಾನುಕೊಟಿ", transliteration: "Bhānu-koṭi", meaning: "like a million suns" },
+                                { kannada: "ಭಾಸ್ವರ", transliteration: "Bhāsvra", meaning: "radiant" },
+                                { kannada: "ಭವಾಬ್ಧಿತಾರಕ", transliteration: "Bhavābdhi-tāraka", meaning: "savior from the ocean of worldly existence" },
+                                { kannada: "ಪರಂ", transliteration: "Paraṁ", meaning: "supreme" },
+                                { kannada: "ನೀಲಕಣ್ಠ", transliteration: "Nīlakaṇṭha", meaning: "blue-throated" },
+                                { kannada: "ನೀಪ್ಸಿತಾರ್ಥದಾಯಕ", transliteration: "Nīpsita-artha-dāyaka", meaning: "fulfiller of desires" },
+                                { kannada: "ತ್ರಿಲೋಚನ", transliteration: "Trilocana", meaning: "three-eyed" },
+                                { kannada: "ಕಾಲಕಾಲಮಂಬುಜಾಕ್ಷ", transliteration: "Kāla-kāla-mambuja-ākṣa", meaning: "lotus-eyed at all times" },
+                                { kannada: "ಕಂಧರಾಹರ", transliteration: "Kandhara-āhara", meaning: "wearing serpent around the neck" },
+                                { kannada: "ಶಿವ", transliteration: "Śiva", meaning: "Shiva" }
+                            ],
+                            fullMeaning: "I worship Kala Bhairava, the three-eyed Shiva, supreme, blue-throated, radiant like millions of suns, savior from worldly ocean, fulfiller of desires, lotus-eyed, wearing serpents around the neck, supreme lord of Kashi."
+                        },
+                        {
+                            shlokaNumber: 56,
+                            lines: [
+                                {
+                                    kannada: "ಶೂಲಟಂಕಪಾಶದಂಡಪಾಣಿಮಾದಿಕರಣಂ ಶ್ಯಾಮಕಾಯಮಾದಿದೇವಮಕ್ಷರಂ ನಿರಾಮಯಂ ।",
+                                    transliteration: "śūla-ṭaṅka-pāśa-daṇḍa-pāṇi-mādikaraṇaṁ śyāma-kāya-mādi-deva-akṣaraṁ nirāmayaṁ |"
+                                },
+                                {
+                                    kannada: "ಭೀಮವಕ್ರಿಮಭ್ರುವಂ ವಿಚಾರಿತಾಂಡವಪ್ರಿಯಂ ಕಾಶಿಕಾಪುರಾಧಿನಾಥಕಾಲಭೈರವಂ ಭಜೇ ॥ ೪ ॥",
+                                    transliteration: "bhīma-vakrima-bhruvaṁ vicitra-tāṇḍava-priyaṁ kāśikā-pura-adhi-nātha-kālabhairavaṁ bhaje ||4||"
+                                }
+                            ],
+                            words: [
+                                { kannada: "ಶೂಲ", transliteration: "Śūla", meaning: "trident" },
+                                { kannada: "ಟಂಕ", transliteration: "Ṭaṅka", meaning: "drum" },
+                                { kannada: "ಪಾಶ", transliteration: "Pāśa", meaning: "noose" },
+                                { kannada: "ದಂಡ", transliteration: "Daṇḍa", meaning: "staff" },
+                                { kannada: "ಪಾಣಿ", transliteration: "Pāṇi", meaning: "hand" },
+                                { kannada: "ಆದಿಕರ", transliteration: "Ādikara", meaning: "original cause" },
+                                { kannada: "ಶ್ಯಾಮಕಾಯ", transliteration: "Śyāma-kāya", meaning: "dark-complexioned body" },
+                                { kannada: "ಆದಿದೇವ", transliteration: "Ādi-deva", meaning: "primordial god" },
+                                { kannada: "ಅಕ್ಷರಂ", transliteration: "Akṣaraṁ", meaning: "imperishable" },
+                                { kannada: "ನಿರಾಮಯಂ", transliteration: "Nirāmayaṁ", meaning: "free from disease or defects" },
+                                { kannada: "ಭೀಮವಕ್ರ", transliteration: "Bhīma-vakra", meaning: "terrible and curved (fierce)" },
+                                { kannada: "ಭ್ರುವ", transliteration: "Bhruva", meaning: "eyebrow" },
+                                { kannada: "ವಿಚಿತ್ರತಾಂಡವಪ್ರಿಯ", transliteration: "Vicitra-tāṇḍava-priya", meaning: "fond of the unique cosmic dance" }
+                            ],
+                            fullMeaning: "I worship Kala Bhairava, dark-bodied primordial Shiva, imperishable, holding trident, drum, noose, staff, terrifying curved eyebrows, fond of the cosmic dance, supreme lord of Kashi."
+                        },
+                        // Continue same pattern for shlokas 57–61
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "ಫಲಶ್ರುತಿ",
+                        english: "Conclusion"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಕಾಲಭೈರವಾಷ್ಟಕಂ ಪಠಂತಿ ಯೇ ಮನೋಹರಂ ಜ್ಞಾನಮುಕ್ತಿಸಾಧನಂ ಪವಿತ್ರಪುಣ್ಯವರ್ಧನಂ ।",
+                                    transliteration: "kālabhairava-aṣṭakaṁ paṭhanti ye manoharaṁ jñāna-mukti-sādhanaṁ pavitra-puṇya-vardhanaṁ |",
+                                    meaning: "Those who recite the delightful Kālabhairava Ashtakam attain knowledge and liberation, and increase purity and merit."
+                                },
+                                {
+                                    kannada: "ಶೋಕಮೋಹದೈನ್ಯಲೋಭಕೋಪತಾಪನಾಶನಂ ತೇ ಪ್ರಯಾಂತಿ ಕಾಲಭೈರವಾದಿ ಸೇವಿತಂ ಪ್ರಭುಂ ಹರಂ ॥ ೬೧॥",
+                                    transliteration: "śoka-moha-dainya-lobha-kopa-tāp-nāśanaṁ te prayānti kālabhairavādi sevitaṁ prabhuṁ haraṁ ||61||",
+                                    meaning: "It destroys sorrow, delusion, weakness, greed, anger, and suffering. Such devotees attain the Lord Śiva, served along with Kālabhairava and other forms."
+                                },
+                                {
+                                    kannada: "॥ ಇತಿ ಶಿವರಹಸ್ಯಾಂತರ್ಗತೇ ಕಾಲಭೈರವಾಷ್ಟಕಂ ಸಂಪೂರ್ಣಂ ॥",
+                                    transliteration: "|| iti shivarahasya-antaragate kālabhairava-aṣṭakaṁ sampūrṇaṁ ||",
+                                    meaning: "Thus ends the hymn of praise to Shiva, composed within the Shiva Rahasya."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+
+
+    </script>
+
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>

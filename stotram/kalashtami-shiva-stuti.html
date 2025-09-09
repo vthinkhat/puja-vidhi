@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಕಾಲಾಷ್ಟಮೀಕೃತ ಶಿವಸ್ತುತಿ (Kalashtami Shiva Stuti)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Centralized Styles -->
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>ಕಾಲಾಷ್ಟಮೀಕೃತ ಶಿವಸ್ತುತಿ <span class="ENG">(Kalashtami Shiva Stuti)</span></h1>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <!-- Content Data Script -->
+    <script>
+        // Define all content in a single data structure
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಶಿವಸ್ತುತಿಃ",
+                        english: "Hymn to Shiva"
+                    },
+                    verses: [
+                        {
+                            shlokaNumber: 28,
+                            lines: [
+                                {
+                                    kannada: "ಜಯ ಶಂಕರ ಪಾರ್ವತೀಪತೇ ಹರ ವಿಧಿವಿಷ್ಣ್ವಿಂದ್ರಸುಸೇವಿತಾಬ್ಜಪಾದ ।",
+                                    transliteration: "jaya shankara paarvatee-pate hara vidhi-vishnu-indra-su-sevita-abja-paada |"
+                                },
+                                {
+                                    kannada: "ಉರಗೇಂದ್ರಾಭರಣ ಪ್ರಸೀದ ಶಂಭೋ ಪ್ರಸಭಂ ಪಾಪಮಪಾಕುರುಷ್ವ ಸದ್ಯಃ ॥೨೮॥",
+                                    transliteration: "uragendra-aabharana praseeda shambho prasabham paapam apaakurushva sadyaḥ ||28||"
+                                }
+                            ],
+                            words: [
+                                { kannada: "ಜಯ", transliteration: "Jaya", meaning: "Victory, Glory, Hail" },
+                                { kannada: "ಶಂಕರ", transliteration: "Shankara", meaning: "The one who brings auspiciousness, a name of Shiva" },
+                                { kannada: "ಪಾರ್ವತೀಪತೇ", transliteration: "Parvatīpate", meaning: "Lord of Parvati" },
+                                { kannada: "ಹರ", transliteration: "Hara", meaning: "The remover of sins, Shiva" },
+                                { kannada: "ವಿಧಿ", transliteration: "Vidhi", meaning: "Brahma, the Creator" },
+                                { kannada: "ವಿಷ್ಣು", transliteration: "Vishnu", meaning: "Lord Vishnu, the Preserver" },
+                                { kannada: "ಇಂದ್ರ", transliteration: "Indra", meaning: "King of the gods" },
+                                { kannada: "ಸುಸೇವಿತ", transliteration: "Su-sevita", meaning: "well worshipped, served" },
+                                { kannada: "ಅಬ್ಜಪಾದ", transliteration: "Abja-pāda", meaning: "lotus feet" },
+                                { kannada: "ಉರಗೇಂದ್ರ", transliteration: "Uragendra", meaning: "king of serpents (Vasuki, Shesha)" },
+                                { kannada: "ಆಭರಣ", transliteration: "Aabharana", meaning: "ornament" },
+                                { kannada: "ಪ್ರಸೀದ", transliteration: "Prasīda", meaning: "Be gracious" },
+                                { kannada: "ಶಂಭೋ", transliteration: "Shambho", meaning: "O Shambhu, source of bliss" },
+                                { kannada: "ಪ್ರಸಭಂ", transliteration: "Prasabham", meaning: "forcibly, completely" },
+                                { kannada: "ಪಾಪಮ್", transliteration: "Paapam", meaning: "sins" },
+                                { kannada: "ಅಪಾಕುರುಷ್ವ", transliteration: "Apaakurushva", meaning: "remove, drive away" },
+                                { kannada: "ಸದ್ಯಃ", transliteration: "Sadyaḥ", meaning: "at once, instantly" }
+                            ],
+                            fullMeaning: "Victory to you, O Shankara, Lord of Parvati, O Hara! Your lotus feet are well worshipped by Brahma, Vishnu, and Indra. O Shambhu, adorned with the king of serpents, be gracious! Please remove all sins at once."
+                        },
+                        {
+                            shlokaNumber: 29,
+                            lines: [
+                                {
+                                    kannada: "ಜಯ ಸೋಮಾನಲಸೂರ್ಯಲೋಚನಾದ್ಯ ಶಂಭೋ ಧೃತಚಂದ್ರಾಂಕಜಟಾಕುಟೀರಗಂಗಾ ।",
+                                    transliteration: "jaya soma-anala-soorya-lochana-aadya shambho dhrita-chandra-anka-jataa-kuteera-gangaa |"
+                                },
+                                {
+                                    kannada: "ಪರಿಪಾಹಿಪತಂಗ ಮಧ್ಯವಾಸ ವಿಧಿಮುಂಡಾಭರಣ ಪ್ರಸೀದ ದೇವ ॥೨೯॥",
+                                    transliteration: "paripaahi patanga-madhya-vaasa vidhi-munda-aabharana praseeda deva ||29||"
+                                }
+                            ],
+                            words: [
+                                { kannada: "ಸೋಮ", transliteration: "Soma", meaning: "Moon" },
+                                { kannada: "ಅನಲ", transliteration: "Anala", meaning: "Fire (Agni)" },
+                                { kannada: "ಸೂರ್ಯ", transliteration: "Surya", meaning: "Sun" },
+                                { kannada: "ಲೋಚನ", transliteration: "Lochana", meaning: "Eye" },
+                                { kannada: "ಆದ್ಯ", transliteration: "Ādya", meaning: "Supreme, primordial" },
+                                { kannada: "ಜಟಾ", transliteration: "Jataa", meaning: "matted locks" },
+                                { kannada: "ಕುಟೀರ", transliteration: "Kuṭīra", meaning: "cluster, abode" },
+                                { kannada: "ಗಂಗಾ", transliteration: "Gaṅgā", meaning: "holy river Ganga" },
+                                { kannada: "ಪರಿಪಾಹಿ", transliteration: "Paripāhi", meaning: "Protect, save" },
+                                { kannada: "ಪತಂಗ", transliteration: "Patanga", meaning: "the Sun’s orb, firefly/flame" },
+                                { kannada: "ಮಧ್ಯ", transliteration: "Madhya", meaning: "center" },
+                                { kannada: "ವಾಸ", transliteration: "Vāsa", meaning: "dwelling" },
+                                { kannada: "ವಿಧಿ", transliteration: "Vidhi", meaning: "Brahma" },
+                                { kannada: "ಮುಂಡ", transliteration: "Muṇḍa", meaning: "skull" },
+                                { kannada: "ಆಭರಣ", transliteration: "Ābharaṇa", meaning: "ornament" },
+                                { kannada: "ಪ್ರಸೀದ ದೇವ", transliteration: "Prasīda Deva", meaning: "Be gracious, O Lord" }
+                            ],
+                            fullMeaning: "Hail to you, O Shambhu, Supreme, whose eyes are the sun, moon, and fire! You hold the crescent moon and flowing Ganga in your matted locks. Protect me, O dweller in the orb of the sun, adorned with Brahmā’s skull. Be gracious, O Lord!"
+                        },
+                        {
+                            shlokaNumber: 30,
+                            lines: [
+                                {
+                                    kannada: "ಜಯ ಸೋಮಕಲಾವತಂಸ ಶೂಲಪಾಣೇ ಗಣವೃಂದಾಮಲಸೇವನ ಪ್ರಸೀದ ।",
+                                    transliteration: "jaya soma-kalaa-avatamsa shoola-paane gana-vrinda-amala-sevana praseeda |"
+                                },
+                                {
+                                    kannada: "ಹರ ಭರ್ಗೋರುಮಹೋಗ್ರಕಾಲಕೂಟವಿಷಭಕ್ಷೇಂದುಕಲಾಲಸತ್ಕಪರ್ದ ॥೩೦॥",
+                                    transliteration: "hara bhargo-uru-maha-ugra-kaalakoota-visha-bhaksha-indu-kalaa-aalasa-t-kaparda ||30||"
+                                }
+                            ],
+                            words: [
+                                { kannada: "ಸೋಮ", transliteration: "Soma", meaning: "Moon" },
+                                { kannada: "ಕಲಾ", transliteration: "Kalā", meaning: "digit, crescent ray" },
+                                { kannada: "ಆವತಂಸ", transliteration: "Avatamsa", meaning: "ornament" },
+                                { kannada: "ಶೂಲಪಾಣೇ", transliteration: "Śūlapāṇe", meaning: "Trident-holder" },
+                                { kannada: "ಗಣವೃಂದ", transliteration: "Gaṇavṛnda", meaning: "hosts of attendants" },
+                                { kannada: "ಅಮಲಸೇವನ", transliteration: "Amala-sevana", meaning: "pure worship" },
+                                { kannada: "ಭರ್ಗ", transliteration: "Bharga", meaning: "effulgent, destroyer of evil" },
+                                { kannada: "ಕಾಲಕೂಟ", transliteration: "Kālakūṭa", meaning: "deadly poison" },
+                                { kannada: "ವಿಷಭಕ್ಷ", transliteration: "Viṣa-bhakṣa", meaning: "poison-consuming" },
+                                { kannada: "ಇಂದುಕಲಾ", transliteration: "Indu-kalā", meaning: "crescent moon" },
+                                { kannada: "ಲಸತ್ಕಪರ್ದ", transliteration: "Lasat-kaparda", meaning: "matted hair shining with the moon" }
+                            ],
+                            fullMeaning: "Victory to you, O crescent-wearing, trident-holder! Be pleased, worshiped with pure devotion by your hosts of attendants. O effulgent Hara, who consumed the deadly poison Kālakūṭa, your locks shine with the crescent moon."
+                        },
+                        {
+                            shlokaNumber: 31,
+                            lines: [
+                                {
+                                    kannada: "ಜಯ ಸಾಂಬ ಮಹೋರಗೇಂದ್ರಹಾರ ಪ್ರಸಭಂ ಮನ್ಮಥನಾಶನ ಪ್ರಸೀದ ಭರ್ಗ ।",
+                                    transliteration: "jaya saamba maha-uragendra-haara prasabham manmatha-naashana praseeda bharga |"
+                                },
+                                {
+                                    kannada: "ಭವ ಭೀಮ ಮಹೇಶ್ವರಾವ ಶಂಭೋ ಮಯಿ ದೃಷ್ಟಿಂ ಕರುಣಾಂ ಕರುಷ್ವ ಶಂಭೋ ॥೩೧॥",
+                                    transliteration: "bhava bheema maheshwara-ava shambho maye drishtim karunaam karushva shambho ||31||"
+                                }
+                            ],
+                            words: [
+                                { kannada: "ಸಾಂಬ", transliteration: "Sāmba", meaning: "with Amba/Parvati" },
+                                { kannada: "ಮಹೌರಗೇಂದ್ರಹಾರ", transliteration: "Mahoragendra-hāra", meaning: "garlanded with the great serpent" },
+                                { kannada: "ಮನ್ಮಥನಾಶನ", transliteration: "Manmatha-nāśana", meaning: "destroyer of Kama" },
+                                { kannada: "ಭರ್ಗ", transliteration: "Bharga", meaning: "effulgent, radiant" },
+                                { kannada: "ಭವ", transliteration: "Bhava", meaning: "source of existence" },
+                                { kannada: "ಭೀಮ", transliteration: "Bhīma", meaning: "awe-inspiring, terrible" },
+                                { kannada: "ಮಹೇಶ್ವರ", transliteration: "Maheshvara", meaning: "the great Lord" },
+                                { kannada: "ಅವ", transliteration: "Ava", meaning: "protect, guard" },
+                                { kannada: "ದೃಷ್ಟಿಂ", transliteration: "Dṛṣṭim", meaning: "glance" },
+                                { kannada: "ಕರುಣಾಂ", transliteration: "Karuṇām", meaning: "compassion, mercy" }
+                            ],
+                            fullMeaning: "Hail, Lord with Parvati, garlanded with the great serpent! Fierce destroyer of Kama, be gracious, O radiant one. Protect me, O Bhava, terrible and mighty Maheshwara. Cast your compassionate glance upon me, O Shambhu."
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "ಫಲಶ್ರುತಿ",
+                        english: "Conclusion"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಇತಿ ಶಿವರಹಸ್ಯಾಂತರ್ಗತೇ ಕಾಲಾಷ್ಟಮೀಕೃತೇ ಶಿವಸ್ತುತಿಃ ಸಂಪೂರ್ಣಾ ॥",
+                                    transliteration: "Iti Shivarahasya-antaragate Kālashtamī-kṛte Shiva-stutih Sampūrṇā ||",
+                                    meaning: "Thus ends the hymn of praise to Shiva, composed for Kālashtamī, within the Shiva Rahasya."
+                                },
+                                {
+                                    kannada: "ಶ್ರೀ ಶಿವರಹಸ्यम್ । ಮಹಾದೇವಾಖ್ಯಃ ಏಕಾದಶಮಾಂಶಃ । ಅಧ್ಯಾಯಃ ೩೪ ಅಷ್ಟಮೀಪೂಜಾ ಕಥನಂ । ೨೮–೩೧॥",
+                                    transliteration: "Śrī Shivarahasyam | Mahādevākhyah Ekādaśamānśaḥ | Adhyāyaḥ 34 Ashtamī-pūjā kathanam | 28–31 ||",
+                                    meaning: "From the sacred text Shri Shiva Rahasya, Mahadeva Section, Eleventh Part, Chapter 34 (narration of Ashtami Puja), verses 28–31."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+
+    </script>
+
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>
