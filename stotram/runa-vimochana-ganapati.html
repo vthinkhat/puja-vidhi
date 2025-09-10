@@ -14,48 +14,271 @@
 <body>
     <h1>ಋಣ ವಿಮೋಚನ ಗಣಪತಿ ಸ್ತೋತ್ರಂ <span class="ENG">(Ruva Vimochana Ganapati Stotram)</span></h1>
 
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
     <div style="display: flex; align-items: center; gap: 1em; margin-bottom: 0.5em;">
         <h2 style="margin: 0;">ಋಣ ವಿಮೋಚನ ಗಣಪತಿ ಸ್ತೋತ್ರಂ <span class="ENG">(Ruva Vimochana Ganapati Stotram)</span></h2>
         <audio controls="controls" src="../audio/runa-vimochana-ganapati.mp3" style="vertical-align: middle;"></audio>
     </div>
 
-    <button class="toggle-btn" onclick="toggleVisibility()">Show/Hide English Transliteration</button>
-
-    <a href="https://youtu.be/zgIay-1IdTY?si=W6uvbChcv-Hsz9aJ" target="_blank">Listen</a>
-
-    <div class="stotram-content">
-        <p>
-            ಸ್ಮರಾಮಿ ದೇವದೇವೇಶಂ ವಕ್ರತುಂಡಂ ಮಹಾಬಲಮ್ । <br>
-            ಷಡಕ್ಷರಂ ಕೃಪಾಸಿಂಧುಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ 1 ॥ <br><br>
-
-            ಏಕಾಕ್ಷರಂ ಹ್ಯೇಕದಂತಂ ಏಕಂ ಬ್ರಹ್ಮ ಸನಾತನಮ್ । <br>
-            ಏಕಮೇವಾದ್ವಿತೀಯಂ ಚ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ 2 ॥ <br><br>
-
-            ಮಹಾಗಣಪತಿಂ ದೇವಂ ಮಹಾಸತ್ತ್ವಂ ಮಹಾಬಲಮ್ । <br>
-            ಮಹಾವಿಘ್ನಹರಂ ಶಂಭೋಃ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ 3 ॥ <br><br>
-
-            ಕೃಷ್ಣಾಂಬರಂ ಕೃಷ್ಣವರ್ಣಂ ಕೃಷ್ಣಗಂಧಾನುಲೇಪನಮ್ । <br>
-            ಕೃಷ್ಣಸರ್ಪೋಪವೀತಂ ಚ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ 4 ॥ <br><br>
-
-            ರಕ್ತಾಂಬರಂ ರಕ್ತವರ್ಣಂ ರಕ್ತಗಂಧಾನುಲೇಪನಮ್ । <br>
-            ರಕ್ತಪುಷ್ಪಪ್ರಿಯಂ ದೇವಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ 5 ॥ <br><br>
-
-            ಪೀತಾಂಬರಂ ಪೀತವರ್ಣಂ ಪೀತಗಂಧಾನುಲೇಪನಮ್ । <br>
-            ಪೀತಪುಷ್ಪಪ್ರಿಯಂ ದೇವಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ 6 ॥ <br><br>
-
-            ಧೂಮ್ರಾಂಬರಂ ಧೂಮ್ರವರ್ಣಂ ಧೂಮ್ರಗಂಧಾನುಲೇಪನಮ್ । <br>
-            ಹೋಮಧೂಮಪ್ರಿಯಂ ದೇವಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ 7 ॥ <br><br>
-
-            ಫಾಲನೇತ್ರಂ ಫಾಲಚಂದ್ರಂ ಪಾಶಾಂಕುಶಧರಂ ವಿಭುಮ್ । <br>
-            ಚಾಮರಾಲಂಕೃತಂ ದೇವಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ 8 ॥ <br><br>
-
-            ಇದಂ ತ್ವೃಣಹರಂ ಸ್ತೋತ್ರಂ ಸಂಧ್ಯಾಯಾಂ ಯಃ ಪಠೇನ್ನರಃ । <br>
-            ಷಣ್ಮಾಸಾಭ್ಯಂತರೇಣೈವ ಋಣಮುಕ್ತೋ ಭವಿಷ್ಯತಿ ॥ 9 ॥ <br><br>
-
-            ಇತಿ ಋಣವಿಮೋಚನ ಮಹಾಗಣಪತಿ ಸ್ತೋತ್ರಮ್ ।
-        </p>
-
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
     </div>
+
+    <!-- Content Data Script -->
+    <script>
+        // Example showing how easy it is to add more content
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಸ್ತೋತ್ರಂ",
+                        english: "Stotram"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಸ್ಮರಾಮಿ ದೇವದೇವೇಶಂ ವಕ್ರತುಂಡಂ ಮಹಾಬಲಮ್ ।",
+                                    transliteration: "smarāmi devadeveśaṁ vakratuṇḍaṁ mahābalam ।",
+                                    words: [
+                                        { kannada: "ಸ್ಮರಾಮಿ", transliteration: "smarāmi", meaning: "I remember / meditate upon" },
+                                        { kannada: "ದೇವದೇವೇಶಂ", transliteration: "devadeveśaṁ", meaning: "Lord of Lords, God of gods" },
+                                        { kannada: "ವಕ್ರತುಂಡಂ", transliteration: "vakratuṇḍaṁ", meaning: "Curved trunk (epithet of Ganesha)" },
+                                        { kannada: "ಮಹಾಬಲಮ್", transliteration: "mahābalam", meaning: "Greatly powerful" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಷಡಕ್ಷರಂ ಕೃಪಾಸಿಂಧುಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ ೧ ॥",
+                                    transliteration: "ṣaḍakṣaraṁ kṛpāsindhuṁ namāmi ṛṇamuktaye ॥ 1 ॥",
+                                    words: [
+                                        { kannada: "ಷಡಕ್ಷರಂ", transliteration: "ṣaḍakṣaraṁ", meaning: "The six-syllabled (one)" },
+                                        { kannada: "ಕೃಪಾಸಿಂಧುಂ", transliteration: "kṛpāsindhuṁ", meaning: "Ocean of compassion" },
+                                        { kannada: "ನಮಾಮಿ", transliteration: "namāmi", meaning: "I bow to" },
+                                        { kannada: "ಋಣಮುಕ್ತಯೇ", transliteration: "ṛṇamuktaye", meaning: "For liberation from debts" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I remember and bow to the Lord of Lords, the curved-trunked, greatly powerful one, the six-syllabled ocean of compassion, for the removal of debts."
+                        },
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಏಕಾಕ್ಷರಂ ಹ್ಯೇಕದಂತಂ ಏಕಂ ಬ್ರಹ್ಮ ಸನಾತನಮ್ ।",
+                                    transliteration: "ekākṣaraṁ hyekadantaṁ ekaṁ brahma sanātanam ।",
+                                    words: [
+                                        { kannada: "ಏಕಾಕ್ಷರಂ", transliteration: "ekākṣaraṁ", meaning: "One-syllabled (Om)" },
+                                        { kannada: "ಹ್ಯೇಕದಂತಂ", transliteration: "hyekadantaṁ", meaning: "Indeed the one-tusked" },
+                                        { kannada: "ಏಕಂ", transliteration: "ekaṁ", meaning: "The one" },
+                                        { kannada: "ಬ್ರಹ್ಮ ಸನಾತನಮ್", transliteration: "brahma sanātanam", meaning: "The eternal Brahman" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಏಕಮೇವಾದ್ವೀತೀಯಂ ಚ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ ೨ ॥",
+                                    transliteration: "ekamevādvītīyaṁ ca namāmi ṛṇamuktaye ॥ 2 ॥",
+                                    words: [
+                                        { kannada: "ಏಕಮೇವಾದ್ವೀತೀಯಂ", transliteration: "ekamevādvītīyaṁ", meaning: "The one and only, without a second" },
+                                        { kannada: "ಚ", transliteration: "ca", meaning: "And" },
+                                        { kannada: "ನಮಾಮಿ", transliteration: "namāmi", meaning: "I bow to" },
+                                        { kannada: "ಋಣಮುಕ್ತಯೇ", transliteration: "ṛṇamuktaye", meaning: "For liberation from debts" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I bow to the one-syllabled, the one-tusked, the one eternal Brahman, the one and only without a second, for liberation from debts."
+                        },
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಮಹಾಗಣಪತಿಂ ದೇವಂ ಮಹಾಸತ್ತ್ವಂ ಮಹಾಬಲಮ್ ।",
+                                    transliteration: "mahāgaṇapatiṁ devaṁ mahāsattvaṁ mahābalam ।",
+                                    words: [
+                                        { kannada: "ಮಹಾಗಣಪತಿಂ", transliteration: "mahāgaṇapatiṁ", meaning: "Great Lord of the ganas (divine hosts)" },
+                                        { kannada: "ದೇವಂ", transliteration: "devaṁ", meaning: "God" },
+                                        { kannada: "ಮಹಾಸತ್ತ್ವಂ", transliteration: "mahāsattvaṁ", meaning: "Of great essence or mighty nature" },
+                                        { kannada: "ಮಹಾಬಲಮ್", transliteration: "mahābalam", meaning: "Mighty powerful" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಮಹಾವಿಘ್ನಹರಂ ಶಂಭೋಃ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ ೩ ॥",
+                                    transliteration: "mahāvighnaharaṁ śambhoḥ namāmi ṛṇamuktaye ॥ 3 ॥",
+                                    words: [
+                                        { kannada: "ಮಹಾವಿಘ್ನಹರಂ", transliteration: "mahāvighnaharaṁ", meaning: "Great remover of obstacles" },
+                                        { kannada: "ಶಂಭೋಃ", transliteration: "śambhoḥ", meaning: "Son of Shiva (Śambhu)" },
+                                        { kannada: "ನಮಾಮಿ", transliteration: "namāmi", meaning: "I bow to" },
+                                        { kannada: "ಋಣಮುಕ್ತಯೇ", transliteration: "ṛṇamuktaye", meaning: "For liberation from debts" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I bow to the great Lord of the ganas, the mighty God, the great remover of obstacles, son of Shiva, for liberation from debts."
+                        },
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಕೃಷ್ಣಾಂಬರಂ ಕೃಷ್ಣವರ್ಣಂ ಕೃಷ್ಣಗಂಧಾನುಲೇಪನಮ್ ।",
+                                    transliteration: "kṛṣṇāmbaraṁ kṛṣṇavarṇaṁ kṛṣṇagandhānulepanam ।",
+                                    words: [
+                                        { kannada: "ಕೃಷ್ಣಾಂಬರಂ", transliteration: "kṛṣṇāmbaraṁ", meaning: "Dressed in black clothes" },
+                                        { kannada: "ಕೃಷ್ಣವರ್ಣಂ", transliteration: "kṛṣṇavarṇaṁ", meaning: "Of black color" },
+                                        { kannada: "ಕೃಷ್ಣಗಂಧಾನುಲೇಪನಮ್", transliteration: "kṛṣṇagandhānulepanam", meaning: "Anointed with black scent" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಕೃಷ್ಣಸರ್ಪೋಪವೀತಂ ಚ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ ೪ ॥",
+                                    transliteration: "kṛṣṇasarpopavītaṁ ca namāmi ṛṇamuktaye ॥ 4 ॥",
+                                    words: [
+                                        { kannada: "ಕೃಷ್ಣಸರ್ಪೋಪವೀತಂ", transliteration: "kṛṣṇasarpopavītaṁ", meaning: "Wearing a black serpent as sacred thread" },
+                                        { kannada: "ಚ", transliteration: "ca", meaning: "And" },
+                                        { kannada: "ನಮಾಮಿ", transliteration: "namāmi", meaning: "I bow to" },
+                                        { kannada: "ಋಣಮುಕ್ತಯೇ", transliteration: "ṛṇamuktaye", meaning: "For liberation from debts" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I bow to the one dressed in black, black in color, anointed with black scent, who wears a black serpent as sacred thread, for liberation from debts."
+                        },
+                        {
+                            lines: [
+                                {
+                                    kannada: "ರಕ್ತಾಂಬರಂ ರಕ್ತವರ್ಣಂ ರಕ್ತಗಂಧಾನುಲೇಪನಮ್ ।",
+                                    transliteration: "raktāmbaraṁ raktavarṇaṁ raktagandhānulepanam ।",
+                                    words: [
+                                        { kannada: "ರಕ್ತಾಂಬರಂ", transliteration: "raktāmbaraṁ", meaning: "Dressed in red clothes" },
+                                        { kannada: "ರಕ್ತವರ್ಣಂ", transliteration: "raktavarṇaṁ", meaning: "Of red color" },
+                                        { kannada: "ರಕ್ತಗಂಧಾನುಲೇಪನಮ್", transliteration: "raktagandhānulepanam", meaning: "Anointed with red scent" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ರಕ್ತಪುಷ್ಪಪ್ರಿಯಂ ದೇವಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ ೫ ॥",
+                                    transliteration: "raktapuṣpapriyaṁ devaṁ namāmi ṛṇamuktaye ॥ 5 ॥",
+                                    words: [
+                                        { kannada: "ರಕ್ತಪುಷ್ಪಪ್ರಿಯಂ", transliteration: "raktapuṣpapriyaṁ", meaning: "Lover of red flowers" },
+                                        { kannada: "ದೇವಂ", transliteration: "devaṁ", meaning: "God" },
+                                        { kannada: "ನಮಾಮಿ", transliteration: "namāmi", meaning: "I bow to" },
+                                        { kannada: "ಋಣಮುಕ್ತಯೇ", transliteration: "ṛṇamuktaye", meaning: "For liberation from debts" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I bow to the God dressed in red, red in color, anointed with red scent, lover of red flowers, for liberation from debts."
+                        },
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಪೀತಾಂಬರಂ ಪೀತವರ್ಣಂ ಪೀತಗಂಧಾನುಲೇಪನಮ್ ।",
+                                    transliteration: "pītāmbaraṁ pītavarṇaṁ pītagandhānulepanam ।",
+                                    words: [
+                                        { kannada: "ಪೀತಾಂಬರಂ", transliteration: "pītāmbaraṁ", meaning: "Dressed in yellow clothes" },
+                                        { kannada: "ಪೀತವರ್ಣಂ", transliteration: "pītavarṇaṁ", meaning: "Yellow colored" },
+                                        { kannada: "ಪೀತಗಂಧಾನುಲೇಪನಮ್", transliteration: "pītagandhānulepanam", meaning: "Anointed with yellow scent" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪೀತಪುಷ್ಪಪ್ರಿಯಂ ದೇವಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ ೬ ॥",
+                                    transliteration: "pītapuṣpapriyaṁ devaṁ namāmi ṛṇamuktaye ॥ 6 ॥",
+                                    words: [
+                                        { kannada: "ಪೀತಪುಷ್ಪಪ್ರಿಯಂ", transliteration: "pītapuṣpapriyaṁ", meaning: "Lover of yellow flowers" },
+                                        { kannada: "ದೇವಂ", transliteration: "devaṁ", meaning: "God" },
+                                        { kannada: "ನಮಾಮಿ", transliteration: "namāmi", meaning: "I bow to" },
+                                        { kannada: "ಋಣಮುಕ್ತಯೇ", transliteration: "ṛṇamuktaye", meaning: "For liberation from debts" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I bow to the God dressed in yellow, yellow in color, anointed with yellow scent, lover of yellow flowers, for liberation from debts."
+                        },
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಧೂಮ್ರಾಂಬರಂ ಧೂಮ್ರವರ್ಣಂ ಧೂಮ್ರಗಂಧಾನುಲೇಪನಮ್ ।",
+                                    transliteration: "dhūmrāmbaraṁ dhūmravarṇaṁ dhūmragandhānulepanam ।",
+                                    words: [
+                                        { kannada: "ಧೂಮ್ರಾಂಬರಂ", transliteration: "dhūmrāmbaraṁ", meaning: "Dressed in smoky/grey clothes" },
+                                        { kannada: "ಧೂಮ್ರವರ್ಣಂ", transliteration: "dhūmravarṇaṁ", meaning: "Smoky/grey colored" },
+                                        { kannada: "ಧೂಮ್ರಗಂಧಾನುಲೇಪನಮ್", transliteration: "dhūmragandhānulepanam", meaning: "Anointed with smoky scent" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಹೋಮಧೂಮಪ್ರಿಯಂ ದೇವಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ ೭ ॥",
+                                    transliteration: "hōmadhūmapriyaṁ devaṁ namāmi ṛṇamuktaye ॥ 7 ॥",
+                                    words: [
+                                        { kannada: "ಹೋಮಧೂಮಪ್ರಿಯಂ", transliteration: "hōmadhūmapriyaṁ", meaning: "Lover of the smoke from sacrificial fire (homa)" },
+                                        { kannada: "ದೇವಂ", transliteration: "devaṁ", meaning: "God" },
+                                        { kannada: "ನಮಾಮಿ", transliteration: "namāmi", meaning: "I bow to" },
+                                        { kannada: "ಋಣಮುಕ್ತಯೇ", transliteration: "ṛṇamuktaye", meaning: "For liberation from debts" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I bow to the God dressed in smoky color, anointed with smoky scent, lover of the homa fire’s smoke, for liberation from debts."
+                        },
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಫಾಲನೇತ್ರಂ ಫಾಲಚಂದ್ರಂ ಪಾಶಾಂಕುಶಧರಂ ವಿಭುಮ್ ।",
+                                    transliteration: "phālanētraṁ phālacandraṁ pāśāṁkuśadharaṁ vibhum ।",
+                                    words: [
+                                        { kannada: "ಫಾಲನೇತ್ರಂ", transliteration: "phālanētraṁ", meaning: "Large, beautiful eyes" },
+                                        { kannada: "ಫಾಲಚಂದ್ರಂ", transliteration: "phālacandraṁ", meaning: "Having a moon as ornament on the forehead" },
+                                        { kannada: "ಪಾಶಾಂಕುಶಧರಂ", transliteration: "pāśāṁkuśadharaṁ", meaning: "Bearer of noose and goad" },
+                                        { kannada: "ವಿಭುಮ್", transliteration: "vibhum", meaning: "The mighty one" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಾಮರಾಲಂಕೃತಂ ದೇವಂ ನಮಾಮಿ ಋಣಮುಕ್ತಯೇ ॥ ೮ ॥",
+                                    transliteration: "cāmarālaṅkṛtaṁ devaṁ namāmi ṛṇamuktaye ॥ 8 ॥",
+                                    words: [
+                                        { kannada: "ಚಾಮರಾಲಂಕೃತಂ", transliteration: "cāmarālaṅkṛtaṁ", meaning: "Adorned with the chamara (fly whisk)" },
+                                        { kannada: "ದೇವಂ", transliteration: "devaṁ", meaning: "God" },
+                                        { kannada: "ನಮಾಮಿ", transliteration: "namāmi", meaning: "I bow to" },
+                                        { kannada: "ಋಣಮುಕ್ತಯೇ", transliteration: "ṛṇamuktaye", meaning: "For liberation from debts" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I bow to the mighty God with large eyes and moon on the forehead, bearer of noose and goad, adorned with the chamara, for liberation from debts."
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "ಫಲ ಶ್ರುತಿ",
+                        english: "Phala Sruthi"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಇದಂ ತ್ವೃಣಹರಂ ಸ್ತೋತ್ರಂ ಸಂಧ್ಯಾಯಾಂ ಯಃ ಪಠೇನ್ನರಃ ।",
+                                    transliteration: "idaṁ tṝṇaharaṁ stotraṁ saṁdhyāyāṁ yaḥ paṭhennaraḥ ।",
+                                    words: [
+                                        { kannada: "ಇದಂ", transliteration: "idaṁ", meaning: "This" },
+                                        { kannada: "ತ್ವೃಣಹರಂ", transliteration: "tṝṇaharaṁ", meaning: "Remover of debts" },
+                                        { kannada: "ಸ್ತೋತ್ರಂ", transliteration: "stotraṁ", meaning: "Stotra, hymn" },
+                                        { kannada: "ಸಂಧ್ಯಾಯಾಂ", transliteration: "saṁdhyāyāṁ", meaning: "At dusk / twilight" },
+                                        { kannada: "ಯಃ", transliteration: "yaḥ", meaning: "Who" },
+                                        { kannada: "ಪಠೇನ್ನರಃ", transliteration: "paṭhennaraḥ", meaning: "Reads / recites" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಷಣ್ಮಾಸಾಭ್ಯಂತರೇಣೈವ ಋಣಮುಕ್ತೋ ಭವಿಷ್ಯತಿ ॥ ೯ ॥",
+                                    transliteration: "ṣaṇmāsābhyantareṇaiva ṛṇamukto bhaviṣyati ॥ 9 ॥",
+                                    words: [
+                                        { kannada: "ಷಣ್ಮಾಸಾ", transliteration: "ṣaṇmāsā", meaning: "Within six months" },
+                                        { kannada: "ಅಭ್ಯಂತರೇಣೈವ", transliteration: "abhyantareṇaiva", meaning: "Within / during" },
+                                        { kannada: "ಋಣಮುಕ್ತೋ", transliteration: "ṛṇamukto", meaning: "Freed from debts" },
+                                        { kannada: "ಭವಿಷ್ಯತಿ", transliteration: "bhaviṣyati", meaning: "Will become" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Whoever recites this debt-removing hymn at twilight will become free of debts within six months."
+                        }
+                    ]
+                }
+            ]
+        };
+
+
+    </script>
+
 
     <!-- Centralized Scripts -->
     <script src="../scripts/common.js"></script>
