@@ -4,48 +4,27 @@ Welcome to the Puja Vidhi repository!
 
 ## Purpose
 
-This repository is dedicated to hosting content related to our family puja procedures. Our goal is to make these procedures easily accessible to everyone in the family, regardless of their location, as long as they have access to the internet.
+This repo preserves and shares our family’s puja procedures, making them easily accessible anywhere.
+It includes step-by-step instructions, rituals, and guidelines to keep traditions alive.
 
-## Prime sources of info
+Content: View here
 
-- [Mindset of performing puja](https://youtu.be/EL-efLozsP8?si=JaJcci6iDwh7_ltg)
+## Local Testing
 
-## Content
+Run with http-server to preview locally:
 
-Here, you will find detailed instructions, rituals, and guidelines for performing various pujas. We hope this will help preserve our traditions and ensure that everyone can participate in these important ceremonies.
-
-Content is currently hosted at [here](https://vthinkhat.github.io/puja-vidhi/)
-
-## Testing using http-server
-
-Here are the commands to install and run http-server locally:
-
-Install http-server:
 ```
-# OPTIONAL # sudo apt install npm
-npm install -g http-server
+sudo apt install npm
+npm install -g http-server -y
 http-server
 ```
 
-This will start a local server and provide you with a URL (e.g., http://127.0.0.1:8080) that you can open in your browser to access your index.html file.
+Open the provided URL (e.g., http://127.0.0.1:8080) in your browser.
 
 ## Contributions
 
-If you have any suggestions or additional content to add, please feel free to contribute by creating a pull request or contacting the repository maintainers.
+Contributions are welcome.
 
-Thank you for being a part of our family traditions!
+## AI Tips
 
-## Contact
-
-For any questions or support, please reach out to the repository maintainers.
-
----
-
-# AI tips
-
-- Ask ChatGPT to generate: romanized phonetic recitation guide
-- Use ChatGPT and Perplexity AI.
-
-Break down to the smallest words possible, given meaning of each word and give meaning of each line put together. Give words in Kannada text and romanized phonetic recitation guide:
-
-*Note: This repository is intended for private family use only.*
+Use tools like ChatGPT and Perplexity AI for assistance.
