@@ -419,5 +419,42 @@ function initializePage() {
 
 
 
+/**
+ * Open image modal for enlarged view
+ * @param {HTMLImageElement} imgElement - The thumbnail image that was clicked
+ */
+function openImageModal(imgElement) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    
+    if (modal && modalImage) {
+        modalImage.src = imgElement.src;
+        modalImage.alt = imgElement.alt + ' - Enlarged view';
+        modal.style.display = 'block';
+    }
+}
+
+/**
+ * Close the image modal
+ */
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+/**
+ * Handle keyboard navigation for modal
+ */
+function handleModalKeyboard(event) {
+    if (event.key === 'Escape') {
+        closeImageModal();
+    }
+}
+
+// Add keyboard listener for modal
+document.addEventListener('keydown', handleModalKeyboard);
+
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializePage); 
