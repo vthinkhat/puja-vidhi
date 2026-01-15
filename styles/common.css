@@ -292,7 +292,7 @@ ul {
     padding-left: 20px;
 }
 
-li {
+li:not(.mantra-section) {
     padding-left: 0;
 }
 
@@ -346,6 +346,46 @@ li {
     .ref {
         font-size: 0.75em;
     }
+}
+
+/* Mantra block styles */
+.mantra-block {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #0066cc;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Ordered list variant of mantra-block */
+ol.mantra-block {
+    padding-left: 50px;
+    list-style-position: outside;
+    list-style-type: decimal;
+}
+
+ol.mantra-block > li.mantra-section {
+    margin: 20px 0;
+    padding-left: 15px !important;
+    display: list-item;
+}
+
+.mantra-block .ENG {
+    font-style: italic;
+    color: #666;
+    display: inline;
+}
+
+.mantra-section {
+    margin: 10px 0;
+}
+
+.mantra-conclusion {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e6f3ff;
+    border-radius: 5px;
 }
 
 /* Utility classes */
