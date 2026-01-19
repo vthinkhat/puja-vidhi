@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Scroller | Puja Vidhi</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400..800&display=swap">
+    <style>
+        :root {
+            --primary-blue: #0066cc;
+            --primary-hover: #0052a3;
+            --primary-active: #003d7a;
+            --bg-warm: #fffaf5;
+            --bg-cream: #fef7ed;
+            --border-light: #e8ddd4;
+            --text-dark: #333;
+            --text-muted: #666;
+            --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 6px 20px rgba(0, 102, 204, 0.15);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Baloo Tamma 2", system-ui, sans-serif;
+            background: linear-gradient(135deg, var(--bg-warm) 0%, var(--bg-cream) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 8px;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Combined Control Bar */
+        .control-bar {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 6px 10px;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 8px;
+            border: 1px solid var(--border-light);
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .url-input {
+            flex: 1;
+            min-width: 150px;
+            padding: 6px 10px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .url-input:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .url-input::placeholder {
+            color: #aaa;
+        }
+
+        .btn {
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            font-family: inherit;
+            font-weight: 500;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-primary:active {
+            background: var(--primary-active);
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: var(--text-dark);
+            border: 2px solid #ddd;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e5e5;
+            border-color: #ccc;
+        }
+
+        .divider {
+            width: 1px;
+            height: 20px;
+            background: var(--border-light);
+            margin: 0 2px;
+        }
+
+        .btn-scroll {
+            padding: 6px 10px;
+            font-size: 0.85rem;
+        }
+
+        .btn-start {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-start:hover {
+            background: #218838;
+        }
+
+        .btn-start:disabled {
+            background: #94d3a2;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-pause {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-pause:hover {
+            background: #c82333;
+        }
+
+        .btn-pause:disabled {
+            background: #f1aeb5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .speed-btn {
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            color: var(--text-dark);
+        }
+
+        .speed-btn:hover {
+            background: #eee;
+            border-color: #bbb;
+        }
+
+        .speed-btn.active {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        .speed-btn.active:hover {
+            background: var(--primary-hover);
+        }
+
+        /* Viewer Section */
+        .viewer-section {
+            flex: 1;
+            min-height: 400px;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .viewer-iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+        }
+
+        .viewer-placeholder {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .viewer-placeholder-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            opacity: 0.5;
+        }
+
+        .viewer-placeholder p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Error message */
+        .error-message {
+            display: none;
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: var(--radius-md);
+            padding: 12px 16px;
+            margin-bottom: 16px;
+            color: #856404;
+            font-size: 0.9rem;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 4px;
+            }
+
+            .control-bar {
+                padding: 4px 6px;
+                gap: 4px;
+            }
+
+            .url-input {
+                min-width: 100px;
+                padding: 4px 8px;
+                font-size: 0.8rem;
+            }
+
+            .btn {
+                padding: 4px 8px;
+                font-size: 0.75rem;
+            }
+
+            .divider {
+                display: none;
+            }
+        }
+
+        @media (max-height: 700px) {
+            .viewer-section {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message">
+            <strong>Note:</strong> Some external websites block embedding. Try loading pages from this site or other compatible sources.
+        </div>
+
+        <!-- Combined Control Bar -->
+        <div class="control-bar">
+            <input 
+                type="url" 
+                id="urlInput" 
+                class="url-input" 
+                placeholder="Enter URL..."
+                autocomplete="off"
+                value=".."
+            >
+            <button id="loadBtn" class="btn btn-primary">Go</button>
+            <div class="divider"></div>
+            <button id="startBtn" class="btn btn-scroll btn-start" disabled>▶</button>
+            <button id="pauseBtn" class="btn btn-scroll btn-pause" disabled>⏸</button>
+            <div class="divider"></div>
+            <button class="btn speed-btn" data-speed="5">Slow</button>
+            <button class="btn speed-btn active" data-speed="10">Med</button>
+            <button class="btn speed-btn" data-speed="18">Fast</button>
+        </div>
+
+        <!-- Viewer Section -->
+        <div class="viewer-section">
+            <div id="placeholder" class="viewer-placeholder">
+                <div class="viewer-placeholder-icon">📜</div>
+                <p>Enter a URL above to get started</p>
+            </div>
+            <iframe id="viewer" class="viewer-iframe" style="display: none;"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // DOM Elements
+        const urlInput = document.getElementById('urlInput');
+        const loadBtn = document.getElementById('loadBtn');
+        const startBtn = document.getElementById('startBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const speedBtns = document.querySelectorAll('.speed-btn');
+        const viewer = document.getElementById('viewer');
+        const placeholder = document.getElementById('placeholder');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // State
+        let isScrolling = false;
+        let pixelsPerSecond = 10; // scroll speed in pixels per second (medium default)
+        let animationId = null;
+        let isPageLoaded = false;
+        let lastTimestamp = 0;
+        let scrollAccumulator = 0;
+
+        // Load URL into iframe
+        function loadURL() {
+            let url = urlInput.value.trim();
+            
+            if (!url) {
+                urlInput.focus();
+                return;
+            }
+
+            // Add protocol if missing for external URLs
+            if (url.startsWith('http://') || url.startsWith('https://')) {
+                // Already has protocol
+            } else if (url.startsWith('www.')) {
+                url = 'https://' + url;
+            } else if (!url.startsWith('.') && !url.startsWith('/') && url.includes('.') && !url.includes('/')) {
+                // Looks like a domain without protocol
+                url = 'https://' + url;
+            }
+            // Otherwise assume it's a relative path
+
+            // Reset state
+            stopScrolling();
+            errorMessage.classList.remove('show');
+            
+            // Show iframe, hide placeholder
+            placeholder.style.display = 'none';
+            viewer.style.display = 'block';
+            
+            // Load the URL
+            viewer.src = url;
+            isPageLoaded = false;
+            
+            // Enable buttons after load
+            viewer.onload = function() {
+                isPageLoaded = true;
+                startBtn.disabled = false;
+                
+                // Check if we can access the iframe content (same-origin check)
+                try {
+                    const doc = viewer.contentDocument || viewer.contentWindow.document;
+                    // If we can access it, we're good
+                } catch (e) {
+                    // Cross-origin - show warning but still allow viewing
+                    errorMessage.classList.add('show');
+                }
+            };
+
+            viewer.onerror = function() {
+                errorMessage.classList.add('show');
+            };
+        }
+
+        // Clear viewer
+        function clearViewer() {
+            stopScrolling();
+            urlInput.value = '';
+            viewer.src = 'about:blank';
+            viewer.style.display = 'none';
+            placeholder.style.display = 'flex';
+            startBtn.disabled = true;
+            pauseBtn.disabled = true;
+            isPageLoaded = false;
+            errorMessage.classList.remove('show');
+            urlInput.focus();
+        }
+
+        // Time-based smooth scroll animation
+        function scrollFrame(timestamp) {
+            if (!isScrolling) return;
+
+            try {
+                const iframeWindow = viewer.contentWindow;
+                const iframeDoc = iframeWindow.document;
+                const scrollHeight = iframeDoc.documentElement.scrollHeight || iframeDoc.body.scrollHeight;
+                const clientHeight = iframeWindow.innerHeight;
+                const currentScroll = iframeWindow.scrollY || iframeDoc.documentElement.scrollTop;
+
+                // Check if we've reached the bottom
+                if (currentScroll + clientHeight >= scrollHeight - 5) {
+                    stopScrolling();
+                    return;
+                }
+
+                // Calculate time delta
+                if (lastTimestamp === 0) {
+                    lastTimestamp = timestamp;
+                }
+                const deltaTime = timestamp - lastTimestamp;
+                lastTimestamp = timestamp;
+
+                // Accumulate scroll distance based on time
+                scrollAccumulator += (pixelsPerSecond * deltaTime) / 1000;
+
+                // Scroll whole pixels when accumulated
+                if (scrollAccumulator >= 1) {
+                    const pixelsToScroll = Math.floor(scrollAccumulator);
+                    iframeWindow.scrollBy(0, pixelsToScroll);
+                    scrollAccumulator -= pixelsToScroll;
+                }
+                
+                // Continue animation
+                animationId = requestAnimationFrame(scrollFrame);
+            } catch (e) {
+                console.warn('Cannot scroll cross-origin content:', e.message);
+                stopScrolling();
+                errorMessage.textContent = 'Cannot auto-scroll external sites due to browser security. You can scroll manually.';
+                errorMessage.classList.add('show');
+            }
+        }
+
+        // Start scrolling
+        function startScrolling() {
+            if (!isPageLoaded || isScrolling) return;
+            
+            isScrolling = true;
+            lastTimestamp = 0;
+            scrollAccumulator = 0;
+            startBtn.disabled = true;
+            pauseBtn.disabled = false;
+            
+            animationId = requestAnimationFrame(scrollFrame);
+        }
+
+        // Stop/pause scrolling
+        function stopScrolling() {
+            isScrolling = false;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+            
+            if (isPageLoaded) {
+                startBtn.disabled = false;
+            }
+            pauseBtn.disabled = true;
+        }
+
+        // Set speed (pixels per second)
+        function setSpeed(pps, button) {
+            pixelsPerSecond = parseFloat(pps);
+            
+            // Update active state
+            speedBtns.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        }
+
+        // Event Listeners
+        loadBtn.addEventListener('click', loadURL);
+        
+        urlInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                loadURL();
+            }
+        });
+
+        startBtn.addEventListener('click', startScrolling);
+        pauseBtn.addEventListener('click', stopScrolling);
+
+        speedBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                setSpeed(btn.dataset.speed, btn);
+            });
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Don't trigger shortcuts when typing in input
+            if (document.activeElement === urlInput) return;
+
+            switch(e.key) {
+                case ' ': // Space to toggle scroll
+                    e.preventDefault();
+                    if (isScrolling) {
+                        stopScrolling();
+                    } else if (isPageLoaded) {
+                        startScrolling();
+                    }
+                    break;
+                case '1':
+                    speedBtns[0].click();
+                    break;
+                case '2':
+                    speedBtns[1].click();
+                    break;
+                case '3':
+                    speedBtns[2].click();
+                    break;
+            }
+        });
+
+        // Check for URL parameter or load default
+        const params = new URLSearchParams(window.location.search);
+        const urlParam = params.get('url');
+        if (urlParam) {
+            urlInput.value = urlParam;
+        }
+        // Auto-load the URL (default is ".." set in HTML)
+        if (urlInput.value) {
+            loadURL();
+        }
+    </script>
+</body>
+
+</html>
+
