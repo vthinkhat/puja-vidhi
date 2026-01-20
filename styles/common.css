@@ -399,4 +399,9 @@ ol.mantra-block > li.mantra-section {
 
 .margin-bottom {
     margin-bottom: 20px;
+}
+
+/* Red text for special sections */
+.red-text {
+    color: #cc0000;
 } 
