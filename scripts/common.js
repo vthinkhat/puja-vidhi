@@ -10,9 +10,10 @@ let currentDisplayMode = 'kannada';
 /**
  * Render content dynamically based on display mode
  * @param {string} mode - 'kannada', 'english', or 'word-by-word'
+ * @param {HTMLElement} [contentContainer] - Optional. If provided, render into this element; otherwise use #dynamic-content
  */
-function renderContent(mode) {
-    const container = document.getElementById('dynamic-content');
+function renderContent(mode, contentContainer) {
+    const container = contentContainer || document.getElementById('dynamic-content');
     if (!container || typeof stotramData === 'undefined') {
         console.warn('Dynamic content container or stotramData not found');
         return;
@@ -324,6 +325,22 @@ function loadSection(sectionId, url) {
 }
 
 /**
+ * Load the Shiva Panchakshara Stotram by embedding it in an iframe.
+ * The stotram page uses JS-generated content (stotramData); loading it in an iframe
+ * avoids fetch/script-injection issues and guarantees the text renders.
+ * @param {string} sectionId - The ID of the element to load content into
+ * @param {string} url - The URL of the stotram HTML file (e.g. shiva-panchakshara-stotram.html)
+ */
+function loadDynamicStotramSection(sectionId, url) {
+    const container = document.getElementById(sectionId);
+    if (!container) return;
+
+    const resolvedUrl = new URL(url, window.location.href).href;
+    container.innerHTML =
+        '<iframe src="' + resolvedUrl + '" class="embedded-stotram" title="Shiva Panchakshara Stotram" style="width:100%;border:none;min-height:1200px;"></iframe>';
+}
+
+/**
  * Load common puja sections automatically
  * This function loads all the standard sections used in puja templates
  */
@@ -387,19 +404,21 @@ function loadCommonPujaSections() {
     });
     
     // Load stotram sections
+    const dynamicStotrams = ['panchakshara-stotram', 'shiva-panchakshara-stotram'];
     stotramSections.forEach(section => {
         const element = document.getElementById(section);
         if (element) {
-            // Determine the correct path based on current location
             const pathPrefix = window.location.pathname.includes('/puja/') ? '../stotram/' : './stotram/';
-            
-            // Handle ID to filename mappings
             let filename = section;
             if (section === 'panchakshara-stotram') {
                 filename = 'shiva-panchakshara-stotram';
             }
-            
-            loadSection(section, `${pathPrefix}${filename}.html`);
+            const url = `${pathPrefix}${filename}.html`;
+            if (dynamicStotrams.includes(section)) {
+                loadDynamicStotramSection(section, url);
+            } else {
+                loadSection(section, url);
+            }
         }
     });
 }
