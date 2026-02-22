@@ -1,6 +1,7 @@
 /* Common styles for Puja Vidhi project */
 
-/* Font imports */
+/* Font imports - Noto Sans Kannada first (Early Access has full Kannada unicode range) */
+@import url('https://fonts.googleapis.com/earlyaccess/notosanskannada.css');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Baloo+Tamma+2:wght@400..800&family=Noto+Serif+Kannada&display=swap');
 
 /* Base styles */
@@ -213,12 +214,20 @@ p {
 }
 
 /* Alternative font options for different content */
+.noto-sans-kannada {
+    font-family: "Noto Sans Kannada", system-ui;
+}
+
 .noto-serif {
     font-family: "Noto Serif Kannada", system-ui;
 }
 
 .anek-kannada {
     font-family: "Anek Kannada", system-ui;
+}
+
+.baloo-tamma {
+    font-family: "Baloo Tamma 2", system-ui;
 }
 
 /* Homam item thumbnail styles */
