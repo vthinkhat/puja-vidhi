@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಶ್ರೀ ಹಯಗ್ರೀವ ಸ್ತೋತ್ರಂ (Śrī Hayagrīva Stotram)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Centralized Styles -->
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>ಶ್ರೀ ಹಯಗ್ರೀವ ಸ್ತೋತ್ರಂ <span class="ENG">(Śrī Hayagrīva Stotram)</span></h1>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <audio controls src="../audio/hayagreeva-stotram.mp3" style="vertical-align: middle;"></audio><br><br>
+    <audio controls src="../audio/hayagreeva-stotram2.mp3" style="vertical-align: middle;"></audio>
+
+    <!-- Content Data Script -->
+    <script>
+        // Define all content in a single data structure
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಸ್ತೋತ್ರಂ",
+                        english: "Stotram"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಸಮಾಹಾರಃ ಸಾಮ್ನಾಂ ಪ್ರತಿಪದಮೃಚಾಂ ಧಾಮ ಯಜುಷಾಂ",
+                                    transliteration: "samaahaara saamnaam pratipadamrichaam dhaama yajusaam",
+                                    words: [
+                                        {
+                                            kannada: "ಸಮಾಹಾರಃ",
+                                            transliteration: "samaahaara",
+                                            meaning: "collection, totality, compendium"
+                                        },
+                                        {
+                                            kannada: "ಸಾಮ್ನಾಂ",
+                                            transliteration: "saamnaam",
+                                            meaning: "of the Sāma hymns (of the Sāmaveda)"
+                                        },
+                                        {
+                                            kannada: "ಪ್ರತಿಪದಮ್",
+                                            transliteration: "pratipadam",
+                                            meaning: "in every word / at every step"
+                                        },
+                                        {
+                                            kannada: "ಋಚಾಂ",
+                                            transliteration: "richaam",
+                                            meaning: "of the Ṛgvedic hymns"
+                                        },
+                                        {
+                                            kannada: "ಧಾಮ",
+                                            transliteration: "dhaama",
+                                            meaning: "abode, source, effulgence"
+                                        },
+                                        {
+                                            kannada: "ಯಜುಷಾಂ",
+                                            transliteration: "yajusaam",
+                                            meaning: "of the Yajur Veda mantras"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಲಯಃ ಪ್ರತ್ಯೂಹಾನಾಂ ಲಹರಿವಿತತಿರ್ಬೋಧಜಲಧೇಃ |",
+                                    transliteration: "layah pratyuuhaanaam lahari-vitatir-bodha-jaladheh |",
+                                    words: [
+                                        {
+                                            kannada: "ಲಯಃ",
+                                            transliteration: "layah",
+                                            meaning: "dissolution, destruction"
+                                        },
+                                        {
+                                            kannada: "ಪ್ರತ್ಯೂಹಾನಾಂ",
+                                            transliteration: "pratyuuhaanaam",
+                                            meaning: "of obstacles, hindrances"
+                                        },
+                                        {
+                                            kannada: "ಲಹರಿ",
+                                            transliteration: "lahari",
+                                            meaning: "wave"
+                                        },
+                                        {
+                                            kannada: "ವಿತತಿಃ",
+                                            transliteration: "vitatir",
+                                            meaning: "vast expanse, spread"
+                                        },
+                                        {
+                                            kannada: "ಬೋಧ",
+                                            transliteration: "bodha",
+                                            meaning: "knowledge"
+                                        },
+                                        {
+                                            kannada: "ಜಲಧೇಃ",
+                                            transliteration: "jaladheh",
+                                            meaning: "of the ocean"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಕಥಾದರ್ಪಕ್ಷುಭ್ಯತ್ಕಥಕಕುಲಕೋಲಾಹಲಭವಂ",
+                                    transliteration: "kathaa-darpa-kshubhyat-kathaka-kula-kolaahala-bhavam",
+                                    words: [
+                                        {
+                                            kannada: "ಕಥಾ",
+                                            transliteration: "kathaa",
+                                            meaning: "debate, discourse"
+                                        },
+                                        {
+                                            kannada: "ದರ್ಪ",
+                                            transliteration: "darpa",
+                                            meaning: "pride"
+                                        },
+                                        {
+                                            kannada: "ಕ್ಷುಭ್ಯತ್",
+                                            transliteration: "kshubhyat",
+                                            meaning: "shaking, agitating"
+                                        },
+                                        {
+                                            kannada: "ಕಥಕ",
+                                            transliteration: "kathaka",
+                                            meaning: "expounders, debaters"
+                                        },
+                                        {
+                                            kannada: "ಕುಲ",
+                                            transliteration: "kula",
+                                            meaning: "groups, assemblies"
+                                        },
+                                        {
+                                            kannada: "ಕೋಲಾಹಲ",
+                                            transliteration: "kolaahala",
+                                            meaning: "noise, uproar"
+                                        },
+                                        {
+                                            kannada: "ಭವಂ",
+                                            transliteration: "bhavam",
+                                            meaning: "arising from"
+                                        }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಹರತ್ವಂತರ್ಧ್ವಾಂತಂ ಹಯವದನಹೇಷಾಹಲಹಲಃ || ೩ ||",
+                                    transliteration: "haratvantar-dhvaantam hayavadana-heshaa halahalah || 3 ||",
+                                    words: [
+                                        {
+                                            kannada: "ಹರತು",
+                                            transliteration: "haratu",
+                                            meaning: "may it remove"
+                                        },
+                                        {
+                                            kannada: "ಅಂತಃ",
+                                            transliteration: "antar",
+                                            meaning: "inner"
+                                        },
+                                        {
+                                            kannada: "ಧ್ವಾಂತಂ",
+                                            transliteration: "dhvaantam",
+                                            meaning: "darkness"
+                                        },
+                                        {
+                                            kannada: "ಹಯ",
+                                            transliteration: "haya",
+                                            meaning: "horse"
+                                        },
+                                        {
+                                            kannada: "ವದನ",
+                                            transliteration: "vadana",
+                                            meaning: "face"
+                                        },
+                                        {
+                                            kannada: "ಹೇಷಾ",
+                                            transliteration: "heshaa",
+                                            meaning: "neighing sound"
+                                        },
+                                        {
+                                            kannada: "ಹಲಹಲಃ",
+                                            transliteration: "halahalah",
+                                            meaning: "loud resonant sound"
+                                        }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "May the resounding neighing sound of Lord Hayagrīva — who is the total essence of the Sāma Veda, who is present in every word of the Ṛg Veda, who is the radiant source of the Yajur Veda, who destroys all obstacles, who is like the vast waves of the ocean of knowledge, who shakes and silences the prideful uproar of disputing scholars — remove the inner darkness of ignorance within us."
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
+
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>
