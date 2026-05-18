@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಚಂದ್ರಶೇಖರಾಷ್ಟಕಂ (Chandrasekhara Ashtakam)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Centralized Styles -->
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>ಚಂದ್ರಶೇಖರಾಷ್ಟಕಂ <span class="ENG">(Chandrasekhara Ashtakam)</span></h1>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <p>
+        <iframe width="560" height="100" src="https://youtu.be/ACD2ZGRyJC8?si=A-k5nYGNopr0V3_v"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </p>
+
+    <p>
+        <iframe width="560" height="100" src="https://youtu.be/2L8HCI41rFM?si=T19i5ll460stAjNE"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </p>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <!-- Content Data Script -->
+    <script>
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಸಂಕಲ್ಪಂ",
+                        english: "Sankalpam"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಶಿವೇಶಾನ ಮಹಾದೇವ ವಾಮದೇವ ಸದಾಶಿವ ।",
+                                    transliteration: "SivaeSaana mahaadaeva vaamadaeva sadaaSiva |",
+                                    words: [
+                                        { kannada: "ಶಿವೇಶಾನ", transliteration: "SivaeSaana", meaning: "Lord Shiva seated (supreme form)" },
+                                        { kannada: "ಮಹಾದೇವ", transliteration: "mahaadaeva", meaning: "Great God" },
+                                        { kannada: "ವಾಮದೇವ", transliteration: "vaamadaeva", meaning: "Vamadeva (preserving aspect of Shiva)" },
+                                        { kannada: "ಸದಾಶಿವ", transliteration: "sadaaSiva", meaning: "Eternal Shiva" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಕಲ್ಪಾಯುರ್ಧೇಹಿ ಮೇ ಪೂರ್ಣಂ ಯಾವದಾಯುರರೋಗತಾಮ್ ॥",
+                                    transliteration: "kalpaayur daehimae poorNaM yaavadaayur arOgataaM ||",
+                                    words: [
+                                        { kannada: "ಕಲ್ಪಾಯುರ್ಧೇಹಿ", transliteration: "kalpaayur daehimae", meaning: "grant me a lifespan of a kalpa (aeon)" },
+                                        { kannada: "ಪೂರ್ಣಂ", transliteration: "poorNaM", meaning: "full, complete" },
+                                        { kannada: "ಯಾವದಾಯುರರೋಗತಾಮ್", transliteration: "yaavadaayur arOgataaM", meaning: "until the end of life, free from disease" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O Shiva, Mahadeva, Vamadeva, and Sadashiva — grant me a full lifespan for a kalpa and health until the end of my days."
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "ಶ್ರೀಚಂದ್ರಶೇಖರಾಷ್ಟಕಂ",
+                        english: "Chandrasekhara Ashtakam"
+                    },
+                    verses: [
+                        {
+                            shlokaNumber: 1,
+                            lines: [
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರ ಚಂದ್ರಶೇಖರ ಚಂದ್ರಶೇಖರ ಪಾಹಿ ಮಾಮ್ |",
+                                    transliteration: "chandrashekhara chandrashekhara chandrashekhara pahi mam |",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರ", transliteration: "chandrashekhara", meaning: "Lord with the moon on His crest" },
+                                        { kannada: "ಪಾಹಿ", transliteration: "pahi", meaning: "protect" },
+                                        { kannada: "ಮಾಮ್", transliteration: "mam", meaning: "me" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರ ಚಂದ್ರಶೇಖರ ಚಂದ್ರಶೇಖರ ರಕ್ಷ ಮಾಮ್ ||",
+                                    transliteration: "chandrashekhara chandrashekhara chandrashekhara raksha mam ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರ", transliteration: "chandrashekhara", meaning: "Lord with the moon on His crest" },
+                                        { kannada: "ರಕ್ಷ", transliteration: "raksha", meaning: "save, guard" },
+                                        { kannada: "ಮಾಮ್", transliteration: "mam", meaning: "me" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O Chandrasekhara, protect me! O Chandrasekhara, save me!"
+                        },
+                        {
+                            shlokaNumber: 1,
+                            lines: [
+                                {
+                                    kannada: "ರತ್ನಸಾನು ಶರಾಸನಂ ರಜತಾದ್ರಿ ಶೃಂಗನಿಕೇತನಂ",
+                                    transliteration: "ratnasaanu SaraasanaM rajataadri SRMga nikaetanaM",
+                                    words: [
+                                        { kannada: "ರತ್ನಸಾನು", transliteration: "ratnasaanu", meaning: "gem-studded seat/throne" },
+                                        { kannada: "ಶರಾಸನಂ", transliteration: "SaraasanaM", meaning: "bow (seat of arrows)" },
+                                        { kannada: "ರಜತಾದ್ರಿ", transliteration: "rajataadri", meaning: "silver mountain (Kailasa)" },
+                                        { kannada: "ಶೃಂಗನಿಕೇತನಂ", transliteration: "SRMga nikaetanaM", meaning: "one who dwells on the peak" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಶಿಂಜಿನೀಕೃತ ಪನ್ನಗೇಶ್ವರಮಚ್ಯುತಾನಲ ಸಾಯಕಮ್ |",
+                                    transliteration: "SiMjineekRta pannagaeSvara machyutaanala saayakam |",
+                                    words: [
+                                        { kannada: "ಶಿಂಜಿನೀಕೃತ", transliteration: "SiMjineekRta", meaning: "worn as an armlet" },
+                                        { kannada: "ಪನ್ನಗೇಶ್ವರ", transliteration: "pannagaeSvara", meaning: "lord of serpents (Vasuki)" },
+                                        { kannada: "ಅಚ್ಯುತಾನಲ", transliteration: "machyutaanala", meaning: "Vishnu's fire (discus)" },
+                                        { kannada: "ಸಾಯಕಮ್", transliteration: "saayakam", meaning: "arrow, missile" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಕ್ಷಿಪ್ರದಗ್ಧ ಪುರತ್ರಯಂ ತ್ರಿದಿವಾಲಯೈ ರಭಿವಂದಿತಂ",
+                                    transliteration: "kshipradagda puratrayaM tridaSaalayai rabhivaMditaM",
+                                    words: [
+                                        { kannada: "ಕ್ಷಿಪ್ರದಗ್ಧ", transliteration: "kshipradagda", meaning: "who swiftly burnt" },
+                                        { kannada: "ಪುರತ್ರಯಂ", transliteration: "puratrayaM", meaning: "the three cities" },
+                                        { kannada: "ತ್ರಿದಿವಾಲಯೈ", transliteration: "tridaSaalayai", meaning: "by the denizens of heaven" },
+                                        { kannada: "ರಭಿವಂದಿತಂ", transliteration: "rabhivaMditaM", meaning: "worshipped" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ ಮಮ ಕಿಂ ಕರಿಷ್ಯತಿ ವೈ ಯಮಃ || 1 ||",
+                                    transliteration: "chaMdraSaekharamaaSrayae mama kiM karishyati vai yama: || 1 ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ", transliteration: "chaMdraSaekharamaaSrayae", meaning: "I take refuge in Chandrasekhara" },
+                                        { kannada: "ಮಮ", transliteration: "mama", meaning: "my" },
+                                        { kannada: "ಕಿಂ ಕರಿಷ್ಯತಿ", transliteration: "kiM karishyati", meaning: "what can he do" },
+                                        { kannada: "ವೈ", transliteration: "vai", meaning: "indeed, verily" },
+                                        { kannada: "ಯಮಃ", transliteration: "yama:", meaning: "Yama (god of death)" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I take refuge in Chandrasekhara, who sits on a gem-studded throne on the silver mountain peak, whose serpent-lord was worn as a bracelet by Vishnu, who swiftly burnt the three cities, and who is worshipped by the gods of heaven — what can Yama do to me?"
+                        },
+                        {
+                            shlokaNumber: 2,
+                            lines: [
+                                {
+                                    kannada: "ಪಂಚಪಾದಪಪುಷ್ಪಗಂಧಪದಾಂಬುಜದ್ವಯಶೋಭಿತಂ",
+                                    transliteration: "paMchapaadapa pushpagaMdha padaaMbuja dvayaSObhitaM",
+                                    words: [
+                                        { kannada: "ಪಂಚಪಾದಪ", transliteration: "paMchapaadapa", meaning: "five trees (sacred trees)" },
+                                        { kannada: "ಪುಷ್ಪಗಂಧ", transliteration: "pushpagaMdha", meaning: "fragrance of flowers" },
+                                        { kannada: "ಪದಾಂಬುಜ", transliteration: "padaaMbuja", meaning: "lotus feet" },
+                                        { kannada: "ದ್ವಯಶೋಭಿತಂ", transliteration: "dvayaSObhitaM", meaning: "adorned by the beauty of the two" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಫಾಲಲೋಚನಜಾತಪಾವಕ ದಗ್ಧಮನ್ಮಥವಿಗ್ರಹಮ್ |",
+                                    transliteration: "phaalalOchana jaatapaavaka dagdha manmadha vigraham |",
+                                    words: [
+                                        { kannada: "ಫಾಲಲೋಚನ", transliteration: "phaalalOchana", meaning: "third eye on the forehead" },
+                                        { kannada: "ಜಾತಪಾವಕ", transliteration: "jaatapaavaka", meaning: "born fire" },
+                                        { kannada: "ದಗ್ಧ", transliteration: "dagdha", meaning: "burnt" },
+                                        { kannada: "ಮನ್ಮಥವಿಗ್ರಹ", transliteration: "manmadha vigraham", meaning: "the body of Cupid (Manmatha)" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಭಸ್ಮದಿಗ್ಧಕಳೇಬರಂ ಭವನಾಶನಂ ಭವಮವ್ಯಯಂ",
+                                    transliteration: "bhasmadigda kaLaebaraM bhavanaaSanaM bhava mavyayaM",
+                                    words: [
+                                        { kannada: "ಭಸ್ಮದಿಗ್ಧಕಳೇಬರಂ", transliteration: "bhasmadigda kaLaebaraM", meaning: "body smeared with sacred ash" },
+                                        { kannada: "ಭವನಾಶನಂ", transliteration: "bhavanaaSanaM", meaning: "destroyer of worldly existence" },
+                                        { kannada: "ಭವಮವ್ಯಯಂ", transliteration: "bhava mavyayaM", meaning: "the imperishable Lord of existence" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ ಮಮ ಕಿಂ ಕರಿಷ್ಯತಿ ವೈ ಯಮಃ || 2 ||",
+                                    transliteration: "chaMdraSaekharamaaSrayae mama kiM karishyati vai yama: || 2 ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ", transliteration: "chaMdraSaekharamaaSrayae", meaning: "I take refuge in Chandrasekhara" },
+                                        { kannada: "ಮಮ", transliteration: "mama", meaning: "my" },
+                                        { kannada: "ಕಿಂ ಕರಿಷ್ಯತಿ", transliteration: "kiM karishyati", meaning: "what can he do" },
+                                        { kannada: "ವೈ", transliteration: "vai", meaning: "indeed, verily" },
+                                        { kannada: "ಯಮಃ", transliteration: "yama:", meaning: "Yama (god of death)" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I take refuge in Chandrasekhara, whose lotus feet are adorned with the fragrance of flowers from the five sacred trees, whose third-eye fire burnt Cupid, whose body is smeared with ash, who destroys worldly existence yet is Himself imperishable — what can Yama do to me?"
+                        },
+                        {
+                            shlokaNumber: 3,
+                            lines: [
+                                {
+                                    kannada: "ಮತ್ತವಾರಣಮುಖ್ಯಚರ್ಮಕೃತೋತ್ತರೀಯ ಮನೋಹರಂ",
+                                    transliteration: "mattavaaraNa mukhyacharma kRtOttareeya manOharaM",
+                                    words: [
+                                        { kannada: "ಮತ್ತವಾರಣ", transliteration: "mattavaaraNa", meaning: "intoxicated elephant" },
+                                        { kannada: "ಮುಖ್ಯಚರ್ಮ", transliteration: "mukhyacharma", meaning: "chief hide/skin" },
+                                        { kannada: "ಕೃತೋತ್ತರೀಯ", transliteration: "kRtOttareeya", meaning: "made into upper garment" },
+                                        { kannada: "ಮನೋಹರಂ", transliteration: "manOharaM", meaning: "captivating, beautiful" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪಂಕಜಾಸನ ಪದ್ಮಲೋಚನ ಪೂಜಿತಾಂಘ್ರಿ ಸರೋರುಹಮ್ |",
+                                    transliteration: "paMkajaasana padmalOchana poojitaaMghri sarOruham |",
+                                    words: [
+                                        { kannada: "ಪಂಕಜಾಸನ", transliteration: "paMkajaasana", meaning: "Brahma (lotus-seated)" },
+                                        { kannada: "ಪದ್ಮಲೋಚನ", transliteration: "padmalOchana", meaning: "lotus-eyed (Vishnu)" },
+                                        { kannada: "ಪೂಜಿತಾಂಘ್ರಿ", transliteration: "poojitaaMghri", meaning: "worshipped feet" },
+                                        { kannada: "ಸರೋರುಹ", transliteration: "sarOruham", meaning: "lotus (feet)" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ದೇವಸಿಂಧುತರಂಗಶೀಕರ ಸಿಕ್ತಶುಭ್ರಜಟಾಧರಂ",
+                                    transliteration: "daeva siMdhu taraMga Seekara sikta Subhra jaTaadharaM",
+                                    words: [
+                                        { kannada: "ದೇವಸಿಂಧು", transliteration: "daeva siMdhu", meaning: "celestial ocean (Ganga)" },
+                                        { kannada: "ತರಂಗಶೀಕರ", transliteration: "taraMga Seekara", meaning: "wave-crest (foam)" },
+                                        { kannada: "ಸಿಕ್ತ", transliteration: "sikta", meaning: "moistened" },
+                                        { kannada: "ಶುಭ್ರಜಟಾಧರಂ", transliteration: "Subhra jaTaadharaM", meaning: "who bears bright matted locks" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ ಮಮ ಕಿಂ ಕರಿಷ್ಯತಿ ವೈ ಯಮಃ || 3 ||",
+                                    transliteration: "chaMdraSaekharamaaSrayae mama kiM karishyati vai yama: || 3 ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ", transliteration: "chaMdraSaekharamaaSrayae", meaning: "I take refuge in Chandrasekhara" },
+                                        { kannada: "ಮಮ", transliteration: "mama", meaning: "my" },
+                                        { kannada: "ಕಿಂ ಕರಿಷ್ಯತಿ", transliteration: "kiM karishyati", meaning: "what can he do" },
+                                        { kannada: "ವೈ", transliteration: "vai", meaning: "indeed, verily" },
+                                        { kannada: "ಯಮಃ", transliteration: "yama:", meaning: "Yama (god of death)" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I take refuge in Chandrasekhara, who wears the hide of the lordly intoxicated elephant as a beautiful upper garment, whose lotus feet are worshipped by Brahma and Vishnu, whose bright matted locks are moistened by the foam of the celestial Ganga — what can Yama do to me?"
+                        },
+                        {
+                            shlokaNumber: 4,
+                            lines: [
+                                {
+                                    kannada: "ಕುಂಡಲೀಕೃತಕುಂಡಲೇಶ್ವರಕುಂಡಲಂ ವೃಷವಾಹನಂ",
+                                    transliteration: "kuMDaleekRta kuMDalaeSvara kuMDalaM vRshavaahanaM",
+                                    words: [
+                                        { kannada: "ಕುಂಡಲೀಕೃತ", transliteration: "kuMDaleekRta", meaning: "worn as earrings" },
+                                        { kannada: "ಕುಂಡಲೇಶ್ವರ", transliteration: "kuMDalaeSvara", meaning: "lord of the earrings (Vishnu)" },
+                                        { kannada: "ಕುಂಡಲಂ", transliteration: "kuMDalaM", meaning: "earring" },
+                                        { kannada: "ವೃಷವಾಹನಂ", transliteration: "vRshavaahanaM", meaning: "whose vehicle is the bull" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ನಾರದಾದಿಮುನೀಶ್ವರಸ್ತುತವೈಭವಂ ಭುವನೇಶ್ವರಮ್ |",
+                                    transliteration: "naaradaadi muneeSvara stutavaibhavaM bhuvanaeSvaram |",
+                                    words: [
+                                        { kannada: "ನಾರದಾದಿ", transliteration: "naaradaadi", meaning: "Narada and others" },
+                                        { kannada: "ಮುನೀಶ್ವರ", transliteration: "muneeSvara", meaning: "lords among sages" },
+                                        { kannada: "ಸ್ತುತವೈಭವಂ", transliteration: "stutavaibhavaM", meaning: "whose glory is praised" },
+                                        { kannada: "ಭುವನೇಶ್ವರ", transliteration: "bhuvanaeSvaram", meaning: "lord of the worlds" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಅಂಧಕಾಂತಕಮಾಶ್ರಿತಾಮರಪಾದಪಂ ಶಮನಾಂತಕಂ",
+                                    transliteration: "aMdhakaaMtaka maaSritaamara paadapaM SamanaaMtakaM",
+                                    words: [
+                                        { kannada: "ಅಂಧಕಾಂತಕ", transliteration: "aMdhakaaMtaka", meaning: "slayer of Andhaka" },
+                                        { kannada: "ಆಶ್ರಿತಾಮರಪಾದಪ", transliteration: "maaSritaamara paadapaM", meaning: "refuge-tree for gods who seek His feet" },
+                                        { kannada: "ಶಮನಾಂತಕ", transliteration: "SamanaaMtakaM", meaning: "destroyer of Yama (death)" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ ಮಮ ಕಿಂ ಕರಿಷ್ಯತಿ ವೈ ಯಮಃ || 4 ||",
+                                    transliteration: "chaMdraSaekharamaaSrayae mama kiM karishyati vai yama: || 4 ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ", transliteration: "chaMdraSaekharamaaSrayae", meaning: "I take refuge in Chandrasekhara" },
+                                        { kannada: "ಮಮ", transliteration: "mama", meaning: "my" },
+                                        { kannada: "ಕಿಂ ಕರಿಷ್ಯತಿ", transliteration: "kiM karishyati", meaning: "what can he do" },
+                                        { kannada: "ವೈ", transliteration: "vai", meaning: "indeed, verily" },
+                                        { kannada: "ಯಮಃ", transliteration: "yama:", meaning: "Yama (god of death)" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I take refuge in Chandrasekhara, who wears Vishnu as earrings, rides the bull, whose glory is praised by Narada and other sages, lord of the worlds, slayer of Andhaka, refuge of the gods, destroyer of Yama — what can Yama do to me?"
+                        },
+                        {
+                            shlokaNumber: 5,
+                            lines: [
+                                {
+                                    kannada: "ಭೇಷಜಂ ಭವರೋಗಿಣಾಮಖಿಲಾಪದಾಮಪಹಾರಿಣಂ",
+                                    transliteration: "bhaeshajaM bhavarOgiNaa makhilaapadaa mapahaariNaM",
+                                    words: [
+                                        { kannada: "ಭೇಷಜಂ", transliteration: "bhaeshajaM", meaning: "medicine, remedy" },
+                                        { kannada: "ಭವರೋಗಿಣಾಮ್", transliteration: "bhavarOgiNaa", meaning: "for those afflicted by the disease of samsara" },
+                                        { kannada: "ಅಖಿಲಾಪದಾಮಪಹಾರಿಣಂ", transliteration: "makhilaapadaa mapahaariNaM", meaning: "remover of all miseries" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ದಕ್ಷಯಜ್ಞವಿನಾಶನಂ ತ್ರಿಗುಣಾತ್ಮಕಂ ತ್ರಿವಿಲೋಚನಮ್ |",
+                                    transliteration: "dakshaya~m~na vinaaSanaM triguNaatmakaM trivilOchanam |",
+                                    words: [
+                                        { kannada: "ದಕ್ಷಯಜ್ಞವಿನಾಶನಂ", transliteration: "dakshaya~m~na vinaaSanaM", meaning: "destroyer of Daksha's sacrifice" },
+                                        { kannada: "ತ್ರಿಗುಣಾತ್ಮಕಂ", transliteration: "triguNaatmakaM", meaning: "embodiment of the three gunas" },
+                                        { kannada: "ತ್ರಿವಿಲೋಚನ", transliteration: "trivilOchanam", meaning: "three-eyed one" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಭುಕ್ತಿಮುಕ್ತಿಫಲಪ್ರದಂ ಸಕಲಾಘಸಂಘನಿಬರ್ಹಣಂ",
+                                    transliteration: "bhukti mukti phalapradaM sakalaagha saMgha nibarhaNaM",
+                                    words: [
+                                        { kannada: "ಭುಕ್ತಿ", transliteration: "bhukti", meaning: "enjoyment, worldly pleasure" },
+                                        { kannada: "ಮುಕ್ತಿ", transliteration: "mukti", meaning: "liberation" },
+                                        { kannada: "ಫಲಪ್ರದಂ", transliteration: "phalapradaM", meaning: "bestower of fruits (results)" },
+                                        { kannada: "ಸಕಲಾಘಸಂಘನಿಬರ್ಹಣಂ", transliteration: "sakalaagha saMgha nibarhaNaM", meaning: "destroyer of all sins" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ ಮಮ ಕಿಂ ಕರಿಷ್ಯತಿ ವೈ ಯಮಃ || 5 ||",
+                                    transliteration: "chaMdraSaekharamaaSrayae mama kiM karishyati vai yama: || 5 ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ", transliteration: "chaMdraSaekharamaaSrayae", meaning: "I take refuge in Chandrasekhara" },
+                                        { kannada: "ಮಮ", transliteration: "mama", meaning: "my" },
+                                        { kannada: "ಕಿಂ ಕರಿಷ್ಯತಿ", transliteration: "kiM karishyati", meaning: "what can he do" },
+                                        { kannada: "ವೈ", transliteration: "vai", meaning: "indeed, verily" },
+                                        { kannada: "ಯಮಃ", transliteration: "yama:", meaning: "Yama (god of death)" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I take refuge in Chandrasekhara, the remedy for those suffering the disease of worldly existence, destroyer of Daksha's sacrifice, embodiment of the three gunas, three-eyed, bestower of enjoyment and liberation, destroyer of all sins — what can Yama do to me?"
+                        },
+                        {
+                            shlokaNumber: 6,
+                            lines: [
+                                {
+                                    kannada: "ವಿಶ್ವಸೃಷ್ಟಿವಿಧಾಯಿನಂ ಪುನರೇವ ಪಾಲನತತ್ಪರಂ",
+                                    transliteration: "viSvasRshTi vidhaayinaM punaraevapaalana tatparaM",
+                                    words: [
+                                        { kannada: "ವಿಶ್ವಸೃಷ್ಟಿ", transliteration: "viSvasRshTi", meaning: "creation of the universe" },
+                                        { kannada: "ವಿಧಾಯಿನಂ", transliteration: "vidhaayinaM", meaning: "the ordainer, creator" },
+                                        { kannada: "ಪುನರೇವ ಪಾಲನತತ್ಪರಂ", transliteration: "punaraevapaalana tatparaM", meaning: "again devoted to preservation" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಸಂಹರಂತಮಪಿಪ್ರಪಂಚಮಶೇಷಲೋಕನಿವಾಸಿನಮ್ |",
+                                    transliteration: "saMharaMta mapi - prapaMcha maSaeshalOka nivaasinam |",
+                                    words: [
+                                        { kannada: "ಸಂಹರಂತಮಪಿ", transliteration: "saMharaMta mapi", meaning: "even while dissolving" },
+                                        { kannada: "ಪ್ರಪಂಚ", transliteration: "prapaMcha", meaning: "the universe" },
+                                        { kannada: "ಅಶೇಷಲೋಕನಿವಾಸಿನ", transliteration: "maSaeshalOka nivaasinam", meaning: "dwelling in all worlds" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಕ್ರೀಡಯಂತಮಹರ್ನಿಶಂ ಗಣನಾಥಯೂಥಸಮನ್ವಿತಂ",
+                                    transliteration: "kreeDayaMta maharniSaM - gaNanaatha yootha samanvitaM",
+                                    words: [
+                                        { kannada: "ಕ್ರೀಡಯಂತ", transliteration: "kreeDayaMta", meaning: "sporting, playing" },
+                                        { kannada: "ಅಹರ್ನಿಶಂ", transliteration: "maharniSaM", meaning: "day and night" },
+                                        { kannada: "ಗಣನಾಥ", transliteration: "gaNanaatha", meaning: "lords of the Ganas" },
+                                        { kannada: "ಯೂಥಸಮನ್ವಿತಂ", transliteration: "yootha samanvitaM", meaning: "accompanied by hosts" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ ಮಮ ಕಿಂ ಕರಿಷ್ಯತಿ ವೈ ಯಮಃ || 6 ||",
+                                    transliteration: "chaMdraSaekharamaaSrayae mama kiM karishyati vai yama: || 6 ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ", transliteration: "chaMdraSaekharamaaSrayae", meaning: "I take refuge in Chandrasekhara" },
+                                        { kannada: "ಮಮ", transliteration: "mama", meaning: "my" },
+                                        { kannada: "ಕಿಂ ಕರಿಷ್ಯತಿ", transliteration: "kiM karishyati", meaning: "what can he do" },
+                                        { kannada: "ವೈ", transliteration: "vai", meaning: "indeed, verily" },
+                                        { kannada: "ಯಮಃ", transliteration: "yama:", meaning: "Yama (god of death)" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I take refuge in Chandrasekhara, who creates the universe, preserves it again, dissolves it yet dwells in all worlds, who sports day and night surrounded by hosts of Ganas — what can Yama do to me?"
+                        },
+                        {
+                            shlokaNumber: 7,
+                            lines: [
+                                {
+                                    kannada: "ಭಕ್ತವತ್ಸಲಮರ್ಚಿತಂ ನಿಧಿಮಕ್ಷಯಂ ಹರಿದಂಬರಂ",
+                                    transliteration: "bhaktavatsala marchitaM nidhimakshayaM haridaMbaraM",
+                                    words: [
+                                        { kannada: "ಭಕ್ತವತ್ಸಲ", transliteration: "bhaktavatsala", meaning: "affectionate to devotees" },
+                                        { kannada: "ಅರ್ಚಿತಂ", transliteration: "marchitaM", meaning: "worshipped" },
+                                        { kannada: "ನಿಧಿಮಕ್ಷಯಂ", transliteration: "nidhimakshayaM", meaning: "inexhaustible treasure" },
+                                        { kannada: "ಹರಿದಂಬರಂ", transliteration: "haridaMbaraM", meaning: "clothed in yellow (or sky-clad)" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಸರ್ವಭೂತಪತಿಂ ಪರಾತ್ಪರಮಪ್ರಮೇಯಮನುತ್ತಮಮ್ |",
+                                    transliteration: "sarvabhoota patiM paraatpara mapramaeya manuttamam |",
+                                    words: [
+                                        { kannada: "ಸರ್ವಭೂತಪತಿಂ", transliteration: "sarvabhoota patiM", meaning: "lord of all beings" },
+                                        { kannada: "ಪರಾತ್ಪರಮಪ್ರಮೇಯ", transliteration: "paraatpara mapramaeya", meaning: "beyond the beyond, immeasurable" },
+                                        { kannada: "ಅನುತ್ತಮ", transliteration: "manuttamam", meaning: "unsurpassed, supreme" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಸೋಮವಾರುಣ ಭೂಹುತಾಶನ ಸೋಮಪಾನಿಖಿಲಾಕೃತಿಂ",
+                                    transliteration: "sOma vaari nabhO hutaaSana sOmapaa nikhilaakRtiM",
+                                    words: [
+                                        { kannada: "ಸೋಮ", transliteration: "sOma", meaning: "moon" },
+                                        { kannada: "ವಾರುಣ", transliteration: "vaari", meaning: "water (Varuna)" },
+                                        { kannada: "ಭೂ", transliteration: "nabhO", meaning: "sky (element)" },
+                                        { kannada: "ಹುತಾಶನ", transliteration: "hutaaSana", meaning: "fire" },
+                                        { kannada: "ಸೋಮಪಾನಿಖಿಲಾಕೃತಿಂ", transliteration: "sOmapaa nikhilaakRtiM", meaning: "drinker of soma; of all forms" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ ಮಮ ಕಿಂ ಕರಿಷ್ಯತಿ ವೈ ಯಮಃ || 7 ||",
+                                    transliteration: "chaMdraSaekharamaaSrayae mama kiM karishyati vai yama: || 7 ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ", transliteration: "chaMdraSaekharamaaSrayae", meaning: "I take refuge in Chandrasekhara" },
+                                        { kannada: "ಮಮ", transliteration: "mama", meaning: "my" },
+                                        { kannada: "ಕಿಂ ಕರಿಷ್ಯತಿ", transliteration: "kiM karishyati", meaning: "what can he do" },
+                                        { kannada: "ವೈ", transliteration: "vai", meaning: "indeed, verily" },
+                                        { kannada: "ಯಮಃ", transliteration: "yama:", meaning: "Yama (god of death)" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I take refuge in Chandrasekhara, affectionate to devotees, the inexhaustible treasure, lord of all beings, beyond the beyond, immeasurable and supreme, comprising moon, water, earth, fire, and all sacrificial forms — what can Yama do to me?"
+                        },
+                        {
+                            shlokaNumber: 8,
+                            lines: [
+                                {
+                                    kannada: "ಯಕ್ಷರಾಜಸಖಂ ಭಗಾಕ್ಷಹರಂ ಭುಜಂಗವಿಭೂಷಣಂ",
+                                    transliteration: "yaksha raajasakhaM bhagaaksha haraM bhujaMga vibhooshaNam",
+                                    words: [
+                                        { kannada: "ಯಕ್ಷರಾಜಸಖಂ", transliteration: "yaksha raajasakhaM", meaning: "friend of Kubera (king of Yakshas)" },
+                                        { kannada: "ಭಗಾಕ್ಷಹರಂ", transliteration: "bhagaaksha haraM", meaning: "destroyer of the eyes of Bhaga" },
+                                        { kannada: "ಭುಜಂಗವಿಭೂಷಣಂ", transliteration: "bhujaMga vibhooshaNam", meaning: "adorned with serpents as ornaments" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಶೈಲರಾಜಸುತಾಪರಿಷ್ಕೃತ ಚಾರುವಾಮಕಳೇಬರಮ್ |",
+                                    transliteration: "Sailaraaja sutaa parishkRta chaaruvaama kaLaebaram |",
+                                    words: [
+                                        { kannada: "ಶೈಲರಾಜಸುತಾ", transliteration: "Sailaraaja sutaa", meaning: "daughter of Himavan (Parvati)" },
+                                        { kannada: "ಪರಿಷ್ಕೃತ", transliteration: "parishkRta", meaning: "adorned, attended to" },
+                                        { kannada: "ಚಾರುವಾಮಕಳೇಬರ", transliteration: "chaaruvaama kaLaebaram", meaning: "whose left half of the body is the graceful Parvati" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಕ್ಷ್ವೇಡನೀಲಗಳಂ ಪರಶ್ವಥಧಾರಿಣಂ ಮೃಗಧಾರಿಣಂ",
+                                    transliteration: "kshvaeLa neelagaLaM paraSvadha dhaariNaM mRgadhaariNam",
+                                    words: [
+                                        { kannada: "ಕ್ಷ್ವೇಡನೀಲಗಳಂ", transliteration: "kshvaeLa neelagaLaM", meaning: "with a blue throat (from poison)" },
+                                        { kannada: "ಪರಶ್ವಥಧಾರಿಣಂ", transliteration: "paraSvadha dhaariNaM", meaning: "bearer of the axe" },
+                                        { kannada: "ಮೃಗಧಾರಿಣಂ", transliteration: "mRgadhaariNam", meaning: "bearer of the deer (in hand)" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ ಮಮ ಕಿಂ ಕರಿಷ್ಯತಿ ವೈ ಯಮಃ || 8 ||",
+                                    transliteration: "chaMdraSaekharamaaSrayae mama kiM karishyati vai yama: || 8 ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರಮಾಶ್ರಯೇ", transliteration: "chaMdraSaekharamaaSrayae", meaning: "I take refuge in Chandrasekhara" },
+                                        { kannada: "ಮಮ", transliteration: "mama", meaning: "my" },
+                                        { kannada: "ಕಿಂ ಕರಿಷ್ಯತಿ", transliteration: "kiM karishyati", meaning: "what can he do" },
+                                        { kannada: "ವೈ", transliteration: "vai", meaning: "indeed, verily" },
+                                        { kannada: "ಯಮಃ", transliteration: "yama:", meaning: "Yama (god of death)" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "I take refuge in Chandrasekhara, friend of Kubera, who destroyed Bhaga's eyes, adorned with serpents, whose graceful form includes Parvati on the left, with blue throat, bearing axe and deer — what can Yama do to me?"
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "ಫಲಶ್ರುತಿ",
+                        english: "Phalashruti / Benefits"
+                    },
+                    verses: [
+                        {
+                            shlokaNumber: 1,
+                            lines: [
+                                {
+                                    kannada: "ಮೃತ್ಯುಭೀತಮೃಕಂಡುಸೂನುಕೃತಸ್ತವಂ ಶಿವಸನ್ನಿಧೌ",
+                                    transliteration: "mRtyubheeta mRkaMDa soonu kRta stavaM Sivasannidhau",
+                                    words: [
+                                        { kannada: "ಮೃತ್ಯುಭೀತ", transliteration: "mRtyubheeta", meaning: "fearing death" },
+                                        { kannada: "ಮೃಕಂಡುಸೂನು", transliteration: "mRkaMDa soonu", meaning: "son of Mrikandu (Markandeya)" },
+                                        { kannada: "ಕೃತಸ್ತವಂ", transliteration: "kRta stavaM", meaning: "who composed this hymn" },
+                                        { kannada: "ಶಿವಸನ್ನಿಧೌ", transliteration: "Sivasannidhau", meaning: "in the presence of Shiva" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಯತ್ರ ಕುತ್ರ ಚ ಯಃ ಪಠೇನ್ನ ಹಿ ತಸ್ಯ ಮೃತ್ಯುಭಯಂ ಭವೇತ್ |",
+                                    transliteration: "yatra kutra cha ya: paThaet nahi tasya mRtyubhayaM bhavaet |",
+                                    words: [
+                                        { kannada: "ಯತ್ರ ಕುತ್ರ ಚ", transliteration: "yatra kutra cha", meaning: "wherever and whenever" },
+                                        { kannada: "ಯಃ", transliteration: "ya:", meaning: "whoever" },
+                                        { kannada: "ಪಠೇತ್", transliteration: "paThaet", meaning: "recites" },
+                                        { kannada: "ನ ಹಿ", transliteration: "nahi", meaning: "surely not" },
+                                        { kannada: "ತಸ್ಯ", transliteration: "tasya", meaning: "his" },
+                                        { kannada: "ಮೃತ್ಯುಭಯಂ ಭವೇತ್", transliteration: "mRtyubhayaM bhavaet", meaning: "fear of death shall not befall" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಪೂರ್ಣಮಾಯುರರೋಗತಾಮಖಿಲಾರ್ಥಸಂಪದಮಾದರಂ",
+                                    transliteration: "poorNamaayu: arOgataaM akhilaartha saMpada maadaraM",
+                                    words: [
+                                        { kannada: "ಪೂರ್ಣಮಾಯು", transliteration: "poorNamaayu:", meaning: "full span of life" },
+                                        { kannada: "ಅರೋಗತಾ", transliteration: "arOgataaM", meaning: "freedom from disease" },
+                                        { kannada: "ಅಖಿಲಾರ್ಥಸಂಪದ", transliteration: "akhilaartha saMpada", meaning: "all desired wealth" },
+                                        { kannada: "ಆದರಂ", transliteration: "maadaraM", meaning: "respect, esteem" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಚಂದ್ರಶೇಖರ ಏವ ತಸ್ಯ ದದಾತಿ ಮುಕ್ತಿಮಯತ್ನತಃ || 1 ||",
+                                    transliteration: "chaMdraSaekhara aeva tasya dadaati muktimayatnata: || 1 ||",
+                                    words: [
+                                        { kannada: "ಚಂದ್ರಶೇಖರ", transliteration: "chaMdraSaekhara", meaning: "Chandrasekhara" },
+                                        { kannada: "ಏವ", transliteration: "aeva", meaning: "alone, indeed" },
+                                        { kannada: "ತಸ್ಯ", transliteration: "tasya", meaning: "to him" },
+                                        { kannada: "ದದಾತಿ", transliteration: "dadaati", meaning: "grants" },
+                                        { kannada: "ಮುಕ್ತಿಮಯತ್ನತಃ", transliteration: "muktimayatnata:", meaning: "liberation without effort" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Markandeya, who feared death, composed this hymn in Shiva's presence. Whoever recites it anywhere shall not fear death; Chandrasekhara grants him full life, health, all desired wealth, respect, and liberation effortlessly."
+                        }
+                    ]
+                },
+                {
+                    title: {
+                        kannada: "ಇತಿ",
+                        english: "Conclusion"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಇತಿ ಮಾರ್ಕಂಡೇಯ ಕೃತ ಶ್ರೀಚಂದ್ರಶೇಖರಾಷ್ಟಕಮ್ |",
+                                    transliteration: "iti mārkaṇḍeya kṛta śrīchandrashekhārāṣṭakam |",
+                                    words: [
+                                        { kannada: "ಇತಿ", transliteration: "iti", meaning: "thus" },
+                                        { kannada: "ಮಾರ್ಕಂಡೇಯ ಕೃತ", transliteration: "maarkaNDeya kRta", meaning: "composed by Markandeya" },
+                                        { kannada: "ಶ್ರೀಚಂದ್ರಶೇಖರಾಷ್ಟಕಮ್", transliteration: "sreechaMdraSaekharaaShTakam", meaning: "the sacred Chandrasekhara Ashtakam" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Thus ends the Chandrasekhara Ashtakam composed by Markandeya."
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
+
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>

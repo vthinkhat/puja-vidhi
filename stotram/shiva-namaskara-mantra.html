@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಶಿವ ನಮಸ್ಕಾರ ಮಂತ್ರ (Shiva Namaskara Mantra)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Centralized Styles -->
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>ಶಿವ ನಮಸ್ಕಾರ ಮಂತ್ರ <span class="ENG">(Shiva Namaskara Mantra)</span></h1>
+
+    <p>
+        Circumambulate the Shiva lingam while chanting this mantra.
+        Afterwards, respectfully present your prasadham to Chandeeshwara before proceeding home with prasadham.
+    </p>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <!-- Content Data Script -->
+    <script>
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಶಿವ ನಮಸ್ಕಾರ ಮಂತ್ರ",
+                        english: "Shiva Namaskara Mantra"
+                    },
+                    verses: [
+                        {
+                            shlokaNumber: 1,
+                            lines: [
+                                {
+                                    kannada: "ಓಂ ತತ್ಪುರುಷ ಮುಖಾಯ ನಮಃ |",
+                                    transliteration: "oṁ tatpuruṣa mukhāya namaḥ |",
+                                    words: [
+                                        { kannada: "ಓಂ", transliteration: "oṁ", meaning: "Om (sacred syllable)" },
+                                        { kannada: "ತತ್ಪುರುಷ", transliteration: "tatpuruṣa", meaning: "Tatpurusha face (eastern aspect of Shiva)" },
+                                        { kannada: "ಮುಖಾಯ", transliteration: "mukhāya", meaning: "to the face" },
+                                        { kannada: "ನಮಃ", transliteration: "namaḥ", meaning: "salutations" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to the Tatpurusha face of Lord Shiva (east, wisdom and the supreme soul)."
+                        },
+                        {
+                            shlokaNumber: 2,
+                            lines: [
+                                {
+                                    kannada: "ಓಂ ಅಘೋರ ಮುಖಾಯ ನಮಃ |",
+                                    transliteration: "oṁ aghora mukhāya namaḥ |",
+                                    words: [
+                                        { kannada: "ಓಂ", transliteration: "oṁ", meaning: "Om (sacred syllable)" },
+                                        { kannada: "ಅಘೋರ", transliteration: "aghora", meaning: "Aghora face (southern aspect, non-terrible, dissolver of fear)" },
+                                        { kannada: "ಮುಖಾಯ", transliteration: "mukhāya", meaning: "to the face" },
+                                        { kannada: "ನಮಃ", transliteration: "namaḥ", meaning: "salutations" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to the Aghora face of Lord Shiva (south, dissolution of fear and destruction of ignorance)."
+                        },
+                        {
+                            shlokaNumber: 3,
+                            lines: [
+                                {
+                                    kannada: "ಓಂ ಸದ್ಯೋಜಾತ ಮುಖಾಯ ನಮಃ |",
+                                    transliteration: "oṁ sadyojāta mukhāya namaḥ |",
+                                    words: [
+                                        { kannada: "ಓಂ", transliteration: "oṁ", meaning: "Om (sacred syllable)" },
+                                        { kannada: "ಸದ್ಯೋಜಾತ", transliteration: "sadyojāta", meaning: "Sadyojata face (western aspect, newly born, creation)" },
+                                        { kannada: "ಮುಖಾಯ", transliteration: "mukhāya", meaning: "to the face" },
+                                        { kannada: "ನಮಃ", transliteration: "namaḥ", meaning: "salutations" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to the Sadyojata face of Lord Shiva (west, creation and manifestation)."
+                        },
+                        {
+                            shlokaNumber: 4,
+                            lines: [
+                                {
+                                    kannada: "ಓಂ ವಾಮದೇವ ಮುಖಾಯ ನಮಃ |",
+                                    transliteration: "oṁ vāmadeva mukhāya namaḥ |",
+                                    words: [
+                                        { kannada: "ಓಂ", transliteration: "oṁ", meaning: "Om (sacred syllable)" },
+                                        { kannada: "ವಾಮದೇವ", transliteration: "vāmadeva", meaning: "Vamadeva face (northern aspect, preservation and compassion)" },
+                                        { kannada: "ಮುಖಾಯ", transliteration: "mukhāya", meaning: "to the face" },
+                                        { kannada: "ನಮಃ", transliteration: "namaḥ", meaning: "salutations" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to the Vamadeva face of Lord Shiva (north, preservation and graciousness)."
+                        },
+                        {
+                            shlokaNumber: 5,
+                            lines: [
+                                {
+                                    kannada: "ಓಂ ಈಶಾನ ಮುಖಾಯ ನಮಃ |",
+                                    transliteration: "oṁ īśāna mukhāya namaḥ |",
+                                    words: [
+                                        { kannada: "ಓಂ", transliteration: "oṁ", meaning: "Om (sacred syllable)" },
+                                        { kannada: "ಈಶಾನ", transliteration: "īśāna", meaning: "Ishana face (upward aspect, supreme consciousness)" },
+                                        { kannada: "ಮುಖಾಯ", transliteration: "mukhāya", meaning: "to the face" },
+                                        { kannada: "ನಮಃ", transliteration: "namaḥ", meaning: "salutations" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "Salutations to the Ishana face of Lord Shiva (upward/northeast, supreme lordship and grace)."
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
+
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
+
+    <p>source: <a href="https://youtube.com/shorts/YYJHC4FL2Is?si=ugTNnd7weLd2iQr_">https://youtube.com/shorts/YYJHC4FL2Is?si=ugTNnd7weLd2iQr_</a></p>
+</body>
+
+</html>
