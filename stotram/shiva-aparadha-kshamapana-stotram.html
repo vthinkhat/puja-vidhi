@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಶಿವ ಅಪರಾಧ ಕ್ಷಮಾಪಣಾ ಸ್ತೋತ್ರಮ್ (Shiva Aparadha Kshamapana Stotram)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Centralized Styles -->
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>ಶಿವ ಅಪರಾಧ ಕ್ಷಮಾಪಣಾ ಸ್ತೋತ್ರಮ್ <span class="ENG">(Shiva Aparadha Kshamapana Stotram)</span></h1>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <!-- Content Data Script -->
+    <script>
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಶಿವ ಅಪರಾಧ ಕ್ಷಮಾಪಣಾ ಸ್ತೋತ್ರಮ್",
+                        english: "Shiva Aparadha Kshamapana Stotram"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಕರಚರಣ ಕೃತಂ ವಾಕ್-ಕಾಯಜಂ ಕರ್ಮಜಂ ವಾ",
+                                    transliteration: "kara charaNa kRtaM vaak-kaayajaM karmajaM vaa",
+                                    words: [
+                                        { kannada: "ಕರಚರಣ", transliteration: "kara charaNa", meaning: "hands and feet (organs of action)" },
+                                        { kannada: "ಕೃತಂ", transliteration: "kRtaM", meaning: "done, committed" },
+                                        { kannada: "ವಾಕ್", transliteration: "vaak", meaning: "speech" },
+                                        { kannada: "ಕಾಯಜಂ", transliteration: "kaayajaM", meaning: "born of the body" },
+                                        { kannada: "ಕರ್ಮಜಂ", transliteration: "karmajaM", meaning: "born of action" },
+                                        { kannada: "ವಾ", transliteration: "vaa", meaning: "or" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಶ್ರವಣ-ನಯನಜಂ ವಾ ಮಾನಸಂ ವಾ ಅಪರಾಧಂ |",
+                                    transliteration: "shravana-nayanajaM vaa maanasaM vaa aparaadhaM |",
+                                    words: [
+                                        { kannada: "ಶ್ರವಣ", transliteration: "shravana", meaning: "ears (organ of hearing)" },
+                                        { kannada: "ನಯನಜಂ", transliteration: "nayanajaM", meaning: "born of the eyes" },
+                                        { kannada: "ವಾ", transliteration: "vaa", meaning: "or" },
+                                        { kannada: "ಮಾನಸಂ", transliteration: "maanasaM", meaning: "mind" },
+                                        { kannada: "ವಾ", transliteration: "vaa", meaning: "or" },
+                                        { kannada: "ಅಪರಾಧಂ", transliteration: "aparaadhaM", meaning: "offense, wrong action" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ವಿಹಿತಮ್-ಅವಿಹಿತಂ ವಾ ಸರ್ವಮೇತತ್ ಕ್ಷಮಸ್ವ",
+                                    transliteration: "vihitam-avihitaM vaa sarvametat kshamasva jaya",
+                                    words: [
+                                        { kannada: "ವಿಹಿತಮ್", transliteration: "vihitam", meaning: "ordained, done knowingly" },
+                                        { kannada: "ಅವಿಹಿತಂ", transliteration: "avihitaM", meaning: "not ordained, done unknowingly" },
+                                        { kannada: "ವಾ", transliteration: "vaa", meaning: "or" },
+                                        { kannada: "ಸರ್ವಮೇತತ್", transliteration: "sarvametat", meaning: "all this" },
+                                        { kannada: "ಕ್ಷಮಸ್ವ", transliteration: "kshamasva", meaning: "please forgive" }
+                                    ]
+                                },
+                                {
+                                    kannada: "ಜಯ ಜಯ ಕರುಣಾಬ್ಧೇ ಶ್ರೀ ಮಹಾದೇವ ಶಂಭೋ ||",
+                                    transliteration: "jaya jaya karuNaabdhe sree mahaadEva SaMbho ||",
+                                    words: [
+                                        { kannada: "ಜಯ ಜಯ", transliteration: "jaya jaya", meaning: "glory, glory (hail)" },
+                                        { kannada: "ಕರುಣಾ", transliteration: "karuNa", meaning: "compassion" },
+                                        { kannada: "ಆಬ್ಧೇ", transliteration: "aabdhe", meaning: "who is Ocean (of)" },
+                                        { kannada: "ಶ್ರೀ", transliteration: "sree", meaning: "auspicious, revered" },
+                                        { kannada: "ಮಹಾದೇವ", transliteration: "mahaadEva", meaning: "Great God" },
+                                        { kannada: "ಶಂಭೋ", transliteration: "SaMbho", meaning: "who brings (auspicious) bliss" }
+                                    ]
+                                }
+                            ],
+                            completeMeaning: "O Lord, kindly forgive my wrong actions done knowingly or unknowingly, either through my organs of action (hands, feet, speech) or through my organs of perception (eyes, ears) or by my mind. Glory unto Thee, O Lord, who is the ocean of kindness."
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
+
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>
