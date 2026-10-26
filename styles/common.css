@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/earlyaccess/notosanskannada.css');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Kannada:wght@100..800&family=Baloo+Tamma+2:wght@400..800&family=Noto+Serif+Kannada&display=swap');
 
+/* Keep light theme so verse text stays visible in dark-mode browsers */
+html {
+    color-scheme: light;
+}
+
 /* Base styles */
 body {
     font-family: "Baloo Tamma 2", system-ui;
@@ -13,6 +18,8 @@ body {
     margin: 0 auto;
     max-width: 800px;
     padding: 20px;
+    background-color: #ffffff;
+    color: #333333;
 }
 
 /* English transliteration styles */
@@ -413,4 +420,32 @@ ol.mantra-block > li.mantra-section {
 /* Red text for special sections */
 .red-text {
     color: #cc0000;
-} 
+}
+
+/* Stotra verse tiers (shloka-block layout) */
+.stotra-container .shloka-block {
+    margin-bottom: 1.75rem;
+}
+
+.stotra-container .shloka-block:last-child {
+    margin-bottom: 0;
+}
+
+.stotra-container .tier {
+    color: #222222;
+}
+
+.stotra-container .tier.devanagari {
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
+.stotra-container .tier.iast {
+    font-size: 1em;
+    color: #0066cc;
+}
+
+.stotra-container .tier.translation {
+    font-size: 0.95em;
+    color: #555555;
+}
