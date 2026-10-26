@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಸರ್ವೇ ಭವಂತು ಸುಖಿನಃ (Sarve Bhavantu Sukhinah)</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Centralized Styles -->
+    <link rel="stylesheet" href="../styles/common.css">
+</head>
+
+<body>
+    <h1>ಸರ್ವೇ ಭವಂತು ಸುಖಿನಃ <span class="ENG">(sarve bhavantu sukhinaḥ)</span></h1>
+
+    <div class="display-mode-buttons">
+        <button class="mode-btn active" data-mode="kannada">Kannada</button>
+        <button class="mode-btn" data-mode="english">English Text</button>
+        <button class="mode-btn" data-mode="word-by-word">Word by Word</button>
+    </div>
+
+    <div class="stotram-content" id="dynamic-content">
+        <!-- Content will be dynamically generated here -->
+    </div>
+
+    <!-- Content Data Script -->
+    <script>
+        const stotramData = {
+            sections: [
+                {
+                    title: {
+                        kannada: "ಸರ್ವೇ ಭವಂತು ಸುಖಿನಃ",
+                        english: "sarve bhavantu sukhinaḥ"
+                    },
+                    verses: [
+                        {
+                            lines: [
+                                {
+                                    kannada: "ಸರ್ವೇ ಭವಂತು ಸುಖಿನಃ |",
+                                    transliteration: "sarve bhavantu sukhinaḥ |",
+                                    words: [
+                                        { kannada: "ಸರ್ವೇ", transliteration: "sarve", meaning: "all" },
+                                        { kannada: "ಭವಂತು", transliteration: "bhavantu", meaning: "May they be" },
+                                        { kannada: "ಸುಖಿನಃ", transliteration: "sukhinaḥ", meaning: "Happy; joyful" },
+                                    ],
+                                    completeMeaning: "May everyone be happy."
+                                },
+                                {
+                                    kannada: "ಸರ್ವೇ ಸಂತು ನಿರಾಮಯಾಃ |",
+                                    transliteration: "sarve santu niraamayaaḥ |",
+                                    words: [
+                                        { kannada: "ಸರ್ವೇ", transliteration: "sarve", meaning: "all" },
+                                        { kannada: "ಸಂತು", transliteration: "santu", meaning: "May they be" },
+                                        { kannada: "ನಿರಾಮಯಾಃ", transliteration: "niraamayaaḥ", meaning: "Free from illness; healthy" }
+                                    ],
+                                    completeMeaning: "May everyone be free from illness."
+                                },
+                                {
+                                    kannada: "ಸರ್ವೇ ಭದ್ರಾಣಿ ಪಶ್ಯಂತು |",
+                                    transliteration: "sarve bhadrāṇi paśyantu |",
+                                    words: [
+                                        { kannada: "ಸರ್ವೇ", transliteration: "sarve", meaning: "all" },
+                                        { kannada: "ಭದ್ರಾಣಿ", transliteration: "bhadrāṇi", meaning: "Auspicious things; good things" },
+                                        { kannada: "ಪಶ್ಯಂತು", transliteration: "paśyantu", meaning: "May they see; may they experience" },
+                                    ],
+                                    completeMeaning: "May all see what is good and auspicious."
+                                },
+                                {
+                                    kannada: "ಮಾ ಕಶ್ಚಿದ್ದುಃಖಭಾಗ್ಭವೇತ್ |",
+                                    transliteration: "mā kaścid duḥkhabhāgbhavet |",
+                                    words: [
+                                        { kannada: "ಮಾ", transliteration: "mā", meaning: "May not; let not" },
+                                        { kannada: "ಕಶ್ಚಿತ್", transliteration: "kaścit", meaning: "Anyone; anyone at all" },
+                                        { kannada: "ದುಃಖ", transliteration: "duḥkha", meaning: "Sorrow; pain; suffering" },
+                                        { kannada: "ಭಾಗ್", transliteration: "bhāg", meaning: "A sharer; one who receives a share" },
+                                        { kannada: "ಭವೇತ್", transliteration: "bhavet", meaning: "May become; may be" }
+                                    ],
+                                    completeMeaning: "May no one be subjected to sorrow."
+                                },
+                                {
+                                    kannada: "ಓಂ ಶಾಂತಿಃ ಶಾಂತಿಃ ಶಾಂತಿಃ ||",
+                                    transliteration: "oṃ śāntiḥ śāntiḥ śāntiḥ ||",
+                                    words: [
+                                        { kannada: "ಓಂ", transliteration: "oṃ", meaning: "Sacred primordial sound" },
+                                        { kannada: "ಶಾಂತಿಃ", transliteration: "śāntiḥ", meaning: "Peace" },
+                                        { kannada: "ಶಾಂತಿಃ", transliteration: "śāntiḥ", meaning: "Peace" },
+                                        { kannada: "ಶಾಂತಿಃ", transliteration: "śāntiḥ", meaning: "Peace" }
+                                    ],
+                                    completeMeaning: "Om, peace, peace, peace."
+                                }
+                            ],
+                            completeMeaning: "May all be happy, may all be healthy, may all experience goodness, may none suffer, and may peace prevail everywhere."
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
+
+    <!-- Centralized Scripts -->
+    <script src="../scripts/common.js"></script>
+</body>
+
+</html>
