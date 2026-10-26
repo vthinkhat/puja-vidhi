@@ -449,3 +449,56 @@ ol.mantra-block > li.mantra-section {
     font-size: 0.95em;
     color: #555555;
 }
+
+/* Per-tier show/hide (stotra-container pages) */
+.stotra-tier-buttons {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tier-toggle-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 2px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tier-toggle-btn:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+
+.tier-toggle-btn.active {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0066cc;
+}
+
+/* .ENG wrapper must not hide tier children */
+.stotra-container span.ENG {
+    display: contents;
+}
+
+.stotra-container:not(.stotra-tiers-initialized) .tier:not(.devanagari) {
+    display: none;
+}
+
+.stotra-container.stotra-tiers-initialized .tier {
+    display: none;
+    margin-bottom: 0.35rem;
+}
+
+.stotra-container.stotra-tiers-initialized .tier.tier-visible {
+    display: block !important;
+}
+
+.stotra-container .tier.kannada.tier-visible {
+    font-size: 1.35em;
+    line-height: 1.5;
+}

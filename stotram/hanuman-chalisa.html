@@ -8,14 +8,22 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
     <!-- Centralized Styles -->
-    <link rel="stylesheet" href="../styles/common.css?v=stotra-tiers-2">
+    <link rel="stylesheet" href="../styles/common.css?v=stotra-tiers-4">
 </head>
 
 <body>
 
-    <h1>ಹನುಮಾನ್ ಚಾಲೀಸಾ <span class="ENG">(Hanuman Chalisa)</span></h1>
+    <h1>Hanuman Chalisa</h1>
 
-    <button onclick="toggleVisibility()">Show/Hide English Transliteration</button><br>
+    <div class="stotra-tier-buttons" role="group" aria-label="Show script tiers">
+        <button type="button" class="tier-toggle-btn" data-tier="devanagari" aria-pressed="false">Devanagari</button>
+        <button type="button" class="tier-toggle-btn" data-tier="kannada" aria-pressed="false">Kannada</button>
+        <button type="button" class="tier-toggle-btn" data-tier="iast" aria-pressed="false">Transliteration</button>
+        <button type="button" class="tier-toggle-btn" data-tier="translation" aria-pressed="false">Translation</button>
+    </div>
+
+    <audio controls src="../audio/hanuman-chalisa-hariharan.mp3"
+        style="vertical-align: middle; height: 24px; width: 500px;"></audio>Hariharan<br><br>
 
     <div class="stotra-container">
         <h2 class="section-title">दोहा <span class="ENG">(Doha - 2 verses - Couplet)</span></h2>
@@ -288,7 +296,7 @@
                 तुम मम प्रिय भरतहि सम भाई <span class="marker">।। १२ ।।</span>
             </div>
             <div class="tier kannada">
-                ರಘುಪತಿ ಕೀನ್ಹೀ ಬಹುತ ಬಡ़ಾಈ ।<br>
+                ರಘುಪತಿ ಕೀನ್ಹೀ ಬಹುತ ಬಡಾಯೀ ।<br>
                 ತುಮ ಮಮ ಪ್ರಿಯ ಭರತಹಿ ಸಮ ಭಾಈ <span class="marker">।। ೧೨ ।।</span>
             </div>
             <span class="ENG">
@@ -568,7 +576,7 @@
                 मन क्रम बचन ध्यान जो लावै <span class="marker">।। २६ ।।</span>
             </div>
             <div class="tier kannada">
-                ಸಂಕಟ ತೇಂ ಹನುಮಾನ ಛುಡ़ಾವೈ ।<br>
+                ಸಂಕಟ ತೇಂ ಹನುಮಾನ ಛುಡಾವೈ ।<br>
                 ಮನ ಕ್ರಮ ಬಚನ ಧ್ಯಾನ ಜೋ ಲಾವೈ <span class="marker">।। ೨೬ ।।</span>
             </div>
             <span class="ENG">
@@ -828,7 +836,7 @@
                 होय सिद्धि साखी गौरीसा <span class="marker">।। ३९ ।।</span>
             </div>
             <div class="tier kannada">
-                ಜೋ ಯಹ ಪಢ़ೈ ಹನುಮಾನ ಚಲೀಸಾ ।<br>
+                ಜೋ ಯಹ ಪಡೈ ಹನುಮಾನ ಚಲೀಸಾ ।<br>
                 ಹೋಯ ಸಿದ್ಧಿ ಸಾಖೀ ಗೌರೀಸಾ <span class="marker">।। ೩೯ ।।</span>
             </div>
             <span class="ENG">
@@ -886,7 +894,8 @@
     </div>
 
     <!-- Centralized Scripts -->
-    <script src="../scripts/common.js"></script>
+    <script src="../scripts/stotra-tiers.js?v=1"></script>
+    <script src="../scripts/common.js?v=stotra-tiers-4"></script>
 </body>
 
 </html>
