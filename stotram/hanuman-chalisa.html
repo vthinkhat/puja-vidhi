@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
     <!-- Centralized Styles -->
-    <link rel="stylesheet" href="../styles/common.css?v=stotra-tiers-4">
+    <link rel="stylesheet" href="../styles/common.css?v=stotra-audio-segments-2">
 </head>
 
 <body>
@@ -22,13 +22,24 @@
         <button type="button" class="tier-toggle-btn" data-tier="translation" aria-pressed="false">Translation</button>
     </div>
 
-    <audio controls src="../audio/hanuman-chalisa-hariharan.mp3"
-        style="vertical-align: middle; height: 24px; width: 500px;"></audio>Hariharan<br><br>
+    <div class="stotra-audio-toolbar">
+        <audio id="hanuman-chalisa-audio" controls data-segment-player
+            src="../audio/hanuman-chalisa-hariharan.mp3"
+            style="vertical-align: middle; height: 24px; width: 500px; max-width: 100%;"></audio>
+        <span>Hariharan</span>
+        <label class="stotra-audio-loop-label">
+            <input type="checkbox" data-segment-loop>
+            Loop selected verse
+        </label>
+    </div>
+    <p class="stotra-audio-hint" style="font-size: 0.9em; color: #555; margin: 0.35rem 0 1rem;">
+        Click a verse below to hear only that section from the recording above.
+    </p>
 
     <div class="stotra-container">
         <h2 class="section-title">दोहा <span class="ENG">(Doha - 2 verses - Couplet)</span></h2>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:00:32" data-audio-end="00:00:58">
             <div class="tier devanagari">
                 श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि ।<br>
                 बरनऊँ रघुबर बिमल जसु जो दायकु फल चारि <span class="marker">॥</span>
@@ -48,7 +59,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:00:59" data-audio-end="00:01:20.5">
             <div class="tier devanagari">
                 बुद्धिहीन तनु जानिके सुमिरौं पवनकुमार ।<br>
                 बल बुद्धि बिद्या देहु मोहिं हरहु कलेस बिकार <span class="marker">॥</span>
@@ -70,7 +81,7 @@
 
         <h2 class="section-title">चौपाई <span class="ENG">(Chaupai — 40 verses - Quatrain)</span></h2>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:01:43.5" data-audio-end="00:01:51">
             <div class="tier devanagari">
                 जय हनुमान ज्ञान गुन सागर ।<br>
                 जय कपीस तिहुँ लोक उजागर <span class="marker">।। १ ।।</span>
@@ -90,7 +101,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:01:51" data-audio-end="00:01:58.5">
             <div class="tier devanagari">
                 राम दूत अतुलित बल धामा ।<br>
                 अंजनिपुत्र पवनसुत नामा <span class="marker">।। २ ।।</span>
@@ -110,7 +121,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:02:00" data-audio-end="00:02:07.5">
             <div class="tier devanagari">
                 महाबीर बिक्रम बजरंगी ।<br>
                 कुमति निवार सुमति के संगी <span class="marker">।। ३ ।।</span>
@@ -130,7 +141,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:02:07.4" data-audio-end="00:02:15">
             <div class="tier devanagari">
                 कंचन बरन बिराज सुबेसा ।<br>
                 कानन कुंडल कुंचित केसा <span class="marker">।। ४ ।।</span>
@@ -150,7 +161,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:02:18.5" data-audio-end="00:02:27.3">
             <div class="tier devanagari">
                 हाथ बज्र औ ध्वजा बिराजै ।<br>
                 काँधे मूँज जनेऊ साजै <span class="marker">।। ५ ।।</span>
@@ -170,7 +181,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:02:26.83" data-audio-end="00:02:34.76">
             <div class="tier devanagari">
                 संकर सुवन केसरीनंदन ।<br>
                 तेज प्रताप महा जग बंदन <span class="marker">।। ६ ।।</span>
@@ -190,7 +201,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:02:36" data-audio-end="00:02:43.5">
             <div class="tier devanagari">
                 विद्यावान गुनी अति चातुर ।<br>
                 राम काज करिबे को आतुर <span class="marker">।। ७ ।।</span>
@@ -210,7 +221,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:02:43.5" data-audio-end="00:02:51.2">
             <div class="tier devanagari">
                 प्रभु चरित्र सुनिबे को रसिया ।<br>
                 राम लखन सीता मन बसिया <span class="marker">।। ८ ।।</span>
@@ -230,7 +241,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:02:54.7" data-audio-end="00:03:02.5">
             <div class="tier devanagari">
                 सूक्श्म रूप धरि सियहिं दिखावा ।<br>
                 बिकट रूप धरि लंक जरावा <span class="marker">।। ९ ।।</span>
@@ -250,7 +261,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:03:03.3" data-audio-end="00:03:11.2">
             <div class="tier devanagari">
                 भीम रूप धरि असुर सँहारे ।<br>
                 रामचंद्र के काज सँवारे <span class="marker">।। १० ।।</span>
@@ -270,7 +281,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:03:12.8" data-audio-end="00:03:20.2">
             <div class="tier devanagari">
                 लाय सजीवन लखन जियाये ।<br>
                 श्रीरघुबीर हरषि उर लाये <span class="marker">।। ११ ।।</span>
@@ -290,7 +301,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:03:18.2" data-audio-end="00:03:25.9">
             <div class="tier devanagari">
                 रघुपति कीन्ही बहुत बड़ाई ।<br>
                 तुम मम प्रिय भरतहि सम भाई <span class="marker">।। १२ ।।</span>
@@ -310,7 +321,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:03:30.8" data-audio-end="00:03:38.5">
             <div class="tier devanagari">
                 सहस बदन तुम्हरो जस गावैं ।<br>
                 अस कहि श्रीपति कंठ लगावैं <span class="marker">।। १३ ।।</span>
@@ -330,7 +341,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:03:39.3" data-audio-end="00:03:47">
             <div class="tier devanagari">
                 सनकादिक ब्रह्मादि मुनीसा ।<br>
                 नारद सारद सहित अहीसा <span class="marker">।। १४ ।।</span>
@@ -350,7 +361,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:03:48.2" data-audio-end="00:03:56">
             <div class="tier devanagari">
                 जम कुबेर दिगपाल जहाँ ते ।<br>
                 कबि कोबिद कहि सके कहाँ ते <span class="marker">।। १५ ।।</span>
@@ -370,7 +381,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:03:55.7" data-audio-end="00:04:03.4">
             <div class="tier devanagari">
                 तुम उपकार सुग्रीवहिं कीन्हा ।<br>
                 राम मिलाय राज पद दीन्हा <span class="marker">।। १६ ।।</span>
@@ -390,7 +401,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:04:07.9" data-audio-end="00:04:15.5">
             <div class="tier devanagari">
                 तुम्हरो मंत्र बिभीषन माना ।<br>
                 लंकेस्वर भए सब जग जाना <span class="marker">।। १७ ।।</span>
@@ -410,7 +421,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:04:15.55" data-audio-end="00:04:23.21">
             <div class="tier devanagari">
                 जुग सहस्र जोजन पर भानू ।<br>
                 लील्यो ताहि मधुर फल जानू <span class="marker">।। १८ ।।</span>
@@ -430,7 +441,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:04:40.5" data-audio-end="00:04:50.7">
             <div class="tier devanagari">
                 प्रभु मुद्रिका मेलि मुख माहीं ।<br>
                 जलधि लाँघि गये अचरज नाहीं <span class="marker">।। १९ ।।</span>
@@ -450,7 +461,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:04:50.7" data-audio-end="00:05:00.9">
             <div class="tier devanagari">
                 दुर्गम काज जगत के जेते ।<br>
                 सुगम अनुग्रह तुम्हरे तेते <span class="marker">।। २० ।।</span>
@@ -470,7 +481,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:05:00.9" data-audio-end="00:05:11.1">
             <div class="tier devanagari">
                 राम दुआरे तुम रखवारे ।<br>
                 होत न आज्ञा बिनु पैसारे <span class="marker">।। २१ ।।</span>
@@ -490,7 +501,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:05:11.1" data-audio-end="00:05:21.3">
             <div class="tier devanagari">
                 सब सुख लहै तुम्हारी सरना ।<br>
                 तुम रच्छक काहू को डर ना <span class="marker">।। २२ ।।</span>
@@ -510,7 +521,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:05:21.3" data-audio-end="00:05:31.4">
             <div class="tier devanagari">
                 आपन तेज संहारो आपै ।<br>
                 तीनों लोक हाँक तें काँपै <span class="marker">।। २३ ।।</span>
@@ -530,7 +541,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:05:31.4" data-audio-end="00:05:41.6">
             <div class="tier devanagari">
                 भूत पिसाच निकट नहिं आवै ।<br>
                 महाबीर जब नाम सुनावै <span class="marker">।। २४ ।।</span>
@@ -550,7 +561,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:05:41.6" data-audio-end="00:05:51.8">
             <div class="tier devanagari">
                 नासै रोग हरै सब पीरा ।<br>
                 जपत निरंतर हनुमत बीरा <span class="marker">।। २५ ।।</span>
@@ -570,7 +581,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:05:51.8" data-audio-end="00:06:02">
             <div class="tier devanagari">
                 संकट तें हनुमान छुड़ावै ।<br>
                 मन क्रम बचन ध्यान जो लावै <span class="marker">।। २६ ।।</span>
@@ -590,7 +601,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:06:02" data-audio-end="00:06:12.2">
             <div class="tier devanagari">
                 सब पर राम तपस्वी राजा ।<br>
                 तिन के काज सकल तुम साजा <span class="marker">।। २७ ।।</span>
@@ -610,7 +621,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:06:12.2" data-audio-end="00:06:22.4">
             <div class="tier devanagari">
                 और मनोरथ जो कोई लावै ।<br>
                 सोई अमित जीवन फल पावै <span class="marker">।। २८ ।।</span>
@@ -630,7 +641,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:06:22.4" data-audio-end="00:06:32.6">
             <div class="tier devanagari">
                 चारों जुग परताप तुम्हारा ।<br>
                 है परसिद्ध जगत उजियारा <span class="marker">।। २९ ।।</span>
@@ -650,7 +661,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:06:32.6" data-audio-end="00:06:42.8">
             <div class="tier devanagari">
                 साधु संत के तुम रखवारे ।<br>
                 असुर निकंदन राम दुलारे <span class="marker">।। ३० ।।</span>
@@ -670,7 +681,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:06:42.8" data-audio-end="00:06:53">
             <div class="tier devanagari">
                 अष्ट सिद्धि नौ निधि के दाता ।<br>
                 अस बर दीन जानकी माता <span class="marker">।। ३१ ।।</span>
@@ -690,7 +701,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:06:53" data-audio-end="00:07:03.2">
             <div class="tier devanagari">
                 राम रसायन तुम्हरे पासा ।<br>
                 सदा रहो रघुपति के दासा <span class="marker">।। ३२ ।।</span>
@@ -710,7 +721,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:07:03.2" data-audio-end="00:07:13.4">
             <div class="tier devanagari">
                 तुम्हरे भजन राम को पावै ।<br>
                 जनम जनम के दुख बिसरावै <span class="marker">।। ३३ ।।</span>
@@ -730,7 +741,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:07:13.4" data-audio-end="00:07:23.6">
             <div class="tier devanagari">
                 अंत काल रघुबर पुर जाई ।<br>
                 जहाँ जन्म हरिभक्त कहाई <span class="marker">।। ३४ ।।</span>
@@ -750,7 +761,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:07:23.6" data-audio-end="00:07:33.8">
             <div class="tier devanagari">
                 और देवता चित्त न धरई ।<br>
                 हनुमत सेई सर्ब सुख करई <span class="marker">।। ३५ ।।</span>
@@ -770,7 +781,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:07:33.8" data-audio-end="00:07:44">
             <div class="tier devanagari">
                 संकट कटै मिटै सब पीरा ।<br>
                 जो सुमिरै हनुमत बलबीरा <span class="marker">।। ३६ ।।</span>
@@ -790,7 +801,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:07:44" data-audio-end="00:07:54.2">
             <div class="tier devanagari">
                 जै जै जै हनुमान गोसाईं ।<br>
                 कृपा करहु गुरु देव की नाईं <span class="marker">।। ३७ ।।</span>
@@ -810,7 +821,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:07:54.2" data-audio-end="00:08:04.4">
             <div class="tier devanagari">
                 जो सत बार पाठ कर कोई ।<br>
                 छूटहि बंदि महा सुख होई <span class="marker">।। ३८ ।।</span>
@@ -830,7 +841,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:08:04.4" data-audio-end="00:08:14.6">
             <div class="tier devanagari">
                 जो यह पढ़ै हनुमान चलीसा ।<br>
                 होय सिद्धि साखी गौरीसा <span class="marker">।। ३९ ।।</span>
@@ -850,7 +861,7 @@
             </span>
         </div>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:08:14.6" data-audio-end="00:08:24.8">
             <div class="tier devanagari">
                 तुलसीदास सदा हरि चेरा ।<br>
                 कीजै नाथ हृदय मँह डेरा <span class="marker">।। ४० ।।</span>
@@ -872,7 +883,7 @@
 
         <h2 class="section-title">दोहा <span class="ENG">(Doha - 2 verses - Couplet)</span></h2>
 
-        <div class="shloka-block">
+        <div class="shloka-block" data-audio-start="00:08:24.8" data-audio-end="00:08:35">
             <div class="tier devanagari">
                 पवनतनय संकट हरन मंगल मूरति रूप ।<br>
                 राम लखन सीता सहित हृदय बसहु सुर भूप <span class="marker">॥</span>
@@ -895,6 +906,7 @@
 
     <!-- Centralized Scripts -->
     <script src="../scripts/stotra-tiers.js?v=1"></script>
+    <script src="../scripts/stotra-audio-segments.js?v=3"></script>
     <script src="../scripts/common.js?v=stotra-tiers-4"></script>
 </body>
 

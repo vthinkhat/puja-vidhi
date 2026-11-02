@@ -423,8 +423,51 @@ ol.mantra-block > li.mantra-section {
 }
 
 /* Stotra verse tiers (shloka-block layout) */
+.stotra-audio-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: 0.35rem;
+}
+
+.stotra-audio-loop-label {
+    font-size: 0.95em;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+
+.stotra-audio-loop-label input {
+    margin-right: 0.35rem;
+    vertical-align: middle;
+}
+
 .stotra-container .shloka-block {
     margin-bottom: 1.75rem;
+}
+
+.stotra-container .shloka-block-audio-sync {
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 0.35rem 0.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stotra-container .shloka-block-audio-sync:hover {
+    background-color: #f5f8ff;
+}
+
+.stotra-container .shloka-block-audio-sync:focus-visible {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+.stotra-container .shloka-block-audio-sync.shloka-block-audio-active {
+    background-color: #e8f0fe;
+    box-shadow: inset 3px 0 0 #0066cc;
 }
 
 .stotra-container .shloka-block:last-child {
