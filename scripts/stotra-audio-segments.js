@@ -6,6 +6,7 @@
     'use strict';
 
     var ACTIVE_CLASS = 'shloka-block-audio-active';
+    var LOOP_GAP_MS = 300;
 
     /**
      * @param {string} value - "HH:MM:SS", "H:MM:SS.ss", or plain seconds
@@ -54,6 +55,33 @@
         var stopAt = null;
         var segmentStart = null;
         var activeBlock = null;
+        var loopGapTimeout = null;
+        var segmentEndRaf = null;
+
+        function cancelLoopGap() {
+            if (loopGapTimeout != null) {
+                clearTimeout(loopGapTimeout);
+                loopGapTimeout = null;
+            }
+        }
+
+        function cancelSegmentEndWatch() {
+            if (segmentEndRaf != null) {
+                cancelAnimationFrame(segmentEndRaf);
+                segmentEndRaf = null;
+            }
+        }
+
+        function getLoopGapMs() {
+            var fromAttr = audio.getAttribute('data-segment-loop-gap-ms');
+            if (fromAttr != null && fromAttr !== '') {
+                var parsed = parseInt(fromAttr, 10);
+                if (!Number.isNaN(parsed) && parsed >= 0) {
+                    return parsed;
+                }
+            }
+            return LOOP_GAP_MS;
+        }
 
         var loopControl = document.querySelector('[data-segment-loop]');
         var LOOP_STORAGE_KEY = 'puja-vidhi-stotra-segment-loop';
@@ -82,6 +110,8 @@
         }
 
         function clearActive() {
+            cancelLoopGap();
+            cancelSegmentEndWatch();
             if (activeBlock) {
                 activeBlock.classList.remove(ACTIVE_CLASS);
             }
@@ -90,17 +120,61 @@
             segmentStart = null;
         }
 
-        function onTimeUpdate() {
+        function restartSegmentAfterLoopGap() {
+            if (!isSegmentLoopEnabled() || segmentStart == null || activeBlock == null) {
+                return;
+            }
+            audio.currentTime = segmentStart;
+            var playPromise = audio.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(function () { /* autoplay blocked */ });
+            }
+            audio.addEventListener('timeupdate', onTimeUpdate);
+            watchSegmentEnd();
+        }
+
+        function handleSegmentEnd() {
             if (stopAt == null) {
                 return;
             }
-            if (audio.currentTime >= stopAt - 0.05) {
-                if (isSegmentLoopEnabled() && segmentStart != null) {
-                    audio.currentTime = segmentStart;
+            cancelSegmentEndWatch();
+            audio.removeEventListener('timeupdate', onTimeUpdate);
+            if (isSegmentLoopEnabled() && segmentStart != null) {
+                audio.pause();
+                cancelLoopGap();
+                loopGapTimeout = setTimeout(function () {
+                    loopGapTimeout = null;
+                    restartSegmentAfterLoopGap();
+                }, getLoopGapMs());
+                return;
+            }
+            audio.pause();
+        }
+
+        function watchSegmentEnd() {
+            cancelSegmentEndWatch();
+            function onFrame() {
+                if (stopAt == null) {
+                    cancelSegmentEndWatch();
                     return;
                 }
-                audio.pause();
-                audio.removeEventListener('timeupdate', onTimeUpdate);
+                if (audio.paused) {
+                    cancelSegmentEndWatch();
+                    return;
+                }
+                if (audio.currentTime >= stopAt - 0.02) {
+                    handleSegmentEnd();
+                    return;
+                }
+                segmentEndRaf = requestAnimationFrame(onFrame);
+            }
+            segmentEndRaf = requestAnimationFrame(onFrame);
+        }
+
+        function onTimeUpdate() {
+            /* kept for browsers that fire timeupdate during segment play */
+            if (stopAt != null && !audio.paused && audio.currentTime >= stopAt - 0.02) {
+                handleSegmentEnd();
             }
         }
 
@@ -121,6 +195,7 @@
                 }
 
                 audio.removeEventListener('timeupdate', onTimeUpdate);
+                cancelLoopGap();
                 clearActive();
 
                 activeBlock = block;
@@ -135,6 +210,7 @@
                         playPromise.catch(function () { /* autoplay blocked */ });
                     }
                     audio.addEventListener('timeupdate', onTimeUpdate);
+                    watchSegmentEnd();
                 }
 
                 if (audio.readyState >= 1) {
